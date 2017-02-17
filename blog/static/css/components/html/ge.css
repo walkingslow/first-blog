@@ -1,0 +1,44 @@
+/****** LOCAL VARIABLES *****/
+:root {
+}
+
+/****** BASE COMPONENT ******/
+.ge {
+  @apply --font-Sans;
+  @apply --font-BaseSize16;
+  @apply --background-ThemeLight;
+}
+.ge body {
+  @apply --font-Body;
+  margin:0;
+}
+
+/******* PROPERTIES ********/
+
+/* BASE */
+.ge.-base--12 {
+  @apply --font-BaseSize12;
+}
+.ge.-base--14 {
+  @apply --font-BaseSize14;
+}
+.ge.-base--16 {
+  @apply --font-BaseSize16;
+}
+.ge.-base--20 {
+  @apply --font-BaseSize20;
+}
+
+/* THEME */
+/* note: no dependancy on ge because this can be used on ANY element or used without ge classname */
+.-theme--light {
+  @apply --background-ThemeLight;
+}
+.-theme--dark {
+  @apply --background-ThemeDark;
+}
+
+
+/******* STATES ********/
+
+/******* VARIENTS ********/

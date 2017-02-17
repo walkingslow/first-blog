@@ -1,0 +1,146 @@
+extends ../../test/test-template.pug
+block content
+    <cdx-test name="ge-toggle default">
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle">
+                <input type="checkbox">
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle">
+                <input type="checkbox" checked>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle checked(attribute)</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle">
+                <input type="checkbox" disabled>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle disabled(attribute)</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle">
+                <input type="checkbox" checked disabled>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle checked & disabled (attributes)</label>
+        </div>
+    </cdx-test>
+
+
+    <cdx-test name="ge-toggle -color--blue">
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle -color--blue">
+                <input type="checkbox">
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle -color--blue</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle -color--blue">
+                <input type="checkbox" checked>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle -color--blue checked(attribute)</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle -color--blue">
+                <input type="checkbox" disabled>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle -color--blue disabled(attribute)</label>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <label class="ge-toggle -color--blue">
+                <input type="checkbox" checked disabled>
+                <div class="ge-toggle__slider"></div>
+            </label>
+            <label>ge-toggle -color--blue checked(attribute) & disabled(attribute)</label>
+        </div>
+    </cdx-test>
+
+
+
+
+    <cdx-test name="ge-toggle -theme--dark">
+        <div class="-theme--dark">
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark">
+                    <input type="checkbox">
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark">
+                    <input type="checkbox" checked>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark checked(attribute)</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark">
+                    <input type="checkbox" disabled>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark disabled(attribute)</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark">
+                    <input type="checkbox" checked disabled>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark checked(attribute) & disabled(attribute)</label>
+            </div>
+        </div>
+    </cdx-test>
+
+
+    <cdx-test name="ge-toggle -theme--dark -color--blue">
+        <div class="-theme--dark">
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark -color--blue">
+                    <input type="checkbox">
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark -color--blue</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark -color--blue">
+                    <input type="checkbox" checked>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark -color--blue checked(attribute)</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark -color--blue">
+                    <input type="checkbox" disabled>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark -color--blue disabled(attribute)</label>
+            </div>
+
+            <div style="display: flex; align-items: center;">
+                <label class="ge-toggle -theme--dark -color--blue">
+                    <input type="checkbox" checked disabled>
+                    <div class="ge-toggle__slider"></div>
+                </label>
+                <label style="color:#fff">ge-toggle -theme--dark -color--blue checked(attribute) & disabled(attribute)</label>
+            </div>
+        </div>
+    </cdx-test>

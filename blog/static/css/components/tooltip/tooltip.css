@@ -1,0 +1,57 @@
+/*** LOCAL VARIABLES ***/
+:root {
+    --spacingStandard {
+        height: var(--size-2rem);
+        padding: 0 var(--size-1rem);
+        top: -var(--size-3_5rem);
+        @apply --font-BodyMinus4;
+    }
+
+    --spacingDense {
+        height: var(--size-1_5rem);
+        padding: 0 var(--size-0_5rem);
+        top: -var(--size-2_5rem);
+        @apply --font-BodyMinus5;
+    }
+}
+
+.ge-tooltip {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*** PSUEDO CLASSES ***/
+.ge-tooltip:before {
+    background-color: var(--color-grayDarker1);
+    border-radius: var(--size-0_125rem);
+    color: var(--color-white);
+    content: attr(data-content);
+    display: none;
+    max-width: var(--size-10rem);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 100;
+
+    @apply --spacingStandard;
+    @apply --text-Bold;
+    @apply --text-SmallSpacing;
+    @apply --text-OverflowEllipsis;
+}
+
+.ge-tooltip:hover:before,
+.ge-tooltip:active:before
+ {
+    align-items: center;
+    display: flex;
+}
+
+/*** PROPERTIES ***/
+.-spacing--standard.ge-tooltip:before {
+    @apply --spacingStandard;
+}
+
+.-spacing--dense.ge-tooltip:before {
+    @apply --spacingDense;
+}

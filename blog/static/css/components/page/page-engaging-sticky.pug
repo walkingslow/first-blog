@@ -1,0 +1,20 @@
+extends ../../test/test-template.pug
+block body
+  <body class="ge-page -pattern--engaging -is--sticky">
+    <header>
+      <div class="ge-navigation -pattern--engaging -hide--brand">
+        include ../navigation/navigation-template.html
+      </div>
+    </header>
+    <main>
+      <section class="-height--vh">
+        <div class="ge-box -height--full -overlay--gradient" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">
+          <div class="ge-lockup -size--largest -align--bottom">
+            <span class="ge-lockup__monogram"></span>
+            <span class="ge-lockup__brand">Core Design by GE</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>FOOTER</footer>
+  </body>

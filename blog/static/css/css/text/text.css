@@ -1,0 +1,51 @@
+/* STYLES */
+.-text--bold {
+  @apply --text-Bold;
+}
+.-text--uppercase {
+  @apply --text-Uppercase;
+}
+.-text--italic {
+  @apply --text-Italic;
+}
+
+/* UNDERLINES */
+.-text--underline {
+  @apply --text-Underline;
+}
+.-text--no-underline {
+  @apply --text-NoUnderline;
+}
+
+/* ALIGN */
+.-text--left {
+  @apply --text-Left;
+}
+.-text--right {
+  @apply --text-Right;
+}
+.-text--center {
+  @apply --text-Center;
+}
+@media (--min60) {
+  .-text--left__min60 {
+    @apply --text-Left;
+  }
+  .-text--right__min60 {
+    @apply --text-Right;
+  }
+  .-text--center__min60 {
+    @apply --text-Center;
+  }
+}
+
+/* OTHER */
+.-text--spaced {
+  @apply --text-Spaced
+}
+.-text--small-spacing {
+  @apply --text-SmallSpacing;
+}
+.-text--overflow-ellipsis {
+  @apply --text-OverflowEllipsis;
+}

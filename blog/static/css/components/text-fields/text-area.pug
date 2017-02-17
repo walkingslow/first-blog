@@ -1,0 +1,27 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="Standard text area default using class">
+    <textarea class="ge-text-area" rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Standard Text area default without using class">
+    <textarea rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Standard Text area with placeholder">
+    <textarea class="ge-text-area" placeholder="Please enter something" rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Dense Text are default using class">
+    <textarea class="ge-text-area -spacing--dense" rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Dense Text area default without using class">
+    <textarea class="ge-text-area  -spacing--dense" rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Dense Text are with placeholder">
+    <textarea class="ge-text-area  -spacing--dense" placeholder="Please enter something" rows="5"></textarea>
+  </cdx-test>
+  <cdx-test name="Dense Text area with text">
+    <textarea class="ge-text-area  -spacing--dense" placeholder="Please enter something" rows="5">Here is some text</textarea>
+  </cdx-test>
+  <cdx-test name="Standard Text area with text">
+    <textarea class="ge-text-area" placeholder="Please enter something" rows="5">Here is some text</textarea>
+  </cdx-test>

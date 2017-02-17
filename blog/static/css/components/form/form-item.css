@@ -1,0 +1,229 @@
+/* LOCAL VARIABLES */
+:root {
+
+  --inputFontSizeStandard:  1.125rem;
+
+  --inputFontSizeDense: 0.889rem;
+
+  --inputFocusColor: #005CB9;
+
+  --inputErrorColor: #D70000;
+
+
+  --textInputDense {
+    padding-right: var(--spacing-0_5rem);
+    padding-left: var(--spacing-0_5rem);
+    min-height: 2.25rem;
+    font-size: var(--inputFontSizeDense);
+    width: calc(100% - var(--spacing-1rem))
+  }
+
+  --borderError {
+    border-width: 0.125rem;
+    border-color: var(--inputErrorColor);
+    margin: 0rem;
+  }
+
+  --textInputStandard {
+    font-size: var(--inputFontSizeStandard);
+    min-height: var(--size-3rem);
+    padding-right: var(--spacing-1rem);
+    padding-left: var(--spacing-1rem);
+    width: calc(100% - var(--spacing-2rem))
+  }
+
+  --labelStandard {
+    font-size: var(--size-1rem);
+    padding-top: var(--spacing-2rem);
+    padding-bottom: var(--spacing-0_5rem);
+    display: block;
+    word-wrap: break-word;
+  }
+
+  --labelDense {
+    font-size: 0.79rem;
+    padding-top: var(--spacing-1_5rem);
+    padding-bottom: var(--spacing-0_25rem);
+    word-wrap: break-word;
+  }
+
+  --labelAlignHorizontal {
+    width: 33%;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  --helperLabel {
+    line-height: 1.025rem;
+    font-size: var(--size-0_75rem);
+    visibility: hidden;
+    position: absolute;
+  }
+
+  --placeholderStandard {
+    font-size: var(--inputFontSizeStandard);
+  }
+
+  --placeholderDense {
+    font-size: var(--inputFontSizeDense);
+  }
+
+}
+
+/* BASE COMPONENT */
+
+.ge-form__item {
+  width: 100%;
+}
+
+.ge-form__item .ge-form__controls {
+  width: 100%;
+}
+
+.ge-form__item .ge-form__controls .ge-text-area {
+  display: block;
+}
+
+/* PSUEDO CLASSES */
+
+/* Focus for normal state and errors */
+
+.ge-form__item .ge-text-input:focus ~ .ge-label--helper,
+.ge-form__item .ge-text-area:focus ~ .ge-label--helper {
+  visibility: visible;
+}
+
+.ge-form__item.-has--error .ge-text-input:focus ~ .ge-label--helper,
+.ge-form__item.-has--error .ge-text-area:focus ~ .ge-label--helper {
+  visibility: hidden;
+}
+
+.ge-form__item.-has--error .ge-text-input ~ .ge-label--error,
+.ge-form__item.-has--error .ge-text-area ~ .ge-label--error {
+  visibility: visible;
+}
+
+
+.ge-form__item.-has--error .ge-text-input:focus,
+.ge-form__item.-has--error .ge-text-area:focus {
+  @apply --borderError;
+}
+
+/* Placeholders */
+
+.ge-form__item.-spacing--standard .ge-text-input::-webkit-input-placeholder,
+.ge-form__item.-spacing--standard .ge-text-area::-webkit-input-placeholder {
+  @apply --placeholderStandard;
+}
+
+.ge-form__item.-spacing--standard .ge-text-input::-moz-placeholder,
+.ge-form__item.-spacing--standard .ge-text-area::-moz-placeholder  {
+  @apply --placeholderStandard;
+}
+
+.ge-form__item.-spacing--standard .ge-text-input:-ms-input-placeholder,
+.ge-form__item.-spacing--standard .ge-text-area:-ms-input-placeholder {
+  @apply --placeholderStandard;
+}
+
+.ge-form__item.-spacing--dense .ge-text-input::-webkit-input-placeholder,
+.ge-form__item.-spacing--dense .ge-text-area::-webkit-input-placeholder {
+  @apply --placeholderDense;
+}
+
+.ge-form__item.-spacing--dense .ge-text-input::-moz-placeholder,
+.ge-form__item.-spacing--dense .ge-text-area::-moz-placeholder {
+  @apply --placeholderDense;
+}
+
+.ge-form__item.-spacing--dense .ge-text-input:-ms-input-placeholder,
+.ge-form__item.-spacing--dense .ge-text-area:-ms-input-placeholder {
+  @apply --placeholderDense;
+}
+
+/* PROPERTIES */
+
+/* Dense spacing */
+
+.ge-form__item.-spacing--dense .ge-text-input,
+.ge-form__item.-spacing--dense .ge-text-area {
+  @apply --textInputDense;
+}
+
+.ge-form__item.-spacing--dense .ge-label {
+  @apply --labelDense;
+}
+
+.ge-form__item.-spacing--standard .ge-text-input,
+.ge-form__item.-spacing--standard .ge-text-area {
+  @apply --textInputStandard;
+}
+
+.ge-form__item.-spacing--standard .ge-label {
+  @apply --labelStandard;
+}
+
+/* Horizontal Label Alignment */
+
+.ge-form__item.-label-align--horizontal {
+  display: flex;
+}
+
+.ge-form__item.-label-align--horizontal > .ge-label {
+  @apply --labelAlignHorizontal;
+}
+
+.ge-form__item.-label-align--horizontal,
+.ge-form__item.-label-align--horizontal.-spacing--standard {
+  margin-top: var(--spacing-2rem);
+}
+
+.ge-form__item.-label-align--horizontal.-spacing--dense {
+  margin-top: var(--spacing-1_5rem);
+}
+
+.ge-form__item.-label-align--horizontal .ge-form__controls {
+  margin-left: var(--spacing-0_5rem);
+}
+
+/* Vertical label alignment */
+
+.ge-form__item.-label-align--vertical .ge-label {
+  display: block;
+}
+
+/* STATES */
+
+/* Has an error */
+
+.ge-form__item.-has--error .ge-text-input,
+.ge-form__item.-has--error .ge-text-area {
+  @apply --borderError;
+}
+
+.ge-form__item.-has--error .ge-label {
+  color: var(--inputErrorColor);
+}
+
+.ge-form__item.-has--error .ge-label--error {
+  color: var(--inputErrorColor);
+}
+
+/* The associated input field has focus */
+
+.ge-form__item.-has--focus .ge-label{
+  color: var(--inputFocusColor);
+}
+
+/* Field is required */
+
+.ge-form__item.-is--required .ge-label::after {
+  content: "*";
+}
+
+.ge-form__item.-has--focus.-is--required .ge-label::after {
+  content: "*";
+  color: var(--inputErrorColor);
+}
+
+

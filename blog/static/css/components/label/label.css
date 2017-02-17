@@ -1,0 +1,76 @@
+/* LOCAL VARIABLES */
+:root {
+
+  --inputErrorColor: #D70000;
+
+  --labelStandard {
+    font-size: var(--size-1rem);
+    padding-top: var(--spacing-2rem);
+    padding-bottom: var(--spacing-0_5rem);
+    display: block;
+    word-wrap: break-word;
+    color: var(--color-gray);
+  }
+
+  --labelDense {
+    font-size: 0.79rem;
+    padding-top: var(--spacing-1_5rem);
+    padding-bottom: var(--spacing-0_25rem);
+    word-wrap: break-word;
+    color: var(--color-gray);
+  }
+
+  --helperLabel {
+    padding-top: .0125rem;
+    padding-bottom: .0125rem;
+    font-size: 0.702rem;
+    visibility: hidden;
+    position: absolute;
+    color: var(--color-grayLighter1);
+  }
+
+}
+
+/* BASE COMPONENT */
+
+.ge-label {
+  @apply --labelStandard;
+}
+
+.ge-label--helper,
+.ge-label--error {
+  @apply --helperLabel;
+}
+
+/* PSUEDO CLASSES */
+
+/* PROPERTIES */
+
+/* Spacing */
+
+
+.ge-label.-spacing--standard {
+  @apply --labelStandard;
+}
+
+.ge-label.-spacing--dense {
+  @apply --labelDense;
+}
+
+/* STATES */
+
+/* Has an error */
+
+.ge-label.-has--error,
+.ge-label--error {
+  color: var(--inputErrorColor);
+}
+
+/* Label is visible */
+
+.ge-label--helper.-is--visible,
+.ge-label--error.-is--visible {
+  visibility: visible;
+}
+
+

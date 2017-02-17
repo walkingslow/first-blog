@@ -1,0 +1,45 @@
+:root {
+  /********** COLOR **********/
+
+  /*** Masterbrand Blue Range ***/
+  --color-blueDarker2: #13294b;
+  --color-blueDarker1: #004080;
+  --color-blue: #005eb8;
+  --color-blueLighter1: #00b5e2;
+  --color-blueLighter2: #72cbe1;
+
+  /*** masterbrand monochromatic range ***/
+  --color-grayDarker2: #18181a;
+  --color-grayDarker1: #2f3133;
+  --color-gray: #63666a;
+  --color-grayLighter1: #a5a6a8;
+  --color-grayLighter2: #d7d8db;
+  --color-grayLighter3: #ececf0;
+  --color-grayLighter4: #f4f5f8;
+
+  /*** RGB with alpha ***/
+  --color-grayDarker1Alpha9: rgba(47, 49, 51, .9);
+  --color-grayDarker1Alpha5: rgba(47, 49, 51, .5);
+  --color-grayDarker1Alpha0: rgba(47, 49, 51, .0);
+  --color-whiteAlpha9: rgba(255, 255, 255, .9);
+  --color-whiteAlpha5: rgba(255, 255, 255, .5);
+  --color-whiteAlpha0: rgba(255, 255, 255, .0);
+  --color-blueAlpha9: rgba(0, 94, 184, .9);
+  --color-blueAlpha5: rgba(0, 94, 184, .5);
+  --color-blueAlpha0: rgba(0, 94, 184, .0);
+  --color-blueDarker2Alpha9: rgba(19, 41, 75, .9);
+  --color-blueDarker2Alpha5: rgba(19, 41, 75, .5);
+  --color-blueDarker2Alpha0: rgba(19, 41, 75, .0);
+  --color-blueLighter1Alpha9: rgba(0, 181, 226, .9);
+  --color-blueLighter1Alpha5: rgba(0, 181, 226, .5);
+  --color-blueLighter1Alpha0: rgba(0, 181, 226, .0);
+
+
+  /*** masterbrand white ***/
+  --color-white: #fff;
+
+  /*** green range ***/
+  --color-green: #00bf6f;
+  --color-greenLighter1: #7befb2;
+
+}

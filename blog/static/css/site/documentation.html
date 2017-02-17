@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="ge" ng-app="mainApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="icon" href="/pages/core-design/core-css/dist/brand/favicon/ge-monogram-gray.ico">
+  <link rel="stylesheet" media="all" href="/pages/core-design/core-css/dist/core-design.css?v=1.0.2">
+  <link rel="stylesheet" media="all" href="css/documentation.css">
+  <script src="https://use.fontawesome.com/36f14c1b4b.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/tomorrow.min.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-highlightjs/0.6.2/angular-highlightjs.min.js"></script>
+
+
+
+</head>
+
+<body class="ge-page -pattern--optimistic">
+  <header class="-color--gray-darker-1">
+    <div class="ge-container -width--wide">
+    <div class="ge-navigation -pattern--optimistic -theme--dark">
+      <div class="ge-navigation__control">
+        <button onClick="core_site.showMenu()" class="ge-button -fill--transparent -is--icon"><i class="fa fa-bars"></i></button>
+      </div>
+      <div class="ge-navigation__main">
+        <div class="ge-navigation__brand">
+          <a href="index.html" class="-link--no-underline">
+            <div class="ge-lockup">
+              <span class="ge-lockup__monogram"></span>
+              <span class="ge-lockup__brand">Core Design</span>
+            </div>
+          </a>
+        </div>
+        <nav role="navigation" class="ge-navigation__primary">
+          <div class="ge-tabs">
+            <a class="ge-tab__item" href="getstarted.html">
+              <span class="ge-tab__label">GET STARTED</span>
+            </a>
+            <a class="ge-tab__item -is--active" href="documentation.html">
+              <span class="ge-tab__label">DOCUMENTATION</span>
+            </a>
+            <a class="ge-tab__item" href="support.html">
+              <span class="ge-tab__label">SUPPORT</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="ge-navigation__secondary">
+        <div class="ge-navigation__persistant">
+          <a href="https://github.build.ge.com/core-design/core-css" class="-font-color--theme-dark -font--plus-2 -padding--m"><i class="fa fa-github-square"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main>
+
+    <section ng-controller="MainController as main" class="documentation">
+      <div class="ge-container -width--wide">
+        <div class="ge-grid">
+          <div class="ge-box -padding--m -padding--topbottom -width--xs -height--full -color--gray-lighter-4 -show--min60">
+            <div class="ge-tabs -align--vertical -spacing--dense">
+              <div ng-repeat='metaMenu in main.metadata.menu'>
+                <div class="-padding--s -font--minus-1 -text--small-spacing -text--bold" ng-if="metaMenu.heading">{{{{metaMenu.title}}}}</div>
+                <a ng-if="!metaMenu.heading" href="#{{{{metaMenu.title}}}}" class="ge-tab__item" ng-class="{{'-is--active': main.isSelected(metaMenu.title) }}">
+                  <span class="ge-tab__label">
+                    {{{{metaMenu.title}}}} {{{{$location.path()}}}}</a>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ge-box -padding--l -width--m -can--shrink" ng-view  id="main">
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="ge-footer -theme--dark">
+    <div class="ge-footer__copyright">© 2016 GENERAL ELECTRIC</div>
+    <div class="ge-footer__brand">
+      <div class="ge-lockup">
+        <span class="ge-lockup__monogram"></span>
+      </div>
+    </div>
+    <div class="ge-footer__legal">
+      <a href="http://www.ge.com/privacy" target="_blank">PRIVACY</a>
+      <a href="http://www.ge.com/terms" target="_blank">TERMS OF USE</a>
+      <a href="http://www.ge.com/cookies" target="_blank">USE OF COOKIES</a>
+      <a href="http://www.ge.com/accessibility" target="_blank">ACCESSIBILITY</a>
+    </div>
+  </footer>
+
+  <div class="ge-overlay" id="menu">
+    <div class="ge-overlay__content -gutter--none -align--left">
+
+        <div class="ge-box -height--full -theme--light -menu--first">
+          <div class="ge-navigation -pattern--purposeful -is--menu">
+            <div class="ge-navigation__control">
+              <button onClick="core_site.hideMenu()" class="ge-button -fill--transparent -is--icon"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="ge-navigation__main">
+              <div class="ge-navigation__brand">
+                <a href="index.html" class="-link--no-underline">
+                  <div class="ge-lockup">
+                    <span class="ge-lockup__monogram"></span>
+                    <span class="ge-lockup__brand">Core Design</span>
+                  </div>
+                </a>
+              </div>
+              <nav role="navigation" class="ge-navigation__primary">
+                <div class="ge-tabs">
+                  <a class="ge-tab__item" href="getstarted.html">
+                    <span class="ge-tab__label">GET STARTED</span>
+                  </a>
+                  <div class="ge-tab__item" onClick="core_site.showSecondMenu()">
+                    <span class="ge-tab__label">DOCUMENTATION</span>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                  <a class="ge-tab__item" href="support.html">
+                    <span class="ge-tab__label">SUPPORT</span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+            <div class="ge-navigation__secondary">
+              <div class="ge-navigation__persistant">
+                <a href="https://github.build.ge.com/core-design/core-css" class="-font-color--theme-light -font--plus-2 -padding--m"><i class="fa fa-github-square"></i></a>
+              </div>
+              <div class="ge-navigation__footer">© 2016 GENERAL ELECTRIC</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ge-box -height--full -theme--light -menu--second">
+          <div class="ge-navigation -pattern--purposeful -is--menu">
+            <div class="ge-navigation__control">
+              <button onClick="core_site.hideSecondMenu()" class="ge-button -fill--transparent -size--small"><i class="fa fa-angle-left pull-left"></i>back</button>
+            </div>
+            <div class="ge-navigation__main">
+              <nav class="ge-navigation__primary">
+
+                <div class="ge-tabs -align--vertical -spacing--dense">
+                  <div class="-padding--s -font--minus-1 -text--small-spacing -text--bold">COMPONENTS</div>
+                  <a href="documentation.html#BADGE" class="ge-tab__item"><span class="ge-tab__label">BADGE </span></a>
+                  <a href="documentation.html#BUTTON" class="ge-tab__item"><span class="ge-tab__label">BUTTON </span></a>
+                  <a href="documentation.html#SELECTION CONTROLS" class="ge-tab__item"><span class="ge-tab__label">SELECTION CONTROLS </span></a>
+                  <a href="documentation.html#LOCKUP" class="ge-tab__item"><span class="ge-tab__label">LOCKUP </span></a>
+                  <a href="documentation.html#MENUS" class="ge-tab__item"><span class="ge-tab__label">MENUS </span></a>
+                  <a href="documentation.html#PAGINATION" class="ge-tab__item"><span class="ge-tab__label">PAGINATION </span></a>
+                  <a href="documentation.html#PILL" class="ge-tab__item"><span class="ge-tab__label">PILL </span></a>
+                  <a href="documentation.html#TABS" class="ge-tab__item"><span class="ge-tab__label">TABS </span></a>
+                  <a href="documentation.html#TEXT FIELDS" class="ge-tab__item"><span class="ge-tab__label">TEXT FIELDS </span></a>
+                  <a href="documentation.html#TOOLTIP" class="ge-tab__item"><span class="ge-tab__label">TOOLTIP </span></a>
+                  <div class="-padding--s -font--minus-1 -text--small-spacing -text--bold">PATTERNS</div>
+                  <a href="documentation.html#CARD" class="ge-tab__item"><span class="ge-tab__label">CARD </span></a>
+                  <a href="documentation.html#DATATABLE" class="ge-tab__item"><span class="ge-tab__label">DATATABLE </span></a>
+                  <a href="documentation.html#FOOTER" class="ge-tab__item"><span class="ge-tab__label">FOOTER </span></a>
+                  <a href="documentation.html#FORMS" class="ge-tab__item"><span class="ge-tab__label">FORMS </span></a>
+                  <a href="documentation.html#LAYOUT" class="ge-tab__item"><span class="ge-tab__label">LAYOUT </span></a>
+                  <a href="documentation.html#NAVIGATION" class="ge-tab__item"><span class="ge-tab__label">NAVIGATION </span></a>
+
+                </div>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <script src="js/site.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){{i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){{
+    (i[r].q=i[r].q||[]).push(arguments)}},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    }})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61003050-16', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script>
+      var mainApp = angular.module("mainApp", ['ngRoute', 'hljs']);
+      mainApp.config(function(hljsServiceProvider) {{
+          hljsServiceProvider.setOptions({{
+                tabReplace: '    '
+          }});
+      }});
+      mainApp.config(['$routeProvider', function($routeProvider) {{
+        {controller_script}
+         $routeProvider.
+         otherwise({{
+            redirectTo: '/BADGE'
+         }});
+      }}]);
+      mainApp.controller('MainController', function($scope, $route, $routeParams, $location) {{
+        var main = this;
+        main.metadata = {menu};
+
+        main.isSelected = function(item) {{
+          return $location.path() == '/' + item
+        }}
+      }})
+      mainApp.run(function($rootScope) {{
+        $rootScope.$on("$routeChangeSuccess", function(event, next, previous) {{
+          core_site.hideMenu();
+        }});
+      }});
+
+   </script>
+</body>
+
+</html>

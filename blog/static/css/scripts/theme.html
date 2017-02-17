@@ -1,0 +1,120 @@
+<html lang="en" class="ge">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+      <title>Documentation</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+      <link href="https://core-design-nonmeasurable-cellobiose.run.aws-usw02-pr.ice.predix.io/pages/core-design/core-css/dist/core-design.css" rel="stylesheet">
+
+      <style>
+         .sidenav {{
+         position: absolute;
+         top: 0;
+         left: 0;
+         //overflow-x: auto;
+         }}
+         #main {{
+         padding-left:360px;
+         //padding-right:5rem;
+         padding-top: 2rem;
+         }}
+         .ge-tabs a, .ge-tabs .ge-tab__item {{
+              border-bottom:none; 
+              /*position: fixed;*/
+         }}
+  
+    
+      </style>
+   </head>
+   <body >
+      <div ng-app = "mainApp" >
+         <div id="mySidenav" class="sidenav">
+            <div style="width:20rem; padding-top:4rem;">
+               <div class="ge-tabs -align--vertical" >
+                  <span ng-repeat='metaMenu in metadata.menu'>
+                     <div class="ge-tab__item -is--disabled" ng-show='metaMenu.heading'>
+                        <span class="ge-tab__label  ge_font-color--black">
+                    
+                        <a href="#{{{{metaMenu.filePath}}}}" >
+                        {{{{metaMenu.title}}}}
+                        </a>
+                        </span>
+                     </div>
+                     <div class="ge-tab__item  " ng-show='!metaMenu.heading'>
+                        <span class="ge-tab__label">
+                        <a href="#{{{{metaMenu.filePath}}}}"  >
+                        &nbsp;&nbsp;&nbsp;{{{{metaMenu.title}}}}
+                        </a>
+                        </span>
+                     </div>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <div class="ge-navigation -theme--dark  -pattern--optimistic" >
+            <!--<div class="ge-navigation__control">
+               <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-bars"></i></button>
+            </div>-->
+            <div class="ge-navigation__main">
+               <div class="ge-navigation__brand">
+                  <div class="ge-lockup">
+                     <span class="ge-lockup__monogram"></span>
+                     <span class="ge-lockup__brand">Core Design</span>
+                  </div>
+               </div>
+               <nav role="navigation" class="ge-navigation__primary">
+                  <div class="ge-tabs">
+                     <div class="ge-tab__item" >
+                        <span class="ge-tab__label">
+                        <a href="#" >
+                        LIBRARY
+                        </a>
+                        </span>
+                     </div>
+                     <div class="ge-tab__item" >
+                        <span class="ge-tab__label ">
+                        <a href="#" >
+                        SUPPORT
+                        </a>
+                        </span>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+         <div ng-view  id="main" ></div>
+         
+
+      </div>
+   </body>
+   <script>
+      var mainApp = angular.module("mainApp", ['ngRoute']);
+      mainApp.run(function($rootScope) {{
+        $rootScope.metadata = {menu};
+      }})
+      mainApp.config(['$routeProvider', function($routeProvider) {{
+      
+        {controller_script}
+         $routeProvider.
+         otherwise({{
+            redirectTo: '/tabs/tabs-design'
+         }});
+      }}]);
+      
+        setTimeout(function(){{
+        
+        var myElement = $( 'a[href*="'+location.hash.replace('#','')+'"]' )
+        $(".ge-tab__item").removeClass("-is--active ge_font-color--blue");
+        myElement.parent().parent().addClass("-is--active ge_font-color--blue");
+
+        $(".ge-tab__item").click(function(e) {{
+            $(".ge-tab__item").removeClass("-is--active ge_font-color--blue");
+            $(this).addClass("-is--active ge_font-color--blue");    
+        }});
+        }}, 500);
+      
+   </script>
+</html>

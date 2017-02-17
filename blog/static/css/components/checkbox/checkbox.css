@@ -1,0 +1,120 @@
+/* LOCAL VARIABLES */
+:root {
+    --checked {
+        color: var(--color-white);
+        content: '\f00c';
+        font-family: FontAwesome;
+        @apply --font-BodyMinus1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@custom-selector :--ge-checkbox input.ge-checkbox;
+@custom-selector :--ge-checkbox-dark .-theme--dark input.ge-checkbox, input.ge-checkbox.-theme--dark;
+
+
+/* BASE COMPONENT */
+:--ge-checkbox {
+    margin: var(--size-1rem);
+    position: relative;
+}
+
+:--ge-checkbox + .ge-checkbox-style {
+    height: var(--size-1_125rem);
+    width: var(--size-1_125rem);
+}
+
+/* PSUEDO CLASSES */
+:--ge-checkbox + .ge-checkbox-style:before {
+    background-color: inherit;
+    border: solid 0.125rem var(--color-grayDarker1);
+    border-radius: 0.125rem;
+    color: transparent;
+    content: '1';
+    display: inline-flex;
+    height: var(--size-1_125rem);
+    width: var(--size-1_125rem);
+    align-items: center;
+    justify-content: center;
+}
+
+:--ge-checkbox:focus {
+    outline: none;
+}
+
+/* PROPERTIES */
+
+/* -color--blue */
+:--ge-checkbox.-color--blue + .ge-checkbox-style:before {
+    border-color: var(--color-blue);
+}
+
+
+/* STATES */
+
+/* disabled */
+:--ge-checkbox:disabled + .ge-checkbox-style:before
+{
+    border-color: var(--color-gray);
+    opacity: 0.3;
+}
+
+
+/* checked */
+:--ge-checkbox:checked + .ge-checkbox-style:before {
+    background-color: var(--color-grayDarker1);
+    @apply --checked;
+}
+
+:--ge-checkbox.-color--blue:checked + .ge-checkbox-style:before  {
+    background-color: var(--color-blue);
+    @apply --checked;
+}
+
+/* checked & disabled */
+:--ge-checkbox:checked:disabled + .ge-checkbox-style:before {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);;
+    opacity: 0.3;
+}
+
+
+/* THEME */
+:--ge-checkbox-dark + .ge-checkbox-style:before {
+    border-color: var(--color-white);
+}
+
+:--ge-checkbox-dark.-color--blue + .ge-checkbox-style:before {
+    border-color: var(--color-blueLighter1);
+}
+
+/* disabled */
+:--ge-checkbox-dark:disabled + .ge-checkbox-style:before {
+    border-color: var(--color-gray);
+    opacity: 0.3;
+}
+
+/* checked */
+:--ge-checkbox-dark:checked + .ge-checkbox-style:before {
+    background-color: var(--color-white);
+    @apply --checked;
+    color: var(--color-gray);
+}
+
+:--ge-checkbox-dark.-color--blue:checked + .ge-checkbox-style:before {
+    background-color: var(--color-blueLighter1);
+    color: var(--color-grayDarker1);
+}
+
+/* checked & disabled */
+:--ge-checkbox-dark:checked:disabled + .ge-checkbox-style:before {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    @apply --checked;
+    color: var(--color-gray);
+    opacity: 0.3;
+}
+
+/* VARIENTS */

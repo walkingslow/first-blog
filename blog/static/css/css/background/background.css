@@ -1,0 +1,22 @@
+/*** BACKGROUND COLORS ***/
+.-color--blue-darker-2   { @apply --background-BlueDarker2; }
+.-color--blue-darker-1   { @apply --background-BlueDarker1; }
+.-color--blue            { @apply --background-Blue; }
+.-color--blue-lighter-1  { @apply --background-BlueLighter1; }
+.-color--blue-lighter-2  { @apply --background-BlueLighter2; }
+
+.-color--gray-darker-2   { @apply --background-GrayDarker2; }
+.-color--gray-darker-1   { @apply --background-GrayDarker1; }
+.-color--gray            { @apply --background-Gray; }
+.-color--gray-lighter-1  { @apply --background-GrayLighter1; }
+.-color--gray-lighter-2  { @apply --background-GrayLighter2; }
+.-color--gray-lighter-3  { @apply --background-GrayLighter3; }
+.-color--gray-lighter-4  { @apply --background-GrayLighter4; }
+
+.-color--white           { @apply --background-White; }
+
+.-color--green           { @apply --background-Green; }
+.-color--green-lighter-1 { @apply --background-GreenLighter1; }
+
+.-color--theme-light     { @apply --background-ThemeLight; }
+.-color--theme-dark      { @apply --background-ThemeDark; }

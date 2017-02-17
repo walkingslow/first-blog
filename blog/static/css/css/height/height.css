@@ -1,0 +1,53 @@
+/* height */
+.-height--auto {
+  height: auto;
+}
+.-height--vh {
+  height: 100vh;
+}
+.-height--full {
+  height: 100%;
+}
+.-height--16_9:before {
+  padding-bottom: 56.25%;
+}
+.-height--3_2:before {
+  padding-bottom: 66.66%;
+}
+.-height--4_3:before {
+  padding-bottom: 75%;
+}
+.-height--1_1:before {
+  padding-bottom: 100%;
+}
+.-height--16_9:before,
+.-height--3_2:before,
+.-height--4_3:before,
+.-height--1_1:before  {
+  content: "";
+  float: left;
+}
+.-height--16_9:after,
+.-height--3_2:after,
+.-height--4_3:after,
+.-height--1_1:after  {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.-height--xl {
+  height: calc(var(--size--xl)*0.5625);
+}
+.-height--l {
+  height: calc(var(--size--l)*0.5625);
+}
+.-height--m {
+  height: calc(var(--size--m)*0.5625);
+}
+.-height--s {
+  height: calc(var(--size--s)*0.5625);
+}
+.-height--xs {
+  height: calc(var(--size--xs)*0.5625);
+}

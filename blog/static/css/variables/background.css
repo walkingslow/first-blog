@@ -1,0 +1,108 @@
+:root {
+  /*** BACK GROUNDS AND FOREGROUNDS ***/
+
+  /* BLUE */
+  --background-BlueDarker2 {
+    background-color: var(--color-blueDarker2);
+    @apply --font-ThemeDark;
+  }
+  --background-BlueDarker1 {
+    background-color: var(--color-blueDarker1);
+    @apply --font-ThemeDark;
+  }
+  --background-Blue {
+    background-color: var(--color-blue);
+    @apply --font-ThemeDark;
+  }
+  --background-BlueLighter1 {
+    background-color: var(--color-blueLighter1);
+    @apply --font-ThemeDark;
+  }
+  --background-BlueLighter2 {
+    background-color: var(--color-blueLighter2);
+    @apply --font-ThemeLight;
+  }
+
+  /* GRAY */
+  --background-GrayDarker2 {
+    background-color: var(--color-grayDarker2);
+    @apply --font-ThemeDark;
+  }
+  --background-GrayDarker1 {
+    background-color: var(--color-grayDarker1);
+    @apply --font-ThemeDark;
+  }
+  --background-Gray {
+    background-color: var(--color-gray);
+    @apply --font-ThemeDark;
+  }
+  --background-GrayLighter1 {
+    background-color: var(--color-grayLighter1);
+    @apply --font-ThemeDark;
+  }
+  --background-GrayLighter2 {
+    background-color: var(--color-grayLighter2);
+    @apply --font-ThemeLight;
+  }
+  --background-GrayLighter3 {
+    background-color: var(--color-grayLighter3);
+    @apply --font-ThemeLight;
+  }
+  --background-GrayLighter4 {
+    background-color: var(--color-grayLighter4);
+    @apply --font-ThemeLight;
+  }
+
+  /* WHITE */
+  --background-White {
+    background-color: var(--color-white);
+    @apply --font-ThemeLight;
+  }
+
+  /* GREEN */
+  --background-Green {
+    background-color: var(--color-green);
+    @apply --font-ThemeDark;
+  }
+  --background-GreenLighter1 {
+    background-color: var(--color-greenLighter1);
+    @apply --font-ThemeLight;
+  }
+
+  --background-ThemeLight {
+    @apply --background-White;
+  }
+  --background-ThemeDark {
+    @apply --background-GrayDarker2;
+  }
+
+
+  --background-ThemeLightTransparent {
+    background: var(--color-whiteAlpha9);
+  }
+  --background-ThemeLightTransparentSubtle {
+    background: var(--color-whiteAlpha5);
+  }
+  --background-ThemeLightGradient {
+    background-image: linear-gradient(to bottom, var(--color-whiteAlpha9), var(--color-whiteAlpha0));
+  }
+  --background-ThemeDarkTransparent {
+    background: var(--color-grayDarker1Alpha9);
+  }
+  --background-ThemeDarkTransparentSubtle {
+    background: var(--color-grayDarker1Alpha5);
+  }
+  --background-ThemeDarkGradient {
+    background-image: linear-gradient(to bottom, var(--color-grayDarker1Alpha9), var(--color-grayDarker1Alpha0));
+  }
+  --background-BlueGradient {
+    background-image: linear-gradient(to bottom, var(--color-blueAlpha9), var(--color-blueAlpha0));
+  }
+  --background-BlueDarker2Gradient {
+    background-image: linear-gradient(to bottom, var(--color-blueDarker2Alpha9), var(--color-blueDarker2Alpha0));
+  }
+  --background-BlueLighter1Gradient {
+    background-image: linear-gradient(to bottom, var(--color-blueLighter1Alpha9), var(--color-blueLighter1Alpha0));
+  }
+
+}

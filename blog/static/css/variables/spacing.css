@@ -1,0 +1,21 @@
+/* padding and margins */
+:root {
+  --spacing-0_25rem: 0.25rem;
+  --spacing-0_5rem: 0.5rem;
+  --spacing-0_75rem: 0.75rem;
+  --spacing-1rem: 1rem;
+  --spacing-1_25rem: 1.25rem;
+  --spacing-1_5rem: 1.5rem;
+  --spacing-1_75rem: 1.75rem;
+  --spacing-2rem: 2rem;
+  --spacing-2_5rem: 2.5rem;
+  --spacing-3rem: 3rem;
+  --spacing-4rem: 4rem;
+  --spacing-5rem: 5rem;
+
+  --spacing-xl: 5rem;
+  --spacing-l: 3rem;
+  --spacing-m: 2rem;
+  --spacing-s: 1rem;
+  --spacing-xs: 0.5rem;
+}

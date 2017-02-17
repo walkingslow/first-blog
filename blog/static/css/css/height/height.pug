@@ -1,0 +1,26 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="height ratio">
+      <div class="_test">
+        <div class="-height--16_9 -width--xs">16:9</div>
+        <div class="-height--3_2 -width--xs">3:2</div>
+        <div class="-height--4_3 -width--xs">4:3</div>
+        <div class="-height--1_1 -width--xs">1:1</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="height">
+      <div class="_test">
+        <div class="-height--vh">VIEW HEIGHT</div>
+        <div class="-height--auto">auto</div>
+        <div style="height:20rem">
+          <div class="-height--full">full</div>
+        </div>
+        <div class="-height--xs">xs</div>
+        <div class="-height--s">s</div>
+        <div class="-height--m">m</div>
+        <div class="-height--l">l</div>
+        <div class="-height--xl">xl</div>
+      </div>
+  </cdx-test>

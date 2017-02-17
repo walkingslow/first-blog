@@ -1,0 +1,61 @@
+.documentation h1 {
+  font-size: 2.281rem;
+  line-height: 2.434rem;
+}
+.documentation h2 {
+  font-size: 2.281rem;
+  line-height: 2.434rem;
+  font-family: monospace;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.documentation h3 {
+  font-size: 1.424rem;
+  line-height: 1.898rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.documentation h4,
+.documentation h5,
+.documentation h6 {
+  font-size: 1.424rem;
+  line-height: 1.898rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.documentation pre {
+  margin:0;
+}
+.documentation code.hljs {
+  font-size: 0.79rem;
+  line-height: 1.46rem;
+  background-color: #f4f5f8;
+  padding:1.5rem;
+  border: solid 1px #ececf0;
+}
+.documentation table code.hljs {
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  padding: 0;
+  border-width: 0;
+}
+.documentation table pre,
+.documentation table code {
+  margin:0;
+  display: inline;
+}
+.documentation td {
+  vertical-align: top;
+  text-align: left;
+  font-family: monospace;
+}
+
+.documentation  .single_block code{
+  display: inline;
+  padding: 0rem;
+}
+.documentation .single_block pre{
+  display: inline !important;
+}

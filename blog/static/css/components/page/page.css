@@ -1,0 +1,86 @@
+/****** LOCAL VARIABLES *****/
+:root {
+  --railWidth: var(--size-20rem);
+  --railWidthCollapsed: var(--size-3_5rem);
+
+  --headerHeight: var(--size-4rem);
+  --headerHeightCondensed: var(--size-2_5rem);
+}
+
+/****** BASE COMPONENT ******/
+.ge-page {
+
+}
+
+/******* PROPERTIES ********/
+
+@custom-selector :--ge-header > header, .ge-header;
+@custom-selector :--ge-main > main, .ge-main;
+@custom-selector :--ge-footer > footer, .ge-footer;
+
+/* PAGE purposeful */
+@media (--min60) {
+  .ge-page.-pattern--purposeful :--ge-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--railWidth);
+    overflow: auto;
+  }
+  .ge-page.-pattern--purposeful :--ge-main {
+    margin-left: var(--railWidth);
+  }
+  .ge-page.-pattern--purposeful :--ge-footer {
+    margin-left: var(--railWidth);
+  }
+  .ge-page.-pattern--purposeful.-is--minimized :--ge-header {
+    width: var(--railWidthCollapsed);
+  }
+  .ge-page.-pattern--purposeful.-is--minimized :--ge-main {
+    margin-left: var(--railWidthCollapsed);
+  }
+  .ge-page.-pattern--purposeful.-is--minimized :--ge-footer {
+    margin-left: var(--railWidthCollapsed);
+  }
+}
+
+/* Engaging and Optimistic */
+.ge-page.-pattern--optimistic.-is--sticky :--ge-header,
+.ge-page.-pattern--engaging.-is--sticky :--ge-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  @apply --background-ThemeLight;
+  box-shadow: 0px 1px 2px 0px var(--color-grayLighter1);
+  animation:slide-down 0.7s;
+}
+.ge-page.-pattern--optimistic.-is--sticky.-theme--dark :--ge-header,
+.ge-page.-pattern--engaging.-is--sticky.-theme--dark :--ge-header {
+  @apply --background-ThemeDark;
+}
+.ge-page.-pattern--optimistic.-is--sticky :--ge-main > section:first-child > *:first-child,
+.ge-page.-pattern--engaging.-is--sticky :--ge-main > section:first-child > *:first-child {
+  padding-top:var(--spacing-3rem);
+}
+.ge-page.-pattern--optimistic.-is--minimized.-is--sticky :--ge-main > section:first-child > *:first-child,
+.ge-page.-pattern--engaging.-is--minimized.-is--sticky :--ge-main > section:first-child > *:first-child {
+  padding-top:var(--size-1_5rem);
+}
+
+@media (--min60) {
+  .ge-page.-pattern--optimistic :--ge-header,
+  .ge-page.-pattern--engaging :--ge-header {
+    height: var(--headerHeight);
+  }
+  .ge-page.-pattern--optimistic.-is--minimized :--ge-header,
+  .ge-page.-pattern--engaging.-is--minimized :--ge-header {
+    height: var(--headerHeightCondensed);
+  }
+  .ge-page.-pattern--optimistic :--ge-footer,
+  .ge-page.-pattern--engaging :--ge-footer {
+
+  }
+}

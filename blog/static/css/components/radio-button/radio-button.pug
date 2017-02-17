@@ -1,0 +1,93 @@
+extends ../../test/test-template.pug
+block content
+    <cdx-test name="ge-radio-button default">
+        <input id="radio1" type="radio" class="ge-radio-button" name="radioDefault">
+        <label for="radio1" class="ge-radio-button-style"></label>
+        <label>ge-radio-button</label>
+
+        <br>
+        <input id="radio2"  type="radio" class="ge-radio-button" checked name="radioDefault">
+        <label for="radio2" class="ge-radio-button-style"></label>
+        <label>ge-radio-button checked(attribute)</label>
+
+        <br>
+        <input id="radio3" type="radio" class="ge-radio-button" disabled name="radioDefaultTwo">
+        <label for="radio3" class="ge-radio-button-style"></label>
+        <label>ge-radio-button disabled(attribute)</label>
+
+        <br>
+        <input id="radio4" type="radio" class="ge-radio-button" checked disabled name="radioDefaultTwo">
+        <label for="radio4" class="ge-radio-button-style"></label>
+        <label>ge-radio-button checked & disabled (attributes)</label>
+    </cdx-test>
+
+    <cdx-test name="ge-radio-button -color--blue">
+        <input id="radio5" type="radio" class="ge-radio-button -color--blue" name="radioBlue">
+        <label for="radio5" class="ge-radio-button-style"></label>
+        <label>ge-radio-button -color--blue</label>
+
+        <br>
+        <input id="radio6" type="radio" class="ge-radio-button -color--blue" checked name="radioBlue">
+        <label for="radio6" class="ge-radio-button-style"></label>
+        <label>ge-radio-button -color--blue checked(attribute)</label>
+
+        <br>
+        <input id="radio7" type="radio" class="ge-radio-button -color--blue" disabled name="radioBlueTwo">
+        <label for="radio8" class="ge-radio-button-style"></label>
+        <label>ge-radio-button -color--blue disabled(attribute)</label>
+
+        <br>
+        <input id="radio8" type="radio" class="ge-radio-button -color--blue" checked disabled name="radioBlueTwo">
+        <label for="radio8" class="ge-radio-button-style"></label>
+        <label>ge-radio-button -color--blue checked(attribute) & disabled(attribute)</label>
+    </cdx-test>
+
+
+
+
+    <cdx-test name="ge-radio-button -theme--dark">
+        <div style="background-color: #2f3133">
+            <input id="radio9" type="radio" class="ge-radio-button -theme--dark" name="radioDark">
+            <label for="radio9" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark</label>
+
+            <br>
+            <input id="radio10" type="radio" class="ge-radio-button -theme--dark" checked name="radioDark">
+            <label for="radio10" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark checked(attribute)</label>
+
+            <br>
+            <input id="radio11" type="radio" class="ge-radio-button -theme--dark" disabled name="radioDarkTwo">
+            <label for="radio11" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark disabled(attribute)</label>
+
+            <br>
+            <input id="radio12" type="radio" class="ge-radio-button -theme--dark" checked disabled name="radioDarkTwo">
+            <label for="radio12" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark checked & disabled (attributes)</label>
+        </div>
+    </cdx-test>
+
+
+    <cdx-test name="ge-radio-button -theme--dark -color--blue">
+        <div style="background-color: #2f3133">
+            <input id="radio13" type="radio" class="ge-radio-button -theme--dark -color--blue" name="radioDarkBlue">
+            <label for="radio13" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark -color--blue</label>
+
+            <br>
+            <input id="radio14" type="radio" class="ge-radio-button -theme--dark -color--blue" checked name="radioDarkBlue">
+            <label for="radio14" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark -color--blue checked(attribute)</label>
+
+            <br>
+            <input id="radio15" type="radio" class="ge-radio-button -theme--dark -color--blue" disabled name="radioDarkBlueTwo">
+            <label for="radio15" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark -color--blue disabled(attribute)</label>
+
+            <br>
+            <input id="radio16" type="radio" class="ge-radio-button -theme--dark -color--blue" checked disabled name="radioDarkBlueTwo">
+            <label for="radio16" class="ge-radio-button-style"></label>
+            <label style="color:#fff">ge-radio-button -theme--dark -color--blue checked & disabled (attributes)</label>
+        </div>
+    </cdx-test>

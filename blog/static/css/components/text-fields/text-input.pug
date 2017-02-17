@@ -1,0 +1,22 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="Standard Text Input default using class">
+    <input type="text" class="ge-text-input">
+  </cdx-test>
+  <cdx-test name="Standard Text Input default without using class">
+    <input type="text">
+  </cdx-test>
+  <cdx-test name="Standard Text Input with placeholder">
+    <input type="text" class="ge-text-input" placeholder="Please enter something">
+  </cdx-test>
+  <cdx-test name="Dense Text Input default using class">
+    <input type="text" class="ge-text-input -spacing--dense">
+  </cdx-test>
+  <cdx-test name="Dense Text Input default without using class">
+    <input type="text" class="ge-text-input  -spacing--dense">
+  </cdx-test>
+  <cdx-test name="Dense Text Input with placeholder">
+    <input type="text" class="ge-text-input  -spacing--dense" placeholder="Please enter something">
+  </cdx-test>
+

@@ -1,0 +1,85 @@
+extends ../../test/test-template.pug
+block content
+  <cdx-test name="box" theme="true">
+    <div class="ge-box">box</div>
+  </cdx-test>
+
+  <cdx-test name="width">
+    <div class="_test">
+      <div class="ge-box -width--full">full</div>
+      <div class="ge-box -width--xl">xl</div>
+      <div class="ge-box -width--l">l</div>
+      <div class="ge-box -width--m">m</div>
+      <div class="ge-box -width--s">s</div>
+      <div class="ge-box -width--xs">xs</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="padding s">
+      <div class="_test">
+        <div class="ge-box -padding--none">padding none</div>
+        <div class="ge-box -padding--xs">padding xs</div>
+        <div class="ge-box -padding--s">padding s</div>
+        <div class="ge-box -padding--m">padding m</div>
+        <div class="ge-box -padding--l">padding l</div>
+        <div class="ge-box -padding--xl">padding l</div>
+        <div class="ge-box -padding--m -padding--topbottom">padding topbottom</div>
+        <div class="ge-box -padding--m -padding--leftright">padding leftright</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="Colors">
+    <div class="ge-box -color--blue-darker-2">COLOR TEST</div>
+    <div class="ge-box -color--blue-darker-1">COLOR TEST</div>
+    <div class="ge-box -color--blue">COLOR TEST</div>
+    <div class="ge-box -color--blue-lighter-1">COLOR TEST</div>
+    <div class="ge-box -color--blue-lighter-2">COLOR TEST</div>
+    <div class="ge-box -color--gray-darker-2">COLOR TEST</div>
+    <div class="ge-box -color--gray-darker-1">COLOR TEST</div>
+    <div class="ge-box -color--gray">COLOR TEST</div>
+    <div class="ge-box -color--gray-lighter-1">COLOR TEST</div>
+    <div class="ge-box -color--gray-lighter-2">COLOR TEST</div>
+    <div class="ge-box -color--gray-lighter-3">COLOR TEST</div>
+    <div class="ge-box -color--gray-lighter-4">COLOR TEST</div>
+    <div class="ge-box -color--white">COLOR TEST</div>
+    <div class="ge-box -color--green">COLOR TEST</div>
+    <div class="ge-box -color--green-lighter-1">COLOR TEST</div>
+
+    <div class="ge-box -theme--light">COLOR TEST</div>
+    <div class="ge-box -theme--dark"><h1>COLOR TEST</h1></div>
+  </cdx-test>
+
+
+  <cdx-test name="height ratio">
+      <div class="_test">
+        <div class="ge-box -height--16_9 -width--xs">16:9</div>
+        <div class="ge-box -height--3_2 -width--xs">3:2</div>
+        <div class="ge-box -height--4_3 -width--xs">4:3</div>
+        <div class="ge-box -height--1_1 -width--xs">1:1</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="height">
+      <div class="_test">
+        <div class="ge-box -height--vh">VIEW HEIGHT</div>
+        <div class="ge-box -height--auto">auto</div>
+        <div style="height:20rem">
+          <div class="ge-box -height--full">full</div>
+        </div>
+        <div class="ge-box -height--xs">xs</div>
+        <div class="ge-box -height--s">s</div>
+        <div class="ge-box -height--m">m</div>
+        <div class="ge-box -height--l">l</div>
+        <div class="ge-box -height--xl">xl</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="images">
+    <div class="ge-box -height--vh -theme--dark" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-box -height--vh -theme--dark -image--contain" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-box -height--vh -theme--dark -image--fixed" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-box -height--vh -theme--dark -image-position--left" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-box -height--vh -theme--dark -image-position--center" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-box -height--vh -theme--dark -image-position--right" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+
+  </cdx-test>

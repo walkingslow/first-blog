@@ -1,0 +1,43 @@
+/* TEXT style, alignment, justification, letter spacing, underlining */
+:root {
+  /* STYLES */
+  --text-Bold {
+    font-weight: bold;
+  }
+  --text-Uppercase {
+    text-transform: uppercase;
+  }
+  --text-Italic {
+    font-style: italic;
+  }
+
+  /* UNDERLINES */
+  --text-Underline {
+    text-decoration: underline;
+  }
+  --text-NoUnderline {
+    text-decoration: none;
+  }
+
+  /* ALIGNMENT */
+  --text-Left {
+    text-align:left;
+  }
+  --text-Right {
+    text-align:right;
+  }
+  --text-Center {
+    text-align:center;
+  }
+
+  /* OTHER */
+  --text-Spaced {
+    letter-spacing: 1.5px;
+  }
+  --text-SmallSpacing {
+    letter-spacing: 1px;
+  }
+  --text-OverflowEllipsis {
+    text-overflow: ellipsis;
+  }
+}

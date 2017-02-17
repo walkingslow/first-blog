@@ -1,0 +1,254 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="ge-card without a header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content">This is some text</div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with a header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__header">This is some text</div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with a header and a category">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__category">
+              <span style="border-radius:2px;height:20px;background-color: #7BEFB2;width:83px;text-transform: uppercase;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:bold;padding-top:.2rem">Category</span>
+            </div>
+            <div class="ge-card__header">This is some text</div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with a floating category and blank content">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__category -is--floating"><span style="border-radius:2px;height:20px;background-color: #7BEFB2;width:83px;text-transform: uppercase;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:bold;padding-top:.2rem">Category</span></div>
+            <div class="ge-card__content" style="background-color: skyblue;height:10rem"></div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 16/9 ratio">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content -ratio--16_9" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 3/2 ratio">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content -ratio--3_2" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 4/3 ratio">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content -ratio--4_3" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 1/1 ratio">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content -ratio--1_1" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 16/9 ratio, header and action buttons">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__header">This is some text</div>
+            <div class="ge-card__content -ratio--16_9" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+            <div class="ge-card__actions">
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+              <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with media at 16/9 ratio, header and floating action buttons on bottom">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__header">This is some text</div>
+            <div class="ge-card__content -ratio--16_9" >
+              <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+            </div>
+            <div class="ge-card__actions -is--floating -align--bottom ">
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+              <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+
+  <cdx-test name="ge-card with media at 16/9 ratio, header and floating action buttons on top">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__content -ratio--16_9" >
+              <div class="ge-card__media" style="background-color: skyblue;"></div>
+            </div>
+            <div class="ge-card__actions -is--floating -align--top ">
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+              <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+
+  <cdx-test name="ge-card with menu right in header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+          <div class="ge-card__header -has--menu-right">
+            <div class="ge-card__menu" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div>Here is some text</div>
+          </div>
+          <div class="ge-card__content -ratio--16_9" >
+            <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+          </div>
+          <div class="ge-card__actions -is--floating -align--bottom ">
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+            <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+          </div>
+        </div>
+    </div>
+  </cdx-test>
+
+    <cdx-test name="ge-card with menu left in header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+          <div class="ge-card__header -has--menu-left">
+            <div class="ge-card__menu" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div>Here is some text</div>
+          </div>
+          <div class="ge-card__content -ratio--16_9" >
+            <div class="ge-card__media" style="background-color: skyblue;">This is media</div>
+          </div>
+          <div class="ge-card__actions -is--floating -align--bottom ">
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+            <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+          </div>
+        </div>
+    </div>
+  </cdx-test>
+
+    <cdx-test name="ge-card with a floating menu">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__menu -is--floating" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div class="ge-card__content" style="background-color: skyblue;height:10rem"></div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with a floating menu on the right">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__menu -is--floating -align--right" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div class="ge-card__content" style="background-color: skyblue;height:10rem"></div>
+        </div>
+    </div>
+  </cdx-test>
+
+
+  <cdx-test name="ge-card with everything except a header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__menu -is--floating -align--right" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div class="ge-card__content" style="background-color: skyblue;height:10rem"></div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with everything except a header">
+    <div>
+        <div style="width:20rem;" class="ge-card">
+            <div class="ge-card__category -is--floating"><span style="border-radius:2px;height:20px;background-color: #7BEFB2;width:83px;text-transform: uppercase;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:bold;padding-top:.2rem">Category</span></div>
+            <div class="ge-card__menu -is--floating -align--right" style="width:2rem;text-align:center">
+              <i style="font-size:1rem;" class="fa fa-bars"></i>
+            </div>
+            <div class="ge-card__content -ratio--16_9" >
+              <div class="ge-card__media" style="background-color: skyblue;"></div>
+            </div>
+            <div class="ge-card__content" style="border-bottom:1px gray solid">This is content</div>
+            <div class="ge-card__actions">
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+              <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+              <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+            </div>
+        </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-card with everything">
+    <div>
+      <div style="width:20rem;" class="ge-card">
+        <div class="ge-card__menu -is--floating -align--right" style="width:2rem;text-align:center">
+          <i style="font-size:1rem;" class="fa fa-bars"></i>
+        </div>
+        <div class="ge-card__category">
+          <span style="border-radius:2px;height:20px;background-color: #7BEFB2;width:83px;text-transform: uppercase;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:bold;padding-top:.2rem">Category</span>
+        </div>
+        <div class="ge-card__header">This is some header text</div>
+        <div class="ge-card__content -ratio--4_3" >
+          <div class="ge-card__media" style="background-color: skyblue;">This is media at 4/3 ratio</div>
+        </div>
+        <div class="ge-card__content" style="border-bottom:1px gray solid">This is content</div>
+        <div class="ge-card__actions">
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 1</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 2</button>
+            <button class="ge-button" style="width:4rem; height:2rem;">Click 3</button>
+            <i style="font-size:2rem;" class="fa fa-info-circle"></i>
+        </div>
+      </div>
+    </div>
+  </cdx-test>
+

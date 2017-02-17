@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="ge">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="icon" href="../../static/css/dist/brand/favicon/ge-monogram-white.ico">
+  <link rel="stylesheet" media="all" href="../../static/css/dist/core-design.css">
+  <script src="https://use.fontawesome.com/36f14c1b4b.js"></script>
+  <script src="../../static/js/core-design.js"></script>
+  <script>
+    function openProfileMenu() {
+      core_design.addClass('#profile-menu', '-is--open');
+    }
+    function closeProfileMenu(e) {
+      core_design.removeClass('#profile-menu', '-is--open');
+      e.stopPropagation();
+    }
+  </script>
+  <style>
+    .secondary-nav {
+      border-bottom: solid 2px #fff;
+      box-shadow: 0px 2px 2px 0px #d7d8db;
+      height: 2rem;
+    }
+    .secondary-nav .ge-action-bar .ge-button {
+      margin: 0rem;
+    }
+    .view-menu {
+      font-size: 0.702rem;
+      line-height: 2.5rem;
+      vertical-align: text-bottom;
+      margin-left:-0.5rem;
+    }
+    .title-hr {
+      text-align: center;
+      font-size: 0.889rem;
+      font-weight: bold;
+      height: 2rem;
+      padding:0.5rem 0 0.5rem 0;
+    }
+    .title-hr span {
+      display: inline-block;
+      background-color: #f4f5f8;
+      padding: 0 1rem 0 1rem;
+    }
+    .title-hr hr {
+      margin-top: -0.82rem;
+      border-top: 1px solid #d7d8db;
+    }
+    .data-card {
+      border-radius: 0.125rem;
+      overflow: hidden;
+      box-shadow: 0px 0px 2px 1px #d7d8db;
+      background-color: #ffffff;
+    }
+    .data-card .ge-action-bar {
+      border-left: solid 0.25rem #2591c0;
+      background-color: #fbfcfd;
+    }
+
+    .ge-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ge-action-bar .ge-button {
+      margin: 0.25rem;
+    }
+    .ge-grid.-padding--xs > .ge-box {
+      padding: 0.25rem;
+    }
+    
+    .ge-dropdown {
+      position: relative;
+    }
+    .ge-dropdown.-fill--transparent {
+      background-color: transparent;
+      border:none;
+    }
+    .ge-lockup__monogram.-color--gray {
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="-color--gray-lighter-4">
+  <div class="ge-page -pattern--engaging -is--minimized">
+    <header>
+      <div class="ge-navigation -pattern--engaging -is--minimized -color--white">
+        <div class="ge-navigation__control">
+          <div onclick="core_design.showMenu()">
+            <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-bars"></i></button>
+            <span class="view-menu">VIEW</span>
+          </div>
+        </div>
+        <div class="ge-navigation__main">
+          <div class="ge-navigation__brand">
+            <div class="ge-lockup">
+              <span class="ge-lockup__monogram -color--gray"></span>
+            </div>
+          </div>
+        </div>
+        <div class="ge-navigation__secondary">
+          <div class="ge-navigation__persistant -font--minus-3 -padding--s -padding--leftright">
+            <div class="ge-dropdown -fill--transparent -spacing--dense" onclick="openProfileMenu()"><span>Ellen Ripley</span><i class="fa fa-chevron-down"></i>
+              <div class="ge-menu -spacing--dense" id="profile-menu" onclick="closeProfileMenu(event)">
+                <div class="ge-menu__item"><i class="fa fa-home"></i>Item 1</div>
+                <div class="ge-menu__item"><i class="fa fa-area-chart"></i>Item 2</div>
+                <hr class="ge-menu__divider">
+                <div class="ge-menu__item"><i class="fa fa-cog"></i>Settings</div>
+              </div>
+            </div>
+          </div>
+          <div class="ge-navigation__footer">© 2016 GENERAL ELECTRIC</div>
+        </div>
+      </div>
+    </header>
+    <div class="secondary-nav">
+      
+      <div class="ge-action-bar -font--minus-3">
+        <div style="padding-left:2.7rem"><a href="#">HEALTHCARE INSIGHTS</a> <i class="fa fa-chevron-right -padding--xs -padding--leftright"></i> RRA DASHBOARD - DEPARTMENT VIEW 1 </div>
+        <div class="-padding--s -padding--leftright">
+          <button class="ge-button -fill--transparent -is--icon -size--small"><i class="fa fa-filter"></i></button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="-padding--xs">
+        <header class="title-hr"><span>TOP INSIGHTS</span><hr /></header>
+        <div class="ge-grid -align--stretch -stack--grid -padding--xs">
+
+          <div class="ge-box -width--1of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">Acquisition Count</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--1of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">Reject Rate %</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--2of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">Reject Rate Trends</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--4of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">Highest Clinical Reject Rate Contribution %</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="-padding--xs">
+        <header class="title-hr"><span>CLINICAL REJECT RATES</span><hr /></header>
+        <div class="ge-grid -align--stretch -stack--grid -padding--xs">
+
+          <div class="ge-box -width--4of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">Rejects Over Time</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-repeat"></i></button>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--2of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">By Classication</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--2of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">By Acquisition Type</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+
+          <div class="ge-box -width--4of4">
+            <div class="data-card">
+              <div class="ge-action-bar">
+                <div class="-padding--xs">By Anatomy</div>
+                <div>
+                  <button class="ge-button -fill--transparent -is--icon"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+              </div>
+              <div class="-text--center">
+                <img src="../../static/css/site/images/loading.png">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+    </main>
+    
+    <footer class="ge-footer -theme--dark">
+      <div class="ge-footer__copyright">© 2016 GENERAL ELECTRIC</div>
+      <div class="ge-footer__brand">
+        <div class="ge-lockup">
+          <span class="ge-lockup__monogram"></span>
+        </div>
+      </div>
+      <div class="ge-footer__legal">
+        <a href="http://www.ge.com/privacy" target="_blank">PRIVACY</a>
+        <a href="http://www.ge.com/terms" target="_blank">TERMS OF USE</a>
+        <a href="http://www.ge.com/cookies" target="_blank">USE OF COOKIES</a>
+        <a href="http://www.ge.com/accessibility" target="_blank">ACCESSIBILITY</a>
+      </div>
+    </footer>
+  </div>
+
+
+  <div class="ge-overlay" id="menu">
+    <div class="ge-overlay__content -gutter--none -align--left">
+
+        <div class="ge-box -height--full -theme--light -menu--first">
+          <div class="ge-navigation -pattern--purposeful -is--menu">
+            <div class="ge-navigation__control">
+              <button onClick="core_design.hideMenu()" class="ge-button -fill--transparent -is--icon"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="ge-navigation__main">
+              <div class="ge-navigation__brand">
+                <a href="index.html" class="-link--no-underline">
+                  <div class="ge-lockup">
+                    <span class="ge-lockup__monogram"></span>
+                    <span class="ge-lockup__brand">Healthcare Insights</span>
+                  </div>
+                </a>
+              </div>
+              <nav role="navigation" class="ge-navigation__primary">
+                <div class="ge-tabs">
+                  <a class="ge-tab__item" href="#">
+                    <span class="ge-tab__label">RRA DASHBOARD</span>
+                  </a>
+                  <div class="ge-tab__item" onClick="core_design.showSecondMenu()">
+                    <span class="ge-tab__label">CLINICAL</span>
+                    <i class="fa fa-angle-right"></i>
+                  </div>
+                  <a class="ge-tab__item" href="#">
+                    <span class="ge-tab__label">SUPPORT</span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+            <div class="ge-navigation__secondary">
+              <div class="ge-navigation__footer">© 2016 GENERAL ELECTRIC</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ge-box -height--full -theme--light -menu--second">
+          <div class="ge-navigation -pattern--purposeful -is--menu">
+            <div class="ge-navigation__control">
+              <button onClick="core_design.hideSecondMenu()" class="ge-button -fill--transparent -size--small"><i class="fa fa-angle-left pull-left"></i>back</button>
+            </div>
+            <div class="ge-navigation__main">
+              <nav class="ge-navigation__primary">
+
+                <div class="ge-tabs -align--vertical -spacing--dense">
+                  <div class="-padding--s -font--minus-1 -text--small-spacing -text--bold">Administrative</div>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 1</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 2</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 3</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 4</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 5</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 6</span></a>
+                  <div class="-padding--s -font--minus-1 -text--small-spacing -text--bold">Physicians</div>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 1</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 2</span></a>
+                  <a href="#" class="ge-tab__item"><span class="ge-tab__label">CHART 3</span></a>
+                </div>
+
+              </nav>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

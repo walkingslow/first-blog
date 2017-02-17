@@ -1,0 +1,85 @@
+/* LOCAL VARIABLES */
+:root {
+}
+
+@custom-selector :--ge-pill-input input[type="checkbox"].ge-pill;
+
+/* BASE COMPONENT */
+.ge-pill-style {
+    border: 0.125rem solid var(--color-grayLighter4);
+    border-radius: var(--size-2_5rem);
+    color: var(--color-gray);
+    height: var(--size-2rem);
+    margin: var(--size-0_5rem);
+    padding-left: var(--size-1rem);
+    padding-right: var(--size-1rem);
+
+    display: inline-flex;
+    align-items: center;
+
+    font-family: "GE Inspira Sans";
+    font-weight: bold;
+
+    @apply --background-ThemeLight;
+    @apply --font-BodyMinus4;
+    @apply --text-SmallSpacing;
+}
+
+:--ge-pill-input {
+    display: none;
+}
+
+
+.ge-pill-style:focus {
+    outline: 0;
+}
+
+.ge-pill-style:hover,
+.ge-pill-style.fa:hover {
+    background-color: var(--color-grayLighter3);
+    border-color: var(--color-grayLighter3);
+    cursor: pointer;
+}
+
+/* .fa styling */
+.ge-pill-style.fa {
+    color: var(--color-gray);
+    display: inline-flex;
+    align-items: center;
+
+    font-family: "GE Inspira Sans";
+    font-weight: bold;
+    @apply --background-ThemeLight;
+    @apply --font-BodyMinus4;
+    @apply --text-SmallSpacing;
+}
+
+.ge-pill-style.fa:before {
+    display: none;
+    padding-right: var(--size-1rem);
+    font-family: "FontAwesome";
+    @apply --font-BodyMinus2;
+}
+
+
+/* PROPERTIES */
+
+/* STATES */
+:--ge-pill-input:checked + .ge-pill-style {
+    background-color: var(--color-grayDarker1);
+    border-color: var(--color-grayDarker1);
+    color: var(--color-white);
+}
+
+:--ge-pill-input:checked + .ge-pill-style.fa:before {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* VARIENTS */
+/* align icon right */
+.ge-pill-style.-icon-align--right.fa:before {
+    order: 2;
+    padding-right: 0;
+    padding-left: var(--size-1rem);
+}

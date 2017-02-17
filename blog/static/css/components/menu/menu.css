@@ -1,0 +1,183 @@
+/*** LOCAL VARIABLES ***/
+:root {
+  --paddingSidesStandard {
+    padding-right: var(--spacing-1_25rem);
+    padding-left: var(--spacing-1_25rem);
+  }
+  --paddingSidesDense {
+    padding-right: var(--spacing-1rem);
+    padding-left: var(--spacing-1rem);
+  }
+  --heightStandard {
+    height: var(--size-3rem);
+    line-height: var(--size-3rem);
+  }
+  --heightDense {
+    height: var(--size-2rem);
+    line-height: var(--size-2rem);
+  }
+
+  --themeLightDisabled {
+    @apply --background-ThemeLight;
+    opacity: 0.33;
+    cursor: default;
+  }
+
+  --themeDarkDisabled {
+    @apply --background-GrayDarker1;
+    opacity: 0.33;
+    cursor: default;
+  }
+}
+@custom-selector :--ge-menu-item a, .ge-menu__item;
+@custom-selector :--ge-menu-divider hr, .ge-menu__divider;
+
+/*** BASE COMPONENT ***/
+.ge-menu {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  padding-top: var(--spacing-0_5rem);
+  padding-bottom: var(--spacing-0_5rem);
+  border-radius: 0.125rem;
+  box-shadow: 0px 1px 2px 0px var(--color-grayDarker1);
+  min-width: var(--size-7rem);
+  max-width: var(--size-20rem);
+  max-height: 90vh;
+  overflow: auto;
+  @apply --background-ThemeLight;
+  left:0;
+  top:0;
+  z-index:10;
+}
+
+/* CHILD STYLING */
+.ge-menu > ul {
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+.ge-menu :--ge-menu-item {
+  @apply --paddingSidesStandard;
+  @apply --heightStandard;
+  vertical-align: middle;
+  text-align: left;
+  display: block;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ge-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*** PSUEDO CLASSES ***/
+.ge-menu :--ge-menu-item:hover {
+  @apply --background-GrayLighter3
+}
+
+/*** PROPERTIES ***/
+
+/* spacing */
+.ge-menu.-spacing--standard :--ge-menu-item {
+  @apply --paddingSidesStandard;
+  @apply --heightStandard;
+}
+.ge-menu.-spacing--dense :--ge-menu-item {
+  @apply --paddingSidesDense;
+  @apply --heightDense;
+}
+
+/* alignment */
+.ge-menu.-align--right{
+  right:0;
+  left:auto;
+}
+
+.ge-menu.-align--left {
+  right:auto;
+  left:0;
+}
+
+/* position */
+.ge-menu.-position--above {
+  bottom: 0;
+  top:auto;
+}
+
+.ge-menu.-position--below {
+  top: initial;
+}
+
+/* disabled */
+.ge-menu :--ge-menu-item.-is--disabled{
+  opacity: 0.33;
+}
+
+/* disabled - psuedo classes */
+.ge-menu :--ge-menu-item:hover.-is--disabled {
+  @apply --themeLightDisabled;
+}
+
+/* theme */
+.-theme--dark .ge-menu,
+.ge-menu.-theme--dark {
+  @apply --background-GrayDarker1;
+}
+.-theme--dark .ge-menu :--ge-menu-item:hover,
+.ge-menu.-theme--dark :--ge-menu-item:hover {
+  @apply --background-GrayDarker2;
+}
+
+.-theme--dark .ge-menu :--ge-menu-item:hover.-is--disabled,
+.ge-menu.-theme--dark :--ge-menu-item:hover.-is--disabled {
+  @apply --themeDarkDisabled;
+}
+
+.ge-menu.-theme--light {
+  @apply --background-ThemeLight;
+}
+.ge-menu.-theme--light :--ge-menu-item:hover {
+  @apply --background-GrayLighter3
+}
+
+.ge-menu.-theme--light :--ge-menu-item:hover.-is--disabled{
+  @apply --themeLightDisabled;
+}
+
+
+/* divider */
+:--ge-menu-divider {
+  border-style: none;
+  border-bottom: solid 0.0625rem var(--color-grayLighter3);
+  margin-top: var(--spacing-0_25rem);
+  margin-bottom: var(--spacing-0_25rem);
+}
+.-theme--dark .ge-menu :--ge-menu-divider,
+.ge-menu.-theme--dark :--ge-menu-divider {
+  border-bottom-color: var(--color-gray);
+}
+.ge-menu.-theme--light :--ge-menu-divider {
+  border-bottom-color: var(--color-grayLighter3);
+}
+
+
+
+/* icons */
+.ge-menu :--ge-menu-item i{
+  padding-left: 0;
+  padding-right: var(--spacing-1rem);
+  min-width: var(--size-1_25rem);
+  text-align: center;
+  font-size: 0.9em; /* use em here so that it inherits from parent */
+  line-height: 1em;
+}
+
+/*** STATES ***/
+.ge-menu.-is--open {
+  visibility: visible;
+}
+
+/*** VARIENTS ***/

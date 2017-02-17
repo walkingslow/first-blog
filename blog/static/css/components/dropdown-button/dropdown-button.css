@@ -1,0 +1,75 @@
+:root {
+    --paddingSidesStandard {
+        padding: var(--spacing-1rem);
+    }
+    --heightStandard {
+        height: var(--size-3rem);
+        line-height: var(--size-3rem);
+    }
+
+
+    --paddingSidesDense {
+        padding: var(--spacing-0_5rem);
+    }
+    --heightDense {
+        height: var(--size-2_25rem);
+        line-height: var(--size-2_25rem);
+    }
+}
+
+@custom-selector :--ge-dropdown .ge-dropdown;
+@custom-selector :--ge-dropdown-dark .ge-dropdown.-theme--dark, .-theme--dark .ge-dropdown;
+
+/* BASE COMPONENT */
+
+:--ge-dropdown {
+    border: 1px solid var(--color-grayLighter3);
+    cursor: pointer;
+    font-size: inherit;
+    margin: 0;
+    max-width: var(--size-20rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @apply --background-ThemeLight;
+    @apply --heightStandard;
+    @apply --paddingSidesStandard;
+}
+
+:--ge-dropdown > i {
+    padding-left: var(--size-1rem);
+};
+
+
+/* PSUEDO CLASSES */
+
+
+/*** PROPERTIES ***/
+
+/* spacing */
+
+:--ge-dropdown.-spacing--standard {
+    @apply --paddingSidesStandard;
+    @apply --heightStandard;
+};
+
+:--ge-dropdown.-spacing--dense {
+    @apply --paddingSidesDense;
+    @apply --heightDense;
+}
+
+/* disabled */
+
+:--ge-dropdown.-is--disabled {
+    cursor: initial;
+    opacity: 0.33;
+}
+
+
+/* theme */
+:--ge-dropdown-dark {
+    @apply --background-GrayDarker1;
+    border: none;
+}

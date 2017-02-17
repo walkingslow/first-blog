@@ -1,0 +1,435 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="basic table with header and footer">
+    <table class="ge-datatable">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Something</td>
+        </tr>
+      </tfoot>
+    </table>
+  </cdx-test>
+
+  <cdx-test name="basic table with borders on all sides">
+    <table class="ge-datatable -borders--all">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Something</td>
+        </tr>
+      </tfoot>
+    </table>
+  </cdx-test>
+
+  <cdx-test name="basic table with borders on top and bottom">
+    <table class="ge-datatable -borders--top-bottom">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Something</td>
+        </tr>
+      </tfoot>
+    </table>
+  </cdx-test>
+
+  <cdx-test name="basic table without thead, tbody and tfoot">
+    <table class="ge-datatable">
+        <tr class="-hover--off">
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr class="-hover--off">
+          <td colspan="4">Something</td>
+        </tr>
+    </table>
+  </cdx-test>
+
+  <cdx-test name="basic table with sorting icons">
+    <table class="ge-datatable">
+      <thead>
+        <tr>
+          <th class="-is--sortable">Column 1</th>
+          <th class="-sorted--desc">Column 2</th>
+          <th class="-sorted--asc">Column 3</th>
+          <th>Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td class="-has--error">Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+          <td>Data 4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Something</td>
+        </tr>
+      </tfoot>
+    </table>
+  </cdx-test>
+
+  <cdx-test name="basic table inside of a card with sorting and anchors">
+  <div class="ge-card">
+    <div class="ge-card__header ge-datatable__header">This is the table header in a card</div>
+    <div class="ge-card__table">
+      <table class="ge-datatable ge-card__content">
+        <thead>
+          <tr>
+            <th class="-is--sortable -is--anchor">Column 1</th>
+            <th class="-sorted--desc -is--anchor">Column 2</th>
+            <th class="-sorted--asc">Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-has--error -is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ge-datatable__footer">This is the table footer in a card</div>
+  </div>
+  </cdx-test>
+
+  <cdx-test name="basic table inside of a card with header/footer borders off">
+  <div class="ge-card">
+    <div class="ge-card__header ge-datatable__header -border--off">This is the table header in a card</div>
+    <div class="ge-card__table">
+      <table class="ge-datatable ge-card__content">
+        <thead>
+          <tr>
+            <th class="-is--sortable -is--anchor">Column 1</th>
+            <th class="-sorted--desc -is--anchor">Column 2</th>
+            <th class="-sorted--asc">Column 3</th>
+            <th>Column 4</th>
+            <th>Column 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-has--error -is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-is--anchor">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+            <td>Data 5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ge-datatable__footer -border--off">This is the table footer in a card</div>
+  </div>
+  </cdx-test>
+
+  <cdx-test name="basic table inside of a card with contextual header">
+  <div class="ge-card">
+    <div class="ge-card__header ge-datatable__header -has--selected">This is the table header in a card</div>
+    <div class="ge-card__table">
+      <table class="ge-datatable ge-card__content">
+        <thead>
+          <tr>
+            <th class="-is--sortable -is--anchor">Column 1</th>
+            <th class="-sorted--desc">Column 2</th>
+            <th class="-sorted--asc">Column 3</th>
+            <th>Column 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td class="-has--error">Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+          </tr>
+          <tr>
+            <td class="-is--anchor">Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ge-datatable__footer">This is the table footer in a card</div>
+  </div>
+  </cdx-test>
+  <cdx-test name="basic table inside of a card with pagination">
+    <div class="ge-card">
+      <div class="ge-card__header ge-datatable__header -has--selected">This is the table header in a card</div>
+      <div class="ge-card__table">
+        <table class="ge-datatable ge-card__content">
+          <thead>
+            <tr>
+              <th class="-is--sortable -is--anchor">Column 1</th>
+              <th class="-sorted--desc">Column 2</th>
+              <th class="-sorted--asc">Column 3</th>
+              <th>Column 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="-is--anchor">Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td class="-is--anchor">Data 1</td>
+              <td class="-has--error">Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td class="-is--anchor">Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ge-datatable__footer">
+        <div class="ge-pagination">
+          <div class="max-rows-label">Rows per page</div>
+          <div class="max-rows-input">
+            <select>
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
+          </div>
+          <div class="row-tracker">1 - 10 of 1000</div>
+          <div style="width:2rem;" class="previous-page -is--disabled"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+          <div style="width:2rem;" class="next-page"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="table with checkboxes and selected examples">
+    <div class="ge-card" style="width:30rem;">
+      <div class="ge-card__header ge-datatable__header -has--selected -has--menu-right">
+        <div>2 Items Selected</div>
+        <div class="ge-card__menu" style="width:2rem;text-align:center">
+          <i style="font-size:1rem;" class="fa fa-bars"></i>
+        </div>
+      </div>
+      <div class="ge-card__table">
+        <table class="ge-datatable ge-card__content">
+          <thead>
+            <tr>
+              <th class="-is--anchor"><input type="checkbox" class="ge-checkbox"></input></th>
+              <th class="-is--sortable -is--anchor">Column 2</th>
+              <th>Column With Numbers</th>
+              <th>Column 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="-is--anchor"><input type="checkbox" class="ge-checkbox"></input></td>
+              <td class="-is--anchor">Data 2</td>
+              <td class="-align-text--right">1234</td>
+              <td>Data 4</td>
+            </tr>
+            <tr class="-is--selected">
+              <td class="-is--anchor"><input type="checkbox" class="ge-checkbox" checked></input></td>
+              <td class="-has--error -is--anchor">Data 2</td>
+              <td class="-align-text--right">1234</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td class="-is--anchor"><input type="checkbox" class="ge-checkbox"></input></td>
+              <td class="-is--anchor">Data 2</td>
+              <td class="-align-text--right">1234</td>
+              <td>Data 4</td>
+            </tr>
+            <tr class="-is--selected">
+              <td class="-is--anchor"><input type="checkbox" class="ge-checkbox" checked></input></td>
+              <td class="-is--anchor">Data 2</td>
+              <td class="-align-text--right">1234</td>
+              <td>Data 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ge-datatable__footer">
+        <div class="ge-pagination">
+          <div class="max-rows-label">Rows per page</div>
+          <div class="max-rows-input">
+            <input type="checkbox" class="fa fa-chevron-down ge-dropdown -spacing--dense" data-content="10" class="ge-dropdown">
+            <div class="ge-menu -position--below">
+                <ul>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#">30</a></li>
+                    <li><a href="#">40</a></li>
+                    <li><a href="#">50</a></li>
+                </ul>
+            </div>
+            </input>
+          </div>
+          <div class="row-tracker">1 - 10 of 1000</div>
+          <div style="width:2rem;" class="previous-page -is--disabled"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+          <div style="width:2rem;" class="next-page"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </div>
+  </cdx-test>
+

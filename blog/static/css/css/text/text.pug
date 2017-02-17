@@ -1,0 +1,21 @@
+extends ../../test/test-template.pug
+block content
+  <cdx-test name="text classes">
+    <div class="-text--bold">-text--bold</div>
+    <div class="-text--uppercase">-text--uppercase</div>
+    <div class="-text--italic">-text--italic</div>
+    <div>&nbsp;</div>
+    <div class="-text--underline">-text--underline</div>
+    <div class="-text--no-underline">-text--no-underline</div>
+    <div>&nbsp;</div>
+    <div class="-text--spaced">-text--spaced</div>
+    <div class="-text--small-spacing">-text--small-spacing</div>
+    <div class="-text--overflow-ellipsis">-text--overflow-ellipsis</div>
+    <div>&nbsp;</div>
+    <div class="-text--left">-text--left</div>
+    <div class="-text--center">-text--center</div>
+    <div class="-text--right">-text--right</div>
+  </cdx-test>
+  <cdx-test name="mixed text classes">
+    <div class="-text--bold -text--uppercase -text--spaced">Combination of bold, uppercase, and spaced</div>
+  </cdx-test>

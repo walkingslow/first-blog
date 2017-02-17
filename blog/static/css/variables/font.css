@@ -1,0 +1,83 @@
+/* TYPOGRAPHY (Color, Size, Font-family) */
+:root {
+
+    /*** FONT DEFAULTS ***/
+  --font-ThemeLight: {
+    color: var(--color-grayDarker1);
+  }
+  --font-ThemeDark: {
+    color: var(--color-white);
+  }
+
+  /*** Font Families ***/
+  --font-Sans: {
+    font-family: "GE Inspira Sans";
+  }
+  --font-Serif: {
+    font-family: "GE Inspira Serif";
+  }
+
+  /* ROOT */
+  --font-BaseSize12: {
+    font-size: 12px;
+  }
+  --font-BaseSize14: {
+    font-size: 14px;
+  }
+  --font-BaseSize16: {
+    font-size: 16px;
+  }
+  --font-BaseSize20: {
+    font-size: 20px;
+  }
+
+  /* TYPOGRAPHY SCALE */
+  --font-BodyPlus6: {
+    font-size: 3.247rem;
+    line-height: 3.465rem;
+  }
+  --font-BodyPlus5: {
+    font-size: 2.887rem;
+    line-height: 3.080rem;
+  }
+  --font-BodyPlus4: {
+    font-size: 2.281rem;
+    line-height: 2.434rem;
+  }
+  --font-BodyPlus3: {
+    font-size: 2.027rem;
+    line-height: 2.163rem;
+  }
+  --font-BodyPlus2: {
+    font-size: 1.602rem;
+    line-height: 2.135rem;
+  }
+  --font-BodyPlus1: {
+    font-size: 1.424rem;
+    line-height: 1.898rem;
+  }
+  --font-Body: {
+    font-size: 1.125rem;
+    line-height: 1.643rem;
+  }
+  --font-BodyMinus1: {
+    font-size: 1rem;
+    line-height: 1.46rem;
+  }
+  --font-BodyMinus2: {
+    font-size: 0.889rem;
+    line-height: 1.298rem;
+  }
+  --font-BodyMinus3: {
+    font-size: 0.79rem;
+    line-height: 1.025rem;
+  }
+  --font-BodyMinus4: {
+    font-size: 0.702rem;
+    line-height: 1.025rem;
+  }
+  --font-BodyMinus5: {
+    font-size: 0.624rem;
+    line-height: 0.911rem;
+  }
+}

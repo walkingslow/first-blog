@@ -1,0 +1,77 @@
+/* LOCAL VARIABLES */
+:root {
+    --fontFamily:  {
+        font-family: FontAwesome;
+    }
+    --unchecked {
+        content: '\f1db';
+    }
+    --checked {
+        content: '\f192';
+    }
+}
+
+
+/* BASE COMPONENT */
+.ge-radio-button-style {
+    color: var(--color-gray);
+    height: var(--size-0_75rem);
+    margin: var(--size-1rem);
+    position: relative;
+    @apply --fontFamily;
+    @apply --background-ThemeLight;
+}
+
+
+/* PSUEDO CLASSES */
+input.ge-radio-button + .ge-radio-button-style:before {
+    color: inherit;
+    font-size: var(--size-1_125rem);
+    top: calc(-var(--size-1rem) / 3);
+    left: -1px;
+    @apply --unchecked;
+}
+
+
+/* PROPERTIES */
+
+/* color */
+input.ge-radio-button.-color--blue + .ge-radio-button-style{
+    color: var(--color-blue);
+}
+
+/* theme */
+.-theme--dark .ge-radio-button-style,
+input.ge-radio-button.-theme--dark + .ge-radio-button-style {
+    @apply --font-ThemeDark;
+    background-color: transparent;
+}
+
+.-theme--dark input.ge-radio-button .-color--blue  + .ge-radio-button-style,
+.-theme--dark input.ge-radio-button.-color--blue  + .ge-radio-button-style,
+input.ge-radio-button.-theme--dark.-color--blue  + .ge-radio-button-style {
+    color: var(--color-blueLighter1);
+}
+
+
+
+/* STATES */
+
+/* disabled */
+input.ge-radio-button:disabled  + .ge-radio-button-style
+{
+    color: var(--color-grayLighter2);
+}
+
+.-theme--dark input.ge-radio-button:disabled + .ge-radio-button-style,
+input.ge-radio-button.-theme--dark:disabled + .ge-radio-button-style
+{
+    color: var(--color-gray);
+}
+
+/* checked */
+input.ge-radio-button:checked + .ge-radio-button-style:before {
+    @apply --checked;
+}
+
+/* VARIENTS */

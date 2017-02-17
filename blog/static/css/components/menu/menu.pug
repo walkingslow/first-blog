@@ -1,0 +1,376 @@
+extends ../../test/test-template.pug
+block content
+  <select onchange="location = this.value;">
+    <option value="#default">Menu Default</option>
+    <option value="#default-open">ge-menu -is--open > ul > li > a</option>
+    <option value="#dark-open">ge-menu -theme--dark -is--open > ul > li > a</option>
+    <option value="#default-a">Menu Default -is--open > a</option>
+    <option value="#default-is--disabled">Menu Default -is--open > ge-menu__item -is--disabled</option>
+  </select>
+
+  <cdx-test id="default" name="ge-menu > ul > li > a [Menu Default] (should be invisible)">
+    <div style="position:relative">PARENT
+      <div class="ge-menu">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test id="#default-open" name="ge-menu -is--open > ul > li > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test id="dark-open" name="ge-menu -theme--dark -is--open > ul > li > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -theme--dark -is--open">
+        <ul>
+          <li><a href="#">ITEM long name here folks</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test id="default-a" name="ge-menu -is--open > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+
+
+  <cdx-test id="default-is--disabled" name="ge-menu -is--open > ul > li > a -is--disabled" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#" class="-is--disabled">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test id="default-a" name="ge-menu > a -is--disabled" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <a href="#">ITEM</a>
+        <a href="#" class="-is--disabled">ITEM</a>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open > ge-menu__item -is--disabled" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <div class="ge-menu__item">Item 1</div>
+        <div class="ge-menu__item -is--disabled">Item 2</div>
+        <div class="ge-menu__item">Item 3</div>
+        <div class="ge-menu__item">Item 4</div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -theme--dark -is--open > ul > li > a -is--disabled" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -theme--dark -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#" class="-is--disabled">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+
+
+
+
+  <cdx-test name="ge-menu -is--open HR divider" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <hr/>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open div.ge-menu__divider" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+        <div class="ge-menu__divider"></div>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open hr.ge-menu__divider" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <div class="ge-menu__item">Item 1</div>
+        <div class="ge-menu__item">Item 2</div>
+        <hr class="ge-menu__divider"/>
+        <div class="ge-menu__item">Item 3</div>
+        <div class="ge-menu__item">Item 4</div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -theme--dark -is--open > ul > li -divider > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -theme--dark -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <hr class="ge-menu__divider"/>
+          <li><a href="#">ITEM</a></li>
+          <hr/>
+          <li><a href="#">ITEM</a></li>
+          <div class="ge-menu__divider"></div>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+
+
+
+
+  <cdx-test name="ge-menu -is--open > ul > li > a > i" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#"><i class="fa fa-home"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-area-chart"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-battery-three-quarters"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-bell-slash-o"></i>ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -spacing--dense > a > i " height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open -spacing--dense">
+        <a href="#"><i class="fa fa-home"></i>ITEM</a>
+        <a href="#"><i class="fa fa-area-chart"></i>ITEM</a>
+        <a href="#"><i class="fa fa-battery-three-quarters"></i>ITEM</a>
+        <a href="#"><i class="fa fa-bell-slash-o"></i>ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open > ge-menu__item > i" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open">
+        <div class="ge-menu__item"><i class="fa fa-home"></i>Item 1</div>
+        <div class="ge-menu__item"><i class="fa fa-area-chart"></i>Item 2</div>
+        <div class="ge-menu__item"><i class="fa fa-battery-three-quarters"></i>Item 3</div>
+        <div class="ge-menu__item"><i class="fa fa-bell-slash-o"></i>Item 4</div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -theme--dark -is--open > ul > li > a > i" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -theme--dark -is--open">
+        <ul>
+          <li><a href="#"><i class="fa fa-home"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-area-chart"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-battery-three-quarters"></i>ITEM</a></li>
+          <li><a href="#"><i class="fa fa-bell-slash-o"></i>ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+
+
+
+  <cdx-test name="ge-menu -is--open -spacing--dense > ul > li > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open -spacing--dense">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -spacing--dense > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open -spacing--dense">
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+        <a href="#">ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -spacing--dense > ge-menu__item" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -is--open -spacing--dense">
+        <div class="ge-menu__item">Item 1</div>
+        <div class="ge-menu__item">Item 2</div>
+        <div class="ge-menu__item">Item 3</div>
+        <div class="ge-menu__item">Item 4</div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -theme--dark -spacing--dense -is--open > ul > li > a" height="15em">
+    <div style="position:relative">PARENT
+      <div class="ge-menu -theme--dark -is--open -spacing--dense">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+
+
+  <cdx-test name="ge-menu -is--open -align--right > ul > li > a" height="15em">
+    <div style="position:relative;margin-left:150px;width:200px;background-color:purple;">PARENT
+      <div class="ge-menu -is--open -align--right">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -align--left > ul > li > a" height="15em">
+    <div style="position:relative; margin-left:150px;width:200px;background-color:purple;">PARENT
+      <div class="ge-menu -is--open -align--left">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -poistion--above > ul > li > a" height="15em">
+    <div style="position:relative; margin-top:200px;width:200px;background-color:purple;">PARENT
+      <div class="ge-menu -is--open -position--above">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open -poistion--above -align--right > ul > li > a" height="15em">
+    <div style="position:relative; margin-top:200px;width:200px;background-color:purple;">PARENT
+      <div class="ge-menu -is--open -position--above -align--right">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open long text" height="15em">
+    <div style="position:relative;">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">Super long text that is too long for the max width</a></li>
+          <li><a href="#"><i class="fa fa-area-chart"></i>Super long text that is too long for the max width</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open inherit parent font size" height="15em">
+    <div style="position:relative;font-size:2rem;">PARENT
+      <div class="ge-menu -is--open">
+        <a href="#"><i class="fa fa-fw fa-home"></i>ITEM</a>
+        <a href="#"><i class="fa fa-fw fa-area-chart"></i>ITEM</a>
+        <a href="#"><i class="fa fa-fw fa-battery-three-quarters"></i>ITEM</a>
+        <a href="#"><i class="fa fa-fw fa-bell-slash-o"></i>ITEM</a>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-menu -is--open SCROLL" height="15em">
+    <div style="position:relative;">PARENT
+      <div class="ge-menu -is--open">
+        <ul>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+          <li><a href="#">ITEM</a></li>
+        </ul>
+      </div>
+    </div>
+  </cdx-test>

@@ -1,0 +1,105 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="ge-button" theme="true">
+    <button class="ge-button">BUTTON w/ class</button>
+    <button>Button</button>
+    <a class="ge-button">Link</a>
+    <input class="ge-button" type="button" value="input button">
+    <input class="ge-button" type="submit" value="submit button">
+  </cdx-test>
+
+  <cdx-test name="ge-button size" theme="true">
+    <button class="ge-button -size--small">BUTTON</button>
+    <button class="ge-button -size--medium">BUTTON</button>
+    <button class="ge-button -size--large">BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button theme" theme="true">
+    <button class="ge-button -theme--light">BUTTON</button>
+    <button class="ge-button -theme--dark">BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button spacing" theme="true">
+    <button class="ge-button -spacing--standard">BUTTON</button>
+    <button class="ge-button -spacing--standard">BUTTON</button>
+    <br/>
+    <button class="ge-button -spacing--dense">BUTTON</button>
+    <button class="ge-button -spacing--dense">BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button color" theme="true">
+    <button class="ge-button -color--gray">BUTTON</button>
+    <button class="ge-button -color--blue">BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button fill" theme="true">
+    <button class="ge-button -fill--solid">BUTTON</button>
+    <button class="ge-button -fill--solid -color--blue">BUTTON</button>
+    <button class="ge-button -fill--outline">BUTTON</button>
+    <button class="ge-button -fill--outline -color--blue">BUTTON</button>
+    <button class="ge-button -fill--transparent">BUTTON</button>
+    <button class="ge-button -fill--transparent -color--blue">BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button disabled" theme="true">
+    <button class="ge-button -fill--solid" disabled>BUTTON</button>
+    <button class="ge-button -fill--solid -color--blue" disabled>BUTTON</button>
+    <button class="ge-button -fill--outline" disabled>BUTTON</button>
+    <button class="ge-button -fill--outline -color--blue" disabled>BUTTON</button>
+    <button class="ge-button -fill--transparent" disabled>BUTTON</button>
+    <button class="ge-button -fill--transparent -color--blue" disabled>BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button primary and secondary" theme="true">
+    <button class="ge-button--primary">BUTTON</button>
+    <button class="ge-button--secondary">BUTTON</button>
+    <button class="ge-button--primary" disabled>BUTTON</button>
+    <button class="ge-button--secondary" disabled>BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button icon" theme="true">
+    <button class="ge-button -size--small">BUTTON <i class="fa fa-home"></i></button>
+    <button class="ge-button -size--medium">BUTTON <i class="fa fa-home"></i></button>
+    <button class="ge-button -size--large">BUTTON <i class="fa fa-home"></i></button>
+    <button class="ge-button -size--large">BUTTON <i class="fa fa-cog pull-left"></i><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -size--small -fill--outline">BUTTON <i class="fa fa-home pull-left"></i></button>
+    <button class="ge-button -size--medium -fill--outline">BUTTON <i class="fa fa-home pull-left"></i></button>
+    <button class="ge-button -size--large -fill--outline">BUTTON <i class="fa fa-home pull-left"></i></button>
+    <br/>
+    <button class="ge-button -size--small -fill--transparent"><i class="fa fa-home"></i>BUTTON</button>
+    <button class="ge-button -size--medium -fill--transparent"><i class="fa fa-home"></i>BUTTON</button>
+    <button class="ge-button -size--large -fill--transparent"><i class="fa fa-cog fa-spin"></i>BUTTON</button>
+    <br/>
+    <button class="ge-button -size--small -color--blue"><i class="fa fa-home pull-right"></i>BUTTON</button>
+    <button class="ge-button -size--medium -color--blue"><i class="fa fa-home pull-right"></i>BUTTON</button>
+    <button class="ge-button -size--large -color--blue"><i class="fa fa-cog fa-spin pull-right"></i>BUTTON</button>
+  </cdx-test>
+
+  <cdx-test name="ge-button icons" theme="true">
+    <button class="ge-button -size--small -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--medium -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--large -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -size--small -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--medium -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--large -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -size--small -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--medium -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -size--large -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -color--blue -size--small -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--medium -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--large -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -color--blue -size--small -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--medium -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--large -fill--outline -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+    <button class="ge-button -color--blue -size--small -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--medium -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <button class="ge-button -color--blue -size--large -fill--transparent -is--icon"><i class="fa fa-home"></i></button>
+    <br/>
+  </cdx-test>

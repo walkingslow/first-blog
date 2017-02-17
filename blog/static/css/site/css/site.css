@@ -1,0 +1,175 @@
+.card-explode {
+	display: inline-block;
+  width: 400px;
+	height: 460px;
+	padding: 0;
+	position: relative;
+	max-width: 100%;
+	-webkit-perspective: 1600px;
+	perspective: 1600px;
+  transform: scale(0.8, 0.8) rotateX(-20deg) rotateZ(-10deg);
+}
+
+.card-explode img,
+.card-explode .card-bg {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	outline: 1px solid transparent;
+  transform: translateZ(-300px) translateX(-20%) rotateY(45deg);
+}
+
+.card-explode.active > img {
+	box-shadow: -1px 0px 50px 0px rgba(0,0,0,0.2);
+}
+.card-explode.active > img:hover {
+	outline: 1px solid rgba(0,0,0,0.75);
+}
+
+
+.card-explode.active .card-bg {
+	transform: translateZ(-300px) translateX(-20%) rotateY(45deg);
+	opacity: 0.15;
+	filter: grayscale(100%);
+}
+
+.card-explode img.card-top,
+.card-explode img.card-top-stay {
+	top: 15px;
+}
+.card-explode.active img.card-top {
+	transform: translateZ(-182px) translateX(10%) rotateY(45deg);
+}
+
+.card-explode img.card-image,
+.card-explode img.card-image-stay {
+	top: 70px;
+}
+.card-explode.active img.card-image {
+	transform: translateZ(-300px) translateX(20%) rotateY(45deg);
+}
+
+.card-explode img.card-text,
+.card-explode img.card-text-stay {
+	top: 300px;
+}
+.card-explode.active img.card-text {
+	transform: translateZ(-300px) translateX(10%) rotateY(45deg);
+}
+
+.card-explode img.card-bottom,
+.card-explode img.card-bottom-stay {
+	top: 385px;
+}
+.card-explode.active img.card-bottom {
+	transform: translateZ(-300px) translateX(20%) rotateY(45deg);
+}
+
+.card-explode > div {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-5%) rotateX(20deg) rotateZ(10deg);
+	transition: all 0.1s 0s;
+  width: 210px;
+  left: -10px;
+  text-align: left;
+}
+.card-explode.active > div {
+	opacity: 1;
+  transform: translateX(0%) rotateX(20deg) rotateZ(10deg);
+  transition: all 0.7s 0.7s;
+}
+.card-explode > div > span {
+	display: inline-block;
+}
+.card-explode > div > hr {
+	display: inline-block;
+  border-bottom: solid 3px #63666a;
+  width:50px;
+  margin-left: 4px;
+}
+.card-image-txt {
+  top: 180px;
+}
+.card-explode.active .card-image-txt {
+  transition: all 0.7s 0.9s;
+}
+.card-top-txt {
+  top: 32px;
+}
+.card-explode.active .card-top-txt {
+  transition: all 0.7s 0.7s;
+}
+.card-bottom-txt {
+  top: 380px;
+}
+.card-explode.active .card-bottom-txt {
+  transition: all 0.7s 1.3s;
+}
+.card-text-txt {
+  top: 300px;
+}
+.card-explode.active .card-text-txt {
+  transition: all 0.7s 1.1s;
+}
+.card-explode > .card-image-txt > hr {
+  width:30px;
+}
+.card-explode > .card-bottom-txt > hr {
+  width:100px;
+}
+
+.devices {
+  position:relative;
+  height:400px;
+  width:800px;
+  flex-grow:0 !important;
+  margin-bottom: 20px;
+}
+
+.device-tv {
+  position: absolute;
+  left:100px;
+  top:0;
+  z-index: 1;
+  width:625px;
+}
+.device-macbook {
+  position: absolute;
+  left:0;
+  bottom:0;
+  z-index: 3;
+  width:385px;
+}
+.device-ipad {
+  position: absolute;
+  right:0px;
+  bottom:10px;
+  z-index: 3;
+  width:185px;
+}
+.device-iphone {
+  position: absolute;
+  right:-20px;
+  bottom:0;
+  z-index: 4;
+  width:75px;
+}
+.img-circle1, .img-circle2 {
+  position: absolute;
+  left:0;
+  top:0;
+  width:480px;
+  height:336px;
+}
+.img-circle1 {
+  position: absolute;
+  left:10px;
+  top:-25px;
+  width:480px;
+  height:336px;
+}

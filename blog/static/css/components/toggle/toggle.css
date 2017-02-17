@@ -1,0 +1,159 @@
+/* LOCAL VARIABLES */
+:root {
+
+}
+
+
+/* BASE COMPONENT */
+.ge-toggle {
+    margin: var(--size-1rem);
+    position: relative;
+    display: inline-block;
+    width: var(--size-2rem);
+    height: var(--size-1_25rem);
+}
+
+.ge-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.ge-toggle__slider {
+    background-color: var(--color-grayLighter1);
+    border-radius: var(--size-1rem);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+}
+
+/* PSUEDO CLASSES */
+.ge-toggle__slider:before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    height: var(--size-1rem);
+    width: var(--size-1rem);;
+    left: 2px;
+    bottom: 2px;
+    transition: .4s;
+    @apply --background-ThemeLight;
+}
+
+
+/* PROPERTIES */
+
+/* -color--blue */
+.ge-toggle.-color--blue input[type="checkbox"]:checked + .ge-toggle__slider {
+    background-color: var(--color-blue);
+}
+
+.ge-toggle.-color--blue input[type="checkbox"]:focus + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-blue);
+}
+
+/* theme */
+.-theme--dark .ge-toggle,
+.-theme--dark.ge-toggle {
+    @apply --background-ThemeDark;
+}
+
+.-theme--dark .ge-toggle__slider {
+    background-color: var(--color-white);
+}
+
+.-theme--dark .ge-toggle__slider:before {
+    @apply --background-ThemeDark;
+}
+
+
+/* theme -color--blue */
+.-theme--dark .ge-toggle.-color--blue input[type="checkbox"]:checked + .ge-toggle__slider,
+.-theme--dark.ge-toggle.-color--blue input[type="checkbox"]:checked + .ge-toggle__slider {
+    background-color: var(--color-blueLighter1);
+}
+
+.-theme--dark .ge-toggle.-color--blue input[type="checkbox"]:focus + .ge-toggle__slider,
+.-theme--dark.ge-toggle.-color--blue input[type="checkbox"]:focus + .ge-toggle__slider {
+    background-color: var(--color-blueLighter1);
+}
+
+
+
+/* STATES - default */
+
+/* checked */
+.ge-toggle input[type="checkbox"]:checked + .ge-toggle__slider {
+    background-color: var(--color-grayDarker1);
+}
+.ge-toggle input[type="checkbox"]:focus + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-grayDarker1);
+}
+.ge-toggle input[type="checkbox"]:checked + .ge-toggle__slider:before {
+    left: 0.1rem;
+    transform: translateX(var(--size-0_75rem));
+}
+
+
+/* disabled */
+.ge-toggle input[type="checkbox"]:disabled + .ge-toggle__slider {
+    background-color: var(--color-grayLighter1);
+    opacity: 0.33;
+}
+.ge-toggle input[type="checkbox"]:focus:disabled + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-grayLighter1);
+    opacity: 0.33;
+}
+
+
+/* disabled & checked */
+.ge-toggle input[type="checkbox"]:disabled:checked + .ge-toggle__slider {
+    background-color: var(--color-gray);
+    opacity: 0.33;
+}
+.ge-toggle input[type="checkbox"]:focus:disabled:checked + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-gray);
+    opacity: 0.33;
+}
+
+
+
+/* STATES -theme--dark */
+
+/* checked */
+.-theme--dark .ge-toggle input[type="checkbox"]:checked + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:checked + .ge-toggle__slider{
+    background-color: var(--color-grayLighter1);
+}
+.-theme--dark .ge-toggle input[type="checkbox"]:focus + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:focus + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-grayLighter1);
+}
+
+/* disabled */
+.-theme--dark .ge-toggle input[type="checkbox"]:disabled + .ge-toggle__slider:before {
+    background-color: var(--color-grayDarker1);
+}
+.-theme--dark .ge-toggle input[type="checkbox"]:disabled + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:disabled + .ge-toggle__slider {
+    background-color: var(--color-gray);
+}
+.-theme--dark .ge-toggle input[type="checkbox"]:focus:disabled + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:focus:disabled + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-gray);
+}
+
+/* disabled & checked */
+.-theme--dark .ge-toggle input[type="checkbox"]:disabled:checked + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:disabled:checked + .ge-toggle__slider {
+    background-color: var(--color-gray);
+}
+.-theme--dark .ge-toggle input[type="checkbox"]:focus:disabled:checked + .ge-toggle__slider,
+.-theme--dark.ge-toggle input[type="checkbox"]:focus:disabled:checked + .ge-toggle__slider {
+    box-shadow: 0 0 1px var(--color-gray);
+}
+
+
+/* VARIENTS */

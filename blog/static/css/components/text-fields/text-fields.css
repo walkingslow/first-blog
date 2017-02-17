@@ -1,0 +1,195 @@
+/* LOCAL VARIABLES */
+:root {
+
+  --inputFontSizeStandard:  1.125rem;
+
+  --inputFontSizeDense: 0.889rem;
+
+  --inputFocusColor: var(--color-blue);
+
+  --inputErrorColor: #D70000;
+
+  --borderRadius: 0.125rem;
+
+  --wideBorderMargin: 0rem;
+
+  --textInputStandard {
+    font-size: var(--inputFontSizeStandard);
+    min-height: var(--size-3rem);
+    padding-right: var(--spacing-1rem);
+    padding-left: var(--spacing-1rem);
+    width: calc(100% - (2 * var(--spacing-1rem)));
+    border-radius: var(--borderRadius);
+    margin: 0.0625rem;
+    @apply --font-Sans;
+  }
+
+  --textInputDense {
+    padding-right: var(--spacing-0_5rem);
+    padding-left: var(--spacing-0_5rem);
+    min-height: 2.25rem;
+    font-size: var(--inputFontSizeDense);
+    width: calc(100% - (2 * var(--spacing-0_5rem)));
+    border-radius: var(--borderRadius);
+    @apply --font-Sans;
+  }
+
+  --borderNormal {
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: var(--color-grayLighter1);
+  }
+
+  --borderFocus {
+    border-width: 0.125rem;
+    border-color: var(--inputFocusColor);
+    outline-style: none;
+    margin: var(--wideBorderMargin);
+  }
+
+  --borderError {
+    border-width: 0.125rem;
+    border-color: var(--inputErrorColor);
+    margin: var(--wideBorderMargin);
+    outline-style: none;
+  }
+
+  --placeholderStandard {
+    font-size: var(--inputFontSizeStandard);
+  }
+
+  --placeholderDense {
+    font-size: var(--inputFontSizeDense);
+  }
+
+  --isDisabled {
+    background-color: var(--color-grayLighter3);
+    opacity: .50;
+  }
+
+}
+
+/* BASE COMPONENT */
+
+.ge-text-input,
+input[type="text"],
+.ge-text-area,
+textarea {
+  @apply --textInputStandard;
+  @apply --borderNormal;
+}
+
+.ge-text-area,
+textarea {
+  resize: none;
+  padding: var(--spacing-1rem);
+}
+
+/* PSUEDO CLASSES */
+
+/* Focus for normal state and errors */
+
+.ge-text-input:focus,
+input[type="text"]:focus,
+.ge-text-area:focus,
+textarea:focus {
+  @apply --borderFocus;
+}
+
+.ge-text-input.-has--error:focus,
+input[type="text"].has--error:focus,
+.ge-text-area.has--error:focus,
+textarea.has--error:focus {
+  @apply --borderError;
+}
+
+.ge-form__item.-has--error .ge-text-input:focus,
+.ge-form__item.-has--error input[type="text"]:focus,
+.ge-form__item.-has--error .ge-text-area:focus,
+.ge-form__item.-has--error textarea:focus,{
+  @apply --borderError;
+}
+
+/* Placeholders */
+
+.ge-text-input::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+.ge-text-area::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  @apply --placeholderStandard;
+}
+
+.ge-text-input::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+.ge-text-area::-moz-placeholder,
+textarea::-moz-placeholder {
+  @apply --placeholderStandard;
+}
+
+.ge-text-input:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+.ge-text-area:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  @apply --placeholderStandard;
+}
+
+.ge-text-input.-spacing--dense::-webkit-input-placeholder,
+input[type="text"].-spacing--dense::-webkit-input-placeholder,
+.ge-text-area.-spacing--dense::-webkit-input-placeholder,
+textarea.-spacing--dense::-webkit-input-placeholder {
+  @apply --placeholderDense;
+}
+
+.ge-text-input.-spacing--dense::-moz-placeholder,
+input[type="text"].-spacing--dense::-moz-placeholder,
+.ge-text-area.-spacing--dense::-moz-placeholder,
+textarea.-spacing--dense::-moz-placeholder  {
+  @apply --placeholderDense;
+}
+
+.ge-text-input.-spacing--dense:-ms-input-placeholder,
+input[type="text"].-spacing--dense:-ms-input-placeholder,
+.ge-text-area.-spacing--dense:-ms-input-placeholder,
+textarea.-spacing--dense:-ms-input-placeholder  {
+  @apply --placeholderDense;
+}
+
+/* PROPERTIES */
+
+/* spacing */
+
+.ge-text-input.-spacing--dense,
+input[type="text"].-spacing--dense,
+.ge-text-area.-spacing--dense,
+textarea.-spacing--dense {
+  @apply --textInputDense;
+}
+
+.ge-text-input.-spacing--standard,
+input[type="text"].-spacing--standard,
+.ge-text-area.-spacing--standard,
+textarea.-spacing--standard {
+  @apply --textInputStandard;
+}
+
+/* STATES */
+
+/* Disabled */
+
+.ge-text-input:disabled,
+input[type="text"]:disabled,
+.ge-text-area:disabled,
+textarea:disabled {
+  @apply --isDisabled;
+}
+
+/* Has an error */
+
+.ge-text-input.-has--error,
+input[type="text"].-has--error,
+.ge-text-area.-has--error,
+textarea.-has--error {
+  @apply --borderError;
+}
+
+

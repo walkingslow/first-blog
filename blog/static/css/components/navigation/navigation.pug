@@ -1,0 +1,54 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="ge-navigation" theme="true">
+    <div class="ge-navigation">
+      include navigation-template.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation optimistic" theme="true">
+    <div class="ge-navigation -pattern--optimistic">
+      include navigation-template2.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation optimistic minimized" theme="true">
+    <div class="ge-navigation -pattern--optimistic -is--minimized">
+      include navigation-template2.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation engaging" theme="true">
+    <div class="ge-navigation -pattern--engaging">
+      include navigation-template.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation engaging minimized" theme="true">
+    <div class="ge-navigation -pattern--engaging -is--minimized">
+      include navigation-template.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation engaging minimized hide brand" theme="true">
+    <div class="ge-navigation -pattern--engaging -is--minimized -hide--brand">
+      include navigation-template.html
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation purposeful" theme="true" height="60rem">
+    <div style="width:20rem; height:100%">
+      <div class="ge-navigation -pattern--purposeful">
+        include navigation-template2.html
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-navigation purposeful minimized" theme="true" height="60rem">
+    <div style="width:3.5rem; height:100%">
+      <div class="ge-navigation -pattern--purposeful -is--minimized">
+        include navigation-template2.html
+      </div>
+    </div>
+  </cdx-test>

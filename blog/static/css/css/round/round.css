@@ -1,0 +1,18 @@
+.-round--xs {
+  border-radius: var(--size-0_125rem);
+}
+.-round--s {
+  border-radius: var(--size-0_5rem);
+}
+.-round--m {
+  border-radius: var(--size-1rem);
+}
+.-round--l {
+  border-radius: var(--size-1_75rem);
+}
+.-round--xl {
+  border-radius: var(--size-2_5rem);
+}
+.-round--none {
+  border-radius: 0;
+}

@@ -1,0 +1,73 @@
+extends ../../test/test-template.pug
+block content
+  <div class="_test">
+    <section>SECTION</section>
+    <div class="ge-container__very-wide">ge-container__very-wide</div>
+    <div class="ge-container__wide">ge-container__wide</div>
+    <div class="ge-container">ge-container</div>
+    <article>ARTICLE</article>
+    <aside>ASIDE</aside>
+  </div>
+  <div class="_test">
+    <section class="ge-container -width--full -align--left">Full</section>
+    <div class="ge-container -width--very-wide -align--left">very-wide</div>
+    <div class="ge-container -width--wide -align--left">wide</div>
+    <div class="ge-container -width--normal -align--left">ge-container</div>
+    <article class="ge-container -width--narrow -align--left">narrow</article>
+    <aside class="ge-container -width--very-narrow -align--left">very-narrow</aside>
+  </div>
+
+  <cdx-test name="theme">
+      <div class="ge-container -theme--dark">DARK THEME</div>
+  </cdx-test>
+
+  <cdx-test name="height">
+      <div class="_test">
+        <div class="ge-container -height--vh">VIEW HEIGHT</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="padding s">
+      <div class="_test">
+        <div class="ge-container -padding--s"><section class="-color--gray-lighter-2">padding s</section></div>
+      </div>
+  </cdx-test>
+  <cdx-test name="padding m">
+      <div class="_test">
+        <div class="ge-container -padding--m"><section class="-color--gray-lighter-2">padding m</section></div>
+      </div>
+  </cdx-test>
+  <cdx-test name="padding topbottom">
+      <div class="_test">
+        <div class="ge-container -padding--m -padding--topbottom"><section class="-color--gray-lighter-2">padding topbottom</section></div>
+      </div>
+  </cdx-test>
+  <cdx-test name="Colors">
+    <div class="ge-container -color--blue-darker-2">COLOR TEST</div>
+    <div class="ge-container -color--blue-darker-1">COLOR TEST</div>
+    <div class="ge-container -color--blue">COLOR TEST</div>
+    <div class="ge-container -color--blue-lighter-1">COLOR TEST</div>
+    <div class="ge-container -color--blue-lighter-2">COLOR TEST</div>
+    <div class="ge-container -color--gray-darker-2">COLOR TEST</div>
+    <div class="ge-container -color--gray-darker-1">COLOR TEST</div>
+    <div class="ge-container -color--gray">COLOR TEST</div>
+    <div class="ge-container -color--gray-lighter-1">COLOR TEST</div>
+    <div class="ge-container -color--gray-lighter-2">COLOR TEST</div>
+    <div class="ge-container -color--gray-lighter-3">COLOR TEST</div>
+    <div class="ge-container -color--gray-lighter-4">COLOR TEST</div>
+    <div class="ge-container -color--white">COLOR TEST</div>
+    <div class="ge-container -color--green">COLOR TEST</div>
+    <div class="ge-container -color--green-lighter-1">COLOR TEST</div>
+
+    <section class="-color--blue-darker-2">COLOR TEST</section>
+    <section class="-theme--dark"><h1>COLOR TEST</h1></section>
+  </cdx-test>
+  <cdx-test name="images">
+    <div class="ge-container -height--vh -theme--dark" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <div class="ge-container -height--vh -theme--dark -image--contain" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+    <section class="-height--vh -theme--dark -image--fixed" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</section>
+    <section class="-height--vh -theme--dark -image-position--left" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</section>
+    <section class="-height--vh -theme--dark -image-position--center" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</section>
+    <section class="-height--vh -theme--dark -image-position--right" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</section>
+
+  </cdx-test>

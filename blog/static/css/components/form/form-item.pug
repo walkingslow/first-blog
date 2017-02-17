@@ -1,0 +1,374 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="Text Input Group">
+    <div class="ge-form__item">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group with dense spacing">
+    <div class="ge-form__item -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group showing label focus state">
+    <div class="ge-form__item -has--focus">
+      <label class="ge-label">This is a label for focus state</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group showing disabled input">
+    <div class="ge-form__item">
+      <label class="ge-label">This is a disabled text input</label>
+      <div class="ge-form__controls">
+        <input type="text" disabled class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group showing error state">
+    <div class="ge-form__item -has--error">
+      <label class="ge-label">This is a label for focus state</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--error">This is some error helper text</div>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group with label horizontal">
+    <div class="ge-form__item -label-align--horizontal">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group with label vertical">
+    <div class="ge-form__item -label-align--vertical">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text Input Group with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text Input Group with label vertical">
+    <div class="ge-form__item -label-align--vertical -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text Input Group with very long label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense">
+      <label class="ge-label">This is a very long label that will wrap if it doesn't fit</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text Input Group with label horizontal and an error">
+    <div class="ge-form__item -label-align--horizontal -has--error">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text Input Group with label horizontal and an error">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -has--error">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text Input Group with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+    <cdx-test name="Required Text Input Group with label vertical">
+    <div class="ge-form__item -label-align--vertical -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text Input Group with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text Input Group with label vertical">
+    <div class="ge-form__item -label-align--vertical -spacing--dense -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text Input Group with label horizontal and focus set for group">
+    <div class="ge-form__item -label-align--horizontal -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text Input Group with label vertical and focus set for group">
+    <div class="ge-form__item -label-align--vertical -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text Input Group with label horizontal and focus set for group">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text Input Group with label vertical and focus set for group">
+    <div class="ge-form__item -label-align--vertical -spacing--dense -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <input type="text" class="ge-text-input" placeholder="Please enter something">
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+
+
+  <cdx-test name="Text area">
+    <div class="ge-form__item">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area with dense spacing">
+    <div class="ge-form__item -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area showing label focus state">
+    <div class="ge-form__item -has--focus">
+      <label class="ge-label">This is a label for focus state</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Disabled text area">
+    <div class="ge-form__item">
+      <label class="ge-label">This is a disabled text area</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" disabled class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area showing error state">
+    <div class="ge-form__item -has--error">
+      <label class="ge-label">This is a label for focus state</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--error">This is some error helper text</div>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area with label horizontal">
+    <div class="ge-form__item -label-align--horizontal">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area  with label vertical">
+    <div class="ge-form__item -label-align--vertical">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text area with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text area with label vertical">
+    <div class="ge-form__item -label-align--vertical -spacing--dense">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text area with very long label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense">
+      <label class="ge-label">This is a very long label that will wrap if it doesn't fit</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Text area with label horizontal and an error">
+    <div class="ge-form__item -label-align--horizontal -has--error">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Dense Text area with label horizontal and an error">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -has--error">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+        <div class="ge-label--error">This is some error helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text area with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+    <cdx-test name="Required Text area with label vertical">
+    <div class="ge-form__item -label-align--vertical -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text area with label horizontal">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text area with label vertical">
+    <div class="ge-form__item -label-align--vertical -spacing--dense -is--required">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text area with label horizontal and focus set for group">
+    <div class="ge-form__item -label-align--horizontal -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Text area with label vertical and focus set for group">
+    <div class="ge-form__item -label-align--vertical -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text area with label horizontal and focus set for group">
+    <div class="ge-form__item -label-align--horizontal -spacing--dense -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+  <cdx-test name="Required Dense Text area with label vertical and focus set for group">
+    <div class="ge-form__item -label-align--vertical -spacing--dense -is--required -has--focus">
+      <label class="ge-label">This is a label</label>
+      <div class="ge-form__controls">
+        <textarea rows="5" class="ge-text-area" placeholder="Please enter something"></textarea>
+        <div class="ge-label--helper">This is some helper text</div>
+      </div>
+    </div>
+  </cdx-test>
+

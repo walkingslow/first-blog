@@ -1,0 +1,101 @@
+
+/*** FONT FAMILIES ***/
+.-font--sans {
+  @apply --font-Sans;
+}
+.-font--serif {
+  @apply --font-Serif;
+}
+
+/*** FONT COLORS ***/
+.-font-color--white { color: var(--color-white); }
+
+.-font-color--blue { color: var(--color-blue); }
+.-font-color--blue-darker-2 { color: var(--color-blueDarker2); }
+
+.-font-color--gray { color: var(--color-gray); }
+.-font-color--gray-darker-1 { color: var(--color-grayDarker1); }
+.-font-color--gray-lighter-1 { color: var(--color-grayLighter1); }
+
+.-font-color--theme-light { @apply --font-ThemeLight; }
+.-font-color--theme-dark { @apply --font-ThemeDark; }
+
+
+/*** HEADINGS ***/
+.-font--plus-6,
+.-font--h1,
+.ge h1 {
+  @apply --font-BodyPlus6;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--plus-5,
+.-font--h2,
+.ge h2 {
+  @apply --font-BodyPlus5;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--plus-4,
+.-font--h3,
+.ge h3 {
+  @apply --font-BodyPlus4;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--plus-3,
+.-font--h4,
+.ge h4 {
+  @apply --font-BodyPlus3;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--plus-2,
+.-font--h5,
+.ge h5 {
+  @apply --font-BodyPlus2;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--plus-1,
+.-font--h6,
+.ge h6 {
+  @apply --font-BodyPlus1;
+  margin:0;
+  font-weight: normal;
+}
+
+.-font--body,
+.-font--p,
+.ge p {
+  @apply --font-Body;
+  margin:0;
+}
+
+.-font--blockquote,
+.ge blockquote {
+  @apply --font-BodyPlus2;
+  @apply --font-Serif;
+  margin:0;
+}
+
+.-font--minus-1 {
+  @apply --font-BodyMinus1;
+}
+.-font--minus-2 {
+  @apply --font-BodyMinus2;
+}
+.-font--minus-3 {
+  @apply --font-BodyMinus3;
+}
+.-font--minus-4 {
+  @apply --font-BodyMinus4;
+}
+.-font--minus-5 {
+  @apply --font-BodyMinus5;
+}

@@ -1,0 +1,78 @@
+{
+  "menu" :[
+      {
+      "files": [],
+      "title": "COMPONENTS",
+      "heading" : true
+    },
+    {
+      "files": ["/docs/components/badge-design", "/components/badge/badge-dev"],
+      "title": "BADGE"
+    },
+    {
+      "files": ["/docs/components/button-design", "/components/button/button-dev"],
+      "title": "BUTTON"
+    },
+    {
+      "files": ["/docs/components/selection-controls-design", "/components/checkbox/checkbox-dev", "/components/radio-button/radio-button-dev", "/components/toggle/toggle-dev"],
+      "title": "SELECTION CONTROLS"
+    },
+    {
+      "files": ["/docs/components/lockup-design", "/components/lockup/lockup-dev"],
+      "title": "LOCKUP"
+    },
+    {
+      "files": ["/docs/components/menu-design", "/components/menu/menu-dev", "/components/dropdown-button/dropdown-button-dev"],
+      "title": "MENUS"
+    },
+    {
+      "files": ["/docs/components/pagination-design", "/components/pagination/pagination-dev"],
+      "title": "PAGINATION"
+    },
+    {
+      "files": ["/docs/components/pill-design", "/components/pill/pill-dev"],
+      "title": "PILL"
+    },
+    {
+      "files": ["/docs/components/tabs-design", "/components/tabs/tabs-dev"],
+      "title": "TABS"
+    },
+    {
+      "files": ["/docs/components/text-fields-design", "/components/text-fields/text-area-dev", "/components/text-fields/text-input-dev"],
+      "title": "TEXT FIELDS"
+    },
+    {
+      "files": ["/docs/components/tooltip-design", "/components/tooltip/tooltip-dev"],
+      "title": "TOOLTIP"
+    },
+    {
+      "files": [],
+      "title": "PATTERNS",
+      "heading" : true
+    },
+    {
+      "files": ["/docs/patterns/card-design", "/components/card/card-dev"],
+      "title": "CARD"
+    },
+    {
+      "files": ["/docs/patterns/datatable-design", "/components/datatable/datatable-dev"],
+      "title": "DATATABLE"
+    },
+    {
+      "files": ["/docs/patterns/footer-design", "/components/footer/footer-dev"],
+      "title": "FOOTER"
+    },
+    {
+      "files": ["/docs/patterns/form-design", "/components/form/form-dev", "/components/form/form-item-dev", "/components/label/label-dev"],
+      "title": "FORMS"
+    },
+    {
+      "files": ["/docs/patterns/layout-design", "/components/container/container-dev", "/components/grid/grid-dev", "/components/box/box-dev"],
+      "title": "LAYOUT"
+    },
+    {
+      "files": ["/docs/patterns/navigation-design", "/components/page/page-dev", "/components/navigation/navigation-dev"],
+      "title": "NAVIGATION"
+    }
+  ]
+}

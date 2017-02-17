@@ -1,0 +1,165 @@
+/* LOCAL VARIABLES */
+:root {
+
+  --mediaRatio {
+    position: relative;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+}
+
+/* BASE COMPONENT */
+
+.ge-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  box-shadow: 0px 1px 2px 0px var(--color-grayDarker1);
+  border-radius: 0.125rem;
+}
+
+.ge-card .ge-card__content,
+.ge-card .ge-card__header {
+  padding: var(--spacing-1rem);
+}
+
+.ge-card .ge-card__table {
+  overflow-x: auto;
+  padding: 0rem;
+}
+
+/* this selector needs to be before the next selector or the card will not look right when there is no header */
+.ge-card > *:not(.ge-card__header):first-child {
+  padding-top: var(--spacing-1_5rem);
+}
+
+.ge-card .ge-card__category,
+.ge-card .ge-card__menu,
+.ge-card > .ge-card__category:first-child,
+.ge-card > .ge-card__menu:first-child {
+  padding: var(--spacing-0_5rem);
+}
+
+.ge-card .ge-card__category ~ .ge-card__header {
+  padding-top: 0rem;
+}
+
+.ge-card .ge-card__header .ge-card__menu {
+  position: relative;
+}
+
+.ge-card .ge-card__actions {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-0_5rem);
+}
+
+.ge-card .ge-card__actions > * {
+  margin-right: var(--spacing-0_5rem);
+}
+
+.ge-card .ge-card__content .ge-card__media {
+  position: relative;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* PSUEDO CLASSES */
+
+.ge-card .ge-card__actions:last-child {
+  margin-right: 0rem;
+}
+
+/* PROPERTIES */
+
+.ge-card .ge-card__content.-ratio--16_9 {
+  @apply --mediaRatio;
+  padding-bottom: 56.25%;
+}
+
+.ge-card .ge-card__content.-ratio--3_2 {
+  @apply --mediaRatio;
+  padding-bottom: 66.66%;
+}
+
+.ge-card .ge-card__content.-ratio--4_3 {
+  @apply --mediaRatio;
+  padding-bottom: 75%;
+}
+
+.ge-card .ge-card__content.-ratio--1_1 {
+  @apply --mediaRatio;
+  padding-bottom: 100%;
+}
+
+.ge-card .-is--floating.-align--top {
+  top: 0;
+}
+
+.ge-card .-is--floating.-align--bottom {
+  bottom: 0;
+}
+
+.ge-card .-is--floating.-align--left {
+  left: 0;
+}
+
+.ge-card .-is--floating.-align--right {
+  right: 0;
+}
+
+/* PROPERTIES */
+
+/* STATES */
+
+.ge-card .ge-card__menu.-is--floating,
+.ge-card .ge-card__actions.-is--floating,
+.ge-card .ge-card__category.-is--floating {
+  position: absolute;
+  z-index: 1000;
+}
+
+.ge-card .ge-card__header.-has--menu-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rem;
+}
+
+.ge-card .ge-card__header.-has--menu-right > * {
+  order: 1;
+  padding-left: var(--spacing-1rem);
+  padding-top: var(--spacing-1rem);
+  padding-bottom: var(--spacing-1rem);
+}
+
+.ge-card .ge-card__header.-has--menu-right .ge-card__menu {
+  order: 2;
+  padding: var(--spacing-0_5rem);
+}
+
+.ge-card .ge-card__header.-has--menu-left {
+  display: flex;
+  flex-direction: row;
+  padding: 0rem;
+}
+
+.ge-card .ge-card__header.-has--menu-left > * {
+  order: 2;
+  padding-right: var(--spacing-1rem);
+  padding-top: var(--spacing-1rem);
+  padding-bottom: var(--spacing-1rem);
+}
+
+.ge-card .ge-card__header.-has--menu-left .ge-card__menu {
+  order: 1;
+  padding: var(--spacing-0_5rem);
+}
+
+/* VARIENTS */

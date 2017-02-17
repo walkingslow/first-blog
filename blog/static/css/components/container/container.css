@@ -1,0 +1,114 @@
+/* LOCAL VARIABLES */
+:root {
+}
+@custom-selector :--container-section .ge-container, .ge section;
+@custom-selector :--container-all .ge-container, .ge-container__very-wide, .ge-container__wide, .ge section, .ge article, .ge aside;
+
+/* BASE COMPONENT */
+:--container-all {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (--min60) {
+  :--container-all {
+    width: 60rem;
+  }
+}
+
+/* PSUEDO CLASSES */
+
+/*** PROPERTIES ***/
+
+/* theme */
+.ge-container.-theme--light {
+  @apply --background-ThemeLight;
+}
+.ge-container.-theme--dark {
+  @apply --background-ThemeDark;
+}
+
+/* align */
+:--container-section.-align--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+:--container-section.-align--left {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+:--container-section.-align--right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* width */
+.ge section,
+.ge-container.-width--full {
+  width:auto;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+/* auto -> 60 -> 80 -> 90 */
+.ge-container__very-wide,
+.ge-container.-width--very-wide {
+  width: auto;
+}
+@media (--min90) {
+  .ge-container__very-wide,
+  .ge-container.-width--very-wide {
+    width: 90rem;
+  }
+}
+
+/* auto -> 60 -> 80 */
+.ge-container__wide,
+.ge-container.-width--wide {
+  width: auto;
+}
+@media (--min80) {
+  .ge-container__wide,
+  .ge-container.-width--wide {
+    width: 80rem;
+  }
+}
+
+/* auto -> 60 */
+.ge-container.-width--normal {
+  width: auto;
+}
+@media (--min60) {
+  .ge-container.-width--normal {
+    width: 60rem;
+  }
+}
+
+/* auto -> 40 */
+.ge article,
+.ge-container.-width--narrow {
+  width: auto;
+}
+@media (--min60) {
+  .ge article,
+  .ge-container.-width--narrow {
+    width: 40rem;
+  }
+}
+
+.ge aside,
+.ge-container.-width--very-narrow {
+  width: auto;
+}
+@media (--min60) {
+  .ge aside,
+  .ge-container.-width--very-narrow {
+    width: 20rem;
+  }
+}

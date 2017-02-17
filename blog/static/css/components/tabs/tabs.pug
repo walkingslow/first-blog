@@ -1,0 +1,432 @@
+extends ../../test/test-template.pug
+block content
+
+    <cdx-test name="ge-tabs - default">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs">
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li class="-is--active"><a href="#">SERVICES</a></li>
+                <li><a href="#">INDUSTRIES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MORE</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs">
+            <a href="#"><i class="fa fa-area-chart"></i><span class="ge-tab__label">ITEM</span></a>
+            <a href="#" class="-is--active">ITEM</a>
+            <a href="#">ITEM</a>
+            <a class="-is--disabled" href="#">ITEM</a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs">
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--active">ITEM</div>
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--disabled">ITEM</div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-tabs - hover background" theme="true">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -hover--background">
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li class="-is--active"><a href="#">SERVICES</a></li>
+                <li><a href="#">INDUSTRIES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MORE</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -hover--background">
+            <a href="#"><i class="fa fa-area-chart"></i><span class="ge-tab__label">ITEM</span></a>
+            <a href="#" class="-is--active">ITEM</a>
+            <a href="#">ITEM</a>
+            <a class="-is--disabled" href="#">ITEM</a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -hover--background">
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--active">ITEM</div>
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--disabled">ITEM</div>
+        </div>
+    </cdx-test>
+
+
+
+    <cdx-test name="ge-tabs -spacing--dense">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -spacing--dense">
+            <ul>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--active"><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -spacing--dense">
+            <a href="#">ITEM</a>
+            <a href="#" class="-is--active">ITEM</a>
+            <a href="#">ITEM</a>
+            <a class="-is--disabled" href="#">ITEM</a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -spacing--dense">
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--active">ITEM</div>
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--disabled">ITEM</div>
+        </div>
+    </cdx-test>
+
+
+
+
+
+    <cdx-test name="ge-tabs -theme--dark">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -theme--dark">
+            <ul>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--active"><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -theme--dark">
+            <a href="#">ITEM</a>
+            <a href="#" class="-is--active">ITEM</a>
+            <a href="#">ITEM</a>
+            <a class="-is--disabled" href="#">ITEM</a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -theme--dark">
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--active">ITEM</div>
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--disabled">ITEM</div>
+        </div>
+    </cdx-test>
+
+
+
+    <cdx-test name="ge-tabs -theme--dark -spacing--dense">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -theme--dark -spacing--dense">
+            <ul>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--active"><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li><a href="#">ITEM</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -theme--dark -spacing--dense">
+            <a href="#">ITEM</a>
+            <a href="#" class="-is--active">ITEM</a>
+            <a href="#">ITEM</a>
+            <a class="-is--disabled" href="#">ITEM</a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -theme--dark -spacing--dense">
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--active">ITEM</div>
+            <div class="ge-tab__item">ITEM</div>
+            <div class="ge-tab__item -is--disabled">ITEM</div>
+        </div>
+    </cdx-test>
+
+
+
+    <cdx-test name="ge-tabs -align--vertical">
+      <div class="ge-box -width--20rem">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -align--vertical -has--ul">
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li class="-is--active"><a href="#">SERVICES</a></li>
+                <li><a href="#">INDUSTRIES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MORE</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+                <li><a href="#"><span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span></a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -align--vertical">
+            <a href="#">PRODUCTS</a>
+            <a href="#" class="-is--active">SERVICES</a>
+            <a href="#">INDUSTRIES</a>
+            <a href="#">MORE</a>
+            <a class="-is--disabled" href="#">ABOUT US</a>
+            <a href="#"><span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span></a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -align--vertical">
+            <div class="ge-tab__item">PRODUCTS</div>
+            <div class="ge-tab__item -is--active">SERVICES</div>
+            <div class="ge-tab__item">INDUSTRIES</div>
+            <div class="ge-tab__item">MORE</div>
+            <div class="ge-tab__item -is--disabled">ABOUT US</div>
+            <div class="ge-tab__item"><span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span></div>
+        </div>
+      </div>
+    </cdx-test>
+
+
+    <cdx-test name="ge-tabs -align--vertical with icons">
+      <div class="ge-box -width--20rem">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -align--vertical -has--ul">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="ge-tab__label">PRODUCTS</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="-is--active">
+                    <a href="#">
+                        <i class="fa fa-anchor"></i>
+                        <span class="ge-tab__label">SERVICES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-asl-interpreting"></i>
+                        <span class="ge-tab__label">INDUSTRIES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-area-chart"></i>
+                        <span class="ge-tab__label">ABOUT US</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bicycle"></i>
+                        <span class="ge-tab__label">MORE</span>
+                    </a>
+                </li>
+                <li class="-is--disabled">
+                    <a href="#">
+                        <i class="fa fa-bomb"></i>
+                        <span class="ge-tab__label">ITEM</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bluetooth"></i>
+                        <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                        <i class="fa fa-angle-right"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -align--vertical">
+            <a href="#"><i class="fa fa-bar-chart-o"></i>PRODUCTS<i class="fa fa-angle-right"></i></a>
+            <a href="#" class="-is--active"><i class="fa fa-anchor"></i>SERVICES</a>
+            <a href="#"><i class="fa fa-asl-interpreting"></i>INDUSTRIES</a>
+            <a href="#"><i class="fa fa-bicycle"></i>MORE</a>
+            <a class="-is--disabled" href="#"><i class="fa fa-bomb"></i>ABOUT US</a>
+            <a href="#"><i class="fa fa-bluetooth"></i>
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                <i class="fa fa-angle-right"></i></a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -align--vertical">
+            <div class="ge-tab__item"><i class="fa fa-bar-chart-o"></i>PRODUCTS</div>
+            <div class="ge-tab__item -is--active"><i class="fa fa-anchor"></i>SERVICES</div>
+            <div class="ge-tab__item"><i class="fa fa-asl-interpreting"></i>INDUSTRIES</div>
+            <div class="ge-tab__item"><i class="fa fa-bomb"></i>MORE</div>
+            <div class="ge-tab__item -is--disabled"><i class="fa fa-bicycle"></i>ABOUT US</div>
+            <div class="ge-tab__item"><i class="fa fa-bluetooth"></i>
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                <i class="fa fa-angle-right"></i></div>
+        </div>
+      </div>
+    </cdx-test>
+
+
+
+    <cdx-test name="ge-tabs -theme--dark -align--vertical">
+      <div class="ge-box -width--20rem">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -theme--dark -align--vertical -has--ul">
+            <ul>
+                <li><a href="#">PRODUCTS</a></li>
+                <li class="-is--active"><a href="#">SERVICES</a></li>
+                <li><a href="#">INDUSTRIES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">MORE</a></li>
+                <li class="-is--disabled"><a href="#">ITEM</a></li>
+                <li><a href="#">
+                    <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                    <i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -theme--dark -align--vertical">
+            <a href="#">PRODUCTS</a>
+            <a href="#" class="-is--active">SERVICES</a>
+            <a href="#">INDUSTRIES</a>
+            <a href="#">MORE</a>
+            <a class="-is--disabled" href="#">ABOUT US</a>
+            <a href="#">
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+            </a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -theme--dark -align--vertical">
+            <div class="ge-tab__item">PRODUCTS</div>
+            <div class="ge-tab__item -is--active">SERVICES</div>
+            <div class="ge-tab__item">INDUSTRIES</div>
+            <div class="ge-tab__item">MORE</div>
+            <div class="ge-tab__item -is--disabled">ABOUT US</div>
+            <div class="ge-tab__item">
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                <i class="fa fa-angle-right"></i></div>
+        </div>
+      </div>
+    </cdx-test>
+
+
+    <cdx-test name="ge-tabs -theme--dark -align--vertical with icons dense">
+      <div class="ge-box -width--20rem">
+        <div>.ge-tabs &gt; ul &gt; li &gt; a</div>
+        <div class="ge-tabs -theme--dark -align--vertical -has--ul -spacing--dense">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="ge-tab__label">PRODUCTS</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="-is--active">
+                    <a href="#">
+                        <i class="fa fa-anchor"></i>
+                        <span class="ge-tab__label">SERVICES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-asl-interpreting"></i>
+                        <span class="ge-tab__label">INDUSTRIES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-area-chart"></i>
+                        <span class="ge-tab__label">ABOUT US</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bicycle"></i>
+                        <span class="ge-tab__label">MORE</span></a>
+                </li>
+                <li class="-is--disabled">
+                    <a href="#"><i class="fa fa-bomb"></i>ITEM</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bluetooth"></i>
+                        <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>.ge-tabs &gt; a </div>
+        <div class="ge-tabs -theme--dark -align--vertical -spacing--dense">
+            <a href="#">
+                <i class="fa fa-bar-chart-o"></i>
+                <span class="ge-tab__label">PRODUCTS</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <a href="#" class="-is--active">
+                <i class="fa fa-anchor"></i>
+                <span class="ge-tab__label">SERVICES</span>
+            </a>
+            <a href="#">
+                <i class="fa fa-asl-interpreting"></i>
+                <span class="ge-tab__label">INDUSTRIES</span>
+            </a>
+            <a href="#">
+                <i class="fa fa-bicycle"></i>
+                <span class="ge-tab__label">MORE</span>
+            </a>
+            <a class="-is--disabled" href="#">
+                <i class="fa fa-bomb"></i>
+                <span class="ge-tab__label">ABOUT US</span>
+            </a>
+            <a href="#"><i class="fa fa-bluetooth"></i>
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+
+        <div>.ge-tabs &gt; .ge-tab__item</div>
+        <div class="ge-tabs -theme--dark -align--vertical -spacing--dense">
+            <div class="ge-tab__item"><i class="fa fa-bar-chart-o"></i>
+                <span class="ge-tab__label">PRODUCTS</span>
+                <i class="fa fa-angle-right"></i>
+            </div>
+            <div class="ge-tab__item -is--active">
+                <i class="fa fa-anchor"></i>
+                <span class="ge-tab__label">SERVICES</span>
+            </div>
+            <div class="ge-tab__item">
+                <i class="fa fa-asl-interpreting"></i>
+                <span class="ge-tab__label">INDUSTRIES INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+            </div>
+            <div class="ge-tab__item">
+                <i class="fa fa-bomb"></i>
+                <span class="ge-tab__label">MORE</span>
+            </div>
+            <div class="ge-tab__item -is--disabled">
+                <i class="fa fa-bicycle"></i>
+                <span class="ge-tab__label">ABOUT US</span>
+            </div>
+            <div class="ge-tab__item">
+                <i class="fa fa-bluetooth"></i>
+                <span class="ge-tab__label">INCREDIBLY LONG NAVIGATION ITEM TO DISPLAY</span>
+                <i class="fa fa-angle-right"></i>
+            </div>
+        </div>
+      </div>
+    </cdx-test>
+
+

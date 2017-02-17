@@ -1,0 +1,39 @@
+extends ../../test/test-template.pug
+block content
+
+    <cdx-test name="ge-dropdown">
+        <div style="width:11rem;">
+            <div class="ge-dropdown"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-dropdown disabled">
+        <div style="width:11rem;">
+            <div class="ge-dropdown -is--disabled"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-dropdown -spacing--dense">
+        <div style="width:11rem;">
+            <div class="ge-dropdown -spacing--dense"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-dropdown -theme--dark">
+        <div style="width:11rem;">
+            <div class="ge-dropdown -theme--dark"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-dropdown -theme--dark -is--disabled">
+        <div style="width:11rem;" class="-theme--dark">
+            <div class="ge-dropdown -theme--dark -is--disabled"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+
+    <cdx-test name="ge-dropdown -theme--dark -spacing--dense">
+        <div style="width:11rem;">
+            <div class="ge-dropdown -theme--dark -spacing--dense"><span>California</span><i class="fa fa-chevron-down"></i></div>
+        </div>
+    </cdx-test>
+

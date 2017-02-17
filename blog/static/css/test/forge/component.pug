@@ -1,0 +1,12 @@
+extends ../../test/test-template.pug
+
+block content
+  <div id="area">
+    <div v-html="componentHTML"></div>
+    <textarea style="position:absolute;bottom:0;left:0;width:95%;height:10rem;">{{ componentHTML }}</textarea>
+  </div>
+block scripts
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+  <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.6.4/js/lib/beautify-html.js"></script>
+  <script src="/pages/core-design/core-css/test-output/test/components.js"></script>
+  <script src="/pages/core-design/core-css/test-output/test/forge/component.js"></script>

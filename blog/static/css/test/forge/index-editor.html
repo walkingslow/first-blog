@@ -1,0 +1,112 @@
+<div ng-app="editorApp">
+  <style>
+    body {
+      background-color:#efefef;
+      margin:0;
+      padding:0;
+    }
+    label {
+      display: inline-block;
+      width:5em;
+    }
+    div.flexy {
+      display:flex;
+      flex-wrap:wrap;
+    }
+    div.flexy > div {
+      margin:0.5em;
+      padding:0.5em;
+      background-color:#fff;
+    }
+  </style>
+  <div ng-controller="editorController as editor">
+    <!--<div>
+      <div ng-repeat="comp in editor.components">
+        <div ng-repeat="(key, props) in comp.properties">
+          {{comp.name}}, {{key}},
+          <span ng-repeat="val in props">{{val}},</span>
+        </div>
+      </div>
+    </div>-->
+    <div class="flexy">
+      <div>
+        <h3>Component</h3>
+        <select size="6" ng-change="editor.changed(editor.component)" ng-model="editor.component" ng-options="option.name for option in editor.components" onchange=""></select>
+      </div>
+      <div>
+        <h3>Page</h3>
+        <label>Base</label>
+        <select ng-model="editor.testParams.base">
+          <option value="">-- default --</option>
+          <option value="12">Base 12</option>
+          <option value="14">Base 14</option>
+          <option value="16">Base 16</option>
+          <option value="20">Base 20</option>
+        </select><br/>
+        <label>Theme</label>
+        <select ng-model="editor.testParams.theme">
+          <option value="">-- default --</option>
+          <option value="light">Light</option>
+          <option value="dark">dark</option>
+        </select><br/><br/>
+        <input type="checkbox" ng-model="editor.testParams.ge"> ge (class on html root)
+      </div>
+      <div ng-if="editor.component">
+        <h3>HTML</h3>
+        <label>Parent</label>
+        <select ng-model="editor.testParams.parentHtml"
+                ng-options="option.name as option.name for option in editor.component.parentHtml">
+        </select><br/>
+        <label>Element</label>
+        <select ng-model="editor.testParams.elementHtml"
+                ng-options="option.name as option.name for option in editor.component.elementHtml">
+        </select><br/>
+        <label>Inner</label>
+        <select ng-model="editor.testParams.innerHtml"
+                ng-options="option.name as option.name for option in editor.component.innerHtml">
+        </select>
+      </div>
+      <div ng-if="editor.component">
+        <h3>Properties</h3>
+        <span ng-repeat="(propName, propList) in editor.component.properties">
+          <label>{{ propName }}</label>
+          <select ng-model="editor.testParams.prop[$index]"
+                  ng-options="'prop-'+propName+'='+idx as option for (idx, option) in propList">
+            <option value="">-- default --</option>
+          </select><br/>
+        </span>
+      </div>
+      <div ng-if="editor.component">
+        <h3>States</h3>
+        <div ng-repeat="state in editor.component.states">
+          <label>
+            <input type="checkbox" ng-model="state.checked">
+            {{ state.name }}
+          </label>
+        </div>
+      </div>
+      <div ng-if="editor.component">
+        <h3>Presets</h3>
+        <select ng-model="editor.testParams.preset"
+                ng-options="option for option in editor.component.preset">
+          <option value="">-- none --</option>
+        </select>
+      </div>
+      <div ng-if="editor.component" style="flex-basis:100%">
+        <br/>
+        {{ editor.createUrl() }}
+        <br/>
+        <button ng-click="editor.refresh()">refresh</button>
+        <button ng-click="editor.openNewWindow()">open in new window</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button onClick="document.getElementById('testFrame').style.width='20em'">20em</button>
+        <button onClick="document.getElementById('testFrame').style.width='40em'">40em</button>
+        <button onClick="document.getElementById('testFrame').style.width='60em'">60em</button>
+        <button onClick="document.getElementById('testFrame').style.width='80em'">80em</button>
+        <button onClick="document.getElementById('testFrame').style.width='100%'">100%</button>
+        <br/>
+        <iframe id="testFrame" ng-src="{{ editor.url }}" style="width:100%;height:500px;"><!--content--></iframe>
+      </div>
+    </div>
+  </div>
+</div>

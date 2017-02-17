@@ -1,0 +1,139 @@
+:root {
+  --line--height: {
+     line-height: 1.25rem;
+  }
+  --position--absolute:{
+    position: absolute;
+  }
+  --top:{
+    top: -10%;
+  }
+  --right:{
+    right: -10%;
+  }
+  --width:{
+    width: 1.25rem;
+  }
+  --height:{
+    height: 1.25rem;
+
+  }
+  --border--radius:{
+    border-radius: 1.75rem;
+  }
+  --tex--align:{
+    text-align: center;
+  }
+  --vertical--align:{
+    vertical-align:middle;
+  }
+  --text--align:{
+    text-align:center;
+  }
+  --padding-left:{
+      padding-left:0.50rem;
+  }
+ --padding-right:{
+      padding-right:0.50rem;
+  }
+  --micro:{
+    line-height: 0.25rem;
+    width: 0.50rem;
+    height: 0.50rem;
+    right: 10%;
+    top: 10%;
+    padding-left:0rem;
+    padding-right:0rem;
+  }
+  --background-none:{
+      background: none;
+  }
+  --border--radius-zero-one:{
+    border-radius: 0rem;
+  }
+  --position-right:{
+    top: 20%;
+  }
+  --position--bottom:{
+    top:  45%;
+    right: -15%;
+  }
+}
+/** Default badge **/
+.ge-badge {
+    font-size: var(--size-0_5rem);
+    @apply --font-ThemeDark;
+    @apply --background-Blue;
+    @apply --position--absolute;
+    @apply --top;
+    @apply --right;
+    @apply --line--height;
+    @apply --border--radius;
+    @apply --vertical--align;
+    @apply --text--align;
+    @apply --font-Sans;
+    @apply --padding-left;
+    @apply --padding-right;
+}
+.ge-badge.-size--micro {
+    @apply --micro;
+}
+.ge-badge.-fill--transparent {
+    @apply --background-none;
+    color: var(--color-blue);
+}
+.ge-badge.-corner--square {
+    @apply --border--radius-zero-one;
+}
+.ge-badge.-position--right {
+    @apply --position-right;
+}
+.ge-badge.-position--bottom {
+    @apply --position--bottom;
+}
+.ge-badge.-color--blueDarker2{
+    background-color:var(--color-blueDarker2);
+}
+.ge-badge.-color--blueDarker1{
+    background-color:var(--color-blueDarker1);
+}
+.ge-badge.-color--blue{
+    background-color:var(--color-blue);
+}
+.ge-badge.-color--blueLighter1{
+    background-color:var(--color-blueLighter1);
+}
+.ge-badge.-color--blueLighter2{
+    background-color:var(--color-blueLighter2);
+}
+.ge-badge.-color--grayDarker2{
+    background-color:var(--color-grayDarker2);
+}
+.ge-badge.-color--grayDarker1{
+    background-color:var(--color-grayDarker1);
+}
+.ge-badge.-color--gray{
+    background-color:var(--color-gray);
+}
+.ge-badge.-color--grayLighter1{
+    background-color:var(--color-grayLighter1);
+}
+.ge-badge.-color--grayLighter2{
+    background-color:var(--color-grayLighter2);
+}
+.ge-badge.-color--grayLighter3{
+    background-color:var(--color-grayLighter3);
+}
+.ge-badge.-color--grayLighter4{
+    background-color:var(--color-grayLighter4);
+}
+.ge-badge.-color--white{
+    background-color:var(--color-white);
+}
+.ge-badge.-color--green{
+    background-color:var(--color-green);
+}
+.ge-badge.-color--greenLighter1{
+    background-color:var(--color-greenLighter1);
+}
+ 

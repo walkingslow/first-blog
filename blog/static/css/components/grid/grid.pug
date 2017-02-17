@@ -1,0 +1,306 @@
+extends ../../test/test-template.pug
+block content
+  <cdx-test name="grid" theme="true">
+    <div class="ge-grid _test">
+      <div class="ge-box">Content</div>
+      <div class="ge-box">Content</div>
+      <div class="ge-box">Content</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="stack">
+    <div class="ge-grid -stack--horizontal _test">
+      <div class="ge-box">horizontal (default)</div>
+      <div class="ge-box">horizontal</div>
+      <div class="ge-box">horizontal</div>
+    </div>
+    <br/>
+    <div class="ge-grid -stack--vertical _test">
+      <div class="ge-box">vertical</div>
+      <div class="ge-box">vertical</div>
+      <div class="ge-box">vertical</div>
+    </div>
+    <br/>
+    <div class="ge-grid -stack--grid _test">
+      <div class="ge-box -width--1of3">grid (allows mulitple rows)</div>
+      <div class="ge-box -width--1of3">grid</div>
+      <div class="ge-box -width--1of3">grid</div>
+      <div class="ge-box -width--1of3">grid</div>
+      <div class="ge-box -width--1of3">grid</div>
+      <div class="ge-box -width--1of3">grid</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="grid GUTTER sizes">
+    <div class="ge-grid -gutter--none _test">
+      <div class="ge-box">none</div>
+      <div class="ge-box">none</div>
+      <div class="ge-box">none</div>
+    </div>
+    <div class="ge-grid -gutter--xs _test">
+      <div class="ge-box">XS</div>
+      <div class="ge-box">XS</div>
+      <div class="ge-box">XS</div>
+    </div>
+    <div class="ge-grid -gutter--s _test">
+      <div class="ge-box">S</div>
+      <div class="ge-box">S</div>
+      <div class="ge-box">S</div>
+    </div>
+    <div class="ge-grid -gutter--m _test">
+      <div class="ge-box">M</div>
+      <div class="ge-box">M</div>
+      <div class="ge-box">M</div>
+    </div>
+    <div class="ge-grid -gutter--l _test">
+      <div class="ge-box">L</div>
+      <div class="ge-box">L</div>
+      <div class="ge-box">L</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="grid PADDING sizes">
+    <div class="ge-grid -padding--none _test">
+      <div class="ge-box">none</div>
+      <div class="ge-box">none</div>
+      <div class="ge-box">none</div>
+    </div>
+    <div class="ge-grid -padding--xs _test">
+      <div class="ge-box">XS</div>
+      <div class="ge-box">XS</div>
+      <div class="ge-box">XS</div>
+    </div>
+    <div class="ge-grid -padding--s _test">
+      <div class="ge-box">S</div>
+      <div class="ge-box">S</div>
+      <div class="ge-box">S</div>
+    </div>
+    <div class="ge-grid -padding--m _test">
+      <div class="ge-box">M</div>
+      <div class="ge-box">M</div>
+      <div class="ge-box">M</div>
+    </div>
+    <div class="ge-grid -padding--l _test">
+      <div class="ge-box">L</div>
+      <div class="ge-box">L</div>
+      <div class="ge-box">L</div>
+    </div>
+    <div class="ge-grid -padding--xl _test">
+      <div class="ge-box">XL</div>
+      <div class="ge-box">XL</div>
+      <div class="ge-box">XL</div>
+    </div>
+    <div class="ge-grid -padding--m -padding--topbottom _test">
+      <div class="ge-box">topbottom</div>
+      <div class="ge-box">topbottom</div>
+      <div class="ge-box">topbottom</div>
+    </div>
+    <div class="ge-grid -padding--m -padding--leftright _test">
+      <div class="ge-box">leftright</div>
+      <div class="ge-box">leftright</div>
+      <div class="ge-box">leftright</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="grid GUTTER/PADDING sizes">
+    <div class="ge-grid -gutter--xs -padding--xs _test">
+      <div class="ge-box">XS/XS</div>
+      <div class="ge-box">XS/XS</div>
+      <div class="ge-box">XS/XS</div>
+    </div>
+    <div class="ge-grid -gutter--s -padding--xs _test">
+      <div class="ge-box">S/XS</div>
+      <div class="ge-box">S/XS</div>
+      <div class="ge-box">S/XS</div>
+    </div>
+    <div class="ge-grid -gutter--m -padding--xs _test">
+      <div class="ge-box">M/XS</div>
+      <div class="ge-box">M/XS</div>
+      <div class="ge-box">M/XS</div>
+    </div>
+    <div class="ge-grid -gutter--l -padding--xs _test">
+      <div class="ge-box">L/XS</div>
+      <div class="ge-box">L/XS</div>
+      <div class="ge-box">L/XS</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="width percentage">
+    <div class="ge-grid -padding--xs -stack--grid _test">
+      <div class="ge-box -width--2of2">2 of 2</div>
+      <div class="ge-box -width--3of3">3 of 3</div>
+      <div class="ge-box -width--4of4">4 of 4</div>
+
+      <div class="ge-box -width--1of2">1 of 2</div>
+      <div class="ge-box -width--1of2">1 of 2</div>
+
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--1of3">1 of 3</div>
+
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--2of3">2 of 3</div>
+
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--1of4">1 of 4</div>
+
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--2of4">2 of 4</div>
+
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--3of4">3 of 4</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="width named">
+    <div class="ge-grid -padding--xs -stack--grid _test">
+      <div class="ge-box -width--xs">xs</div>
+      <div class="ge-box -width--s">s</div>
+      <div class="ge-box -width--m">m</div>
+      <div class="ge-box -width--l">l</div>
+      <div class="ge-box -width--xl">xl</div>
+      <div class="ge-box -width--full">full</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="width mixing">
+    <div class="ge-grid -padding--xs -stack--grid _test">
+      <div class="ge-box -width--1of4">1 of 4</div>
+      <div class="ge-box -width--xs">xs</div>
+      <div class="ge-box">Just a box</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="width percentage gutter will adjust with -stack--vertical or -stack--horizontal">
+    <div class="_test">
+      <div class="ge-grid -gutter--xs -stack--horizontal">
+        <div class="ge-box -width--1of3">1 of 3</div>
+        <div class="ge-box -width--2of3">2 of 3</div>
+      </div>
+      <br/>
+      <div class="ge-grid -gutter--xs -stack--vertical" style="height:30rem;width:20rem;">
+        <div class="ge-box -width--1of3">1 of 3</div>
+        <div class="ge-box -width--2of3">2 of 3</div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="Be Careful with GUTTER and -stack--grid">
+    <span class="ge_font-color--gray-lighter-1">Using margin/gutter does not work with getting flex basis percentages to add up</span>
+    <div class="_test">
+      <div class="ge-grid -gutter--xs -stack--grid _test">
+        <div class="ge-box -width--1of3">1 of 3</div>
+        <div class="ge-box -width--2of3">2 of 3</div>
+        <div class="ge-box -width--1of3">1 of 3</div>
+        <div class="ge-box -width--xs">xs</div>
+        <div class="ge-box">just a box</div>
+      </div>
+    </div>
+    <span class="ge_font-color--gray-lighter-1">Use PADDING another box inside for it get the gutter effect of percentage layouts</span>
+    <div class="_test">
+      <div class="ge-grid -padding--xs -stack--grid">
+        <div class="ge-box -width--1of3 _test"><div class="ge-box">1 of 3</div></div>
+        <div class="ge-box -width--2of3 _test"><div class="ge-box">2 of 3</div></div>
+        <div class="ge-box -width--1of3 _test"><div class="ge-box">1 of 3</div></div>
+        <div class="ge-box -width--xs _test"><div class="ge-box">xs</div></div>
+        <div class="ge-box _test"><div class="ge-box">just a box</div></div>
+      </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="width percentage margin NON-GRID">
+    <span class="ge_font-color--gray-lighter-1">Percentage layouts work for non-grid when they add up to 100% or have a box without width set to fill remaining space</span>
+    <div class="ge-grid -padding--xs _test">
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--2of3">2 of 3</div>
+    </div>
+    <span class="ge_font-color--gray-lighter-1">another example</span>
+    <div class="ge-grid -padding--xs _test">
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box">Just a box</div>
+    </div>
+    <span class="ge_font-color--gray-lighter-1">Over 100% Percentage layouts do not work when not -stack--grid</span>
+    <div class="ge-grid -padding--xs _test">
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--2of3">2 of 3</div>
+      <div class="ge-box -width--1of3">1 of 3</div>
+      <div class="ge-box -width--xs">20</div>
+      <div class="ge-box">just a box</div>
+    </div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="height ratio">
+      <div class="ge-grid _test">
+        <div class="ge-box -height--16_9">16:9</div>
+        <div class="ge-box -height--3_2">3:2</div>
+        <div class="ge-box -height--4_3">4:3</div>
+        <div class="ge-box -height--1_1">1:1</div>
+      </div>
+  </cdx-test>
+
+  <cdx-test name="height named">
+    <div class="ge-grid -padding--xs _test">
+      <div class="ge-box -height--xs">xs</div>
+      <div class="ge-box -height--s">s</div>
+      <div class="ge-box -height--m">m</div>
+      <div class="ge-box -height--l">l</div>
+      <div class="ge-box -height--xl">xl</div>
+      <div class="ge-box -height--full">full</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="align strech">
+    <div class="ge-grid -padding--xs -align--stretch _test">
+      <div class="ge-box">box that is same height as longest one</div>
+      <div class="ge-box -width--1of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam viverra vulputate. Praesent blandit, neque eu ultrices rutrum, nisl tortor condimentum lorem, vel sodales nunc libero vel purus. Praesent consectetur tempor efficitur. Donec at felis a massa suscipit pretium id id metus. Suspendisse malesuada molestie ipsum, eu congue odio. Ut euismod sit amet risus id fermentum. Mauris lacinia sed magna ac tincidunt. Maecenas efficitur tincidunt erat, vel venenatis odio sodales vel. Etiam ut nunc condimentum, pretium odio quis, tincidunt nulla. Phasellus viverra, lorem sit amet dignissim sodales, mi magna convallis tellus, a elementum orci nisl vel dui. Vivamus dictum enim in est convallis ultrices. Aenean eget posuere ipsum. Nulla in pellentesque purus. Nunc quis scelerisque nisl. Cras ultricies in orci nec lobortis. In maximus lectus auctor turpis suscipit, sit amet ornare ex lobortis.</div>
+      <div class="ge-box">box that is same height as longest one</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="align center">
+    <div class="ge-grid -padding--xs -align--center _test">
+      <div class="ge-box">box center</div>
+      <div class="ge-box -width--1of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam viverra vulputate. Praesent blandit, neque eu ultrices rutrum, nisl tortor condimentum lorem, vel sodales nunc libero vel purus. Praesent consectetur tempor efficitur. Donec at felis a massa suscipit pretium id id metus. Suspendisse malesuada molestie ipsum, eu congue odio. Ut euismod sit amet risus id fermentum. Mauris lacinia sed magna ac tincidunt. Maecenas efficitur tincidunt erat, vel venenatis odio sodales vel. Etiam ut nunc condimentum, pretium odio quis, tincidunt nulla. Phasellus viverra, lorem sit amet dignissim sodales, mi magna convallis tellus, a elementum orci nisl vel dui. Vivamus dictum enim in est convallis ultrices. Aenean eget posuere ipsum. Nulla in pellentesque purus. Nunc quis scelerisque nisl. Cras ultricies in orci nec lobortis. In maximus lectus auctor turpis suscipit, sit amet ornare ex lobortis.</div>
+      <div class="ge-box">box center</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="align end">
+    <div class="ge-grid -padding--xs -align--end _test">
+      <div class="ge-box">box on bottom</div>
+      <div class="ge-box -width--1of3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam viverra vulputate. Praesent blandit, neque eu ultrices rutrum, nisl tortor condimentum lorem, vel sodales nunc libero vel purus. Praesent consectetur tempor efficitur. Donec at felis a massa suscipit pretium id id metus. Suspendisse malesuada molestie ipsum, eu congue odio. Ut euismod sit amet risus id fermentum. Mauris lacinia sed magna ac tincidunt. Maecenas efficitur tincidunt erat, vel venenatis odio sodales vel. Etiam ut nunc condimentum, pretium odio quis, tincidunt nulla. Phasellus viverra, lorem sit amet dignissim sodales, mi magna convallis tellus, a elementum orci nisl vel dui. Vivamus dictum enim in est convallis ultrices. Aenean eget posuere ipsum. Nulla in pellentesque purus. Nunc quis scelerisque nisl. Cras ultricies in orci nec lobortis. In maximus lectus auctor turpis suscipit, sit amet ornare ex lobortis.</div>
+      <div class="ge-box -height--full">box that is same height as longest one</div>
+    </div>
+  </cdx-test>
+
+
+  <cdx-test name="Gradient">
+    <div class="ge-grid -gutter--m -height--full">
+      <div class="ge-box -overlay--gradient -padding--m -height--full -color--blue-lighter-1"><div>box is flow blue overlay</div></div>
+      <div class="ge-box -overlay--gradient -padding--m -height--full -color--blue-darker-2 -width--1of4"><div>box is indigo overlay. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam viverra vulputate. Praesent blandit, neque eu ultrices rutrum, nisl tortor condimentum lorem, vel sodales nunc libero vel purus. Praesent consectetur tempor efficitur.</div></div>
+      <div class="ge-box -overlay--gradient -padding--m -height--full -color--blue"><div>box is blue overlay</div></div>
+      <div class="ge-box -overlay--gradient -padding--m -height--full -theme--dark"><div>box is dark overlay</div></div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="Gradient">
+    <span class="ge_font-color--gray-lighter-1">Cannot use ratios and gradients on same element. Nest boxes instead.</span>
+    <div class="ge-grid -gutter--m -height--16_9">
+      <div class="ge-box"><div class="ge-box -overlay--gradient -height--full -padding--m -color--blue"><div>box is blue overlay</div></div></div>
+      <div class="ge-box"><div class="ge-box -overlay--gradient -height--full -padding--m -color--blue"><div>box is blue overlay</div></div></div>
+      <div class="ge-box"><div class="ge-box -overlay--gradient -height--full -padding--m -color--blue"><div>box is blue overlay</div></div></div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="Ratio with images">
+    <div class="ge-grid -gutter--m -height--16_9">
+      <div class="ge-box -width--1of3" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">IMAGE</div>
+      <div class="ge-box -width--1of3 -color--blue">BLUE</div>
+      <div class="ge-box -width--1of3" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');"><div class="ge-box -overlay--gradient -padding--s -color--blue"><div>box is blue overlay</div></div></div>
+    </div>
+  </cdx-test>
+

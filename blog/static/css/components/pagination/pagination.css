@@ -1,0 +1,49 @@
+/* LOCAL VARIABLES */
+
+:root {
+
+  --iconColor {
+    color: #262626;
+  }
+
+}
+
+/* BASE COMPONENT */
+
+.ge-pagination {
+  font-size: 0.79rem;
+  display: flex;
+  align-items: center;
+}
+
+.ge-pagination .max-rows-label {
+  text-align: right;
+}
+
+.ge-pagination .max-rows-input {
+  position: relative;
+  margin-left: var(--spacing-0_5rem);
+}
+
+.ge-pagination .row-tracker {
+  padding-left: var(--spacing-2rem);
+}
+
+.ge-pagination .previous-page {
+  padding-left: var(--spacing-2rem);
+  @apply --iconColor;
+}
+
+.ge-pagination .next-page {
+  padding-left: var(--spacing-0_5rem);
+  @apply --iconColor;
+}
+
+/* STATES */
+
+.ge-pagination .previous-page.-is--disabled,
+.ge-pagination .next-page.-is--disabled {
+  color: var(--color-grayLighter2);
+}
+
+/* VARIENTS */

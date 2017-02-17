@@ -1,0 +1,323 @@
+/* LOCAL VARIABLES */
+:root {
+  --Small {
+    padding-left: calc(var(--spacing-0_75rem) - var(--size-0_125rem));
+    padding-right: calc(var(--spacing-0_75rem)- var(--size-0_125rem));
+    min-width: var(--spacing-1_5rem); /* 3 - padding */
+    @apply --text-SmallSpacing;
+    @apply --font-BodyMinus4;
+    line-height: var(--size-1_75rem);
+  }
+  --Medium {
+    padding-left: calc(var(--spacing-1rem) - var(--size-0_125rem));
+    padding-right: calc(var(--spacing-1rem) - var(--size-0_125rem));
+    min-width: var(--spacing-1_75rem); /* 3.5 - padding */
+    @apply --font-BodyMinus2;
+    line-height: var(--size-2_25rem);
+  }
+  --Large {
+    padding-left: calc(var(--spacing-1_5rem) - var(--size-0_125rem));
+    padding-right: calc(var(--spacing-1_5rem) - var(--size-0_125rem));
+    @apply --font-Body;
+    line-height: var(--size-3_25rem);
+  }
+  --BlueBorder {
+    color: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+  --BlueHover {
+    color: var(--color-blueDarker2);
+    border-color: var(--color-blueDarker2);
+  }
+}
+@custom-selector :--hoverPress :hover, :active, :focus;
+@custom-selector :--ge-button .ge-button, .ge button;
+@custom-selector :--ge-button-dark .ge-button.-theme--dark, .-theme--dark .ge-button, .ge button.-theme--dark, .ge .-theme--dark button;
+
+/* BASE COMPONENT */
+:--ge-button {
+  display: inline-block;
+  margin: var(--spacing-0_5rem);
+  padding:0;
+  border-radius: var(--size-2_5rem);
+  border-style: solid;
+  border-width: var(--size-0_125rem);
+  background-color: var(--color-gray);
+  border-color: var(--color-gray);
+  color: var(--color-white);
+  box-sizing: border-box;
+  @apply --Medium;
+  @apply --text-Spaced;
+  @apply --text-Uppercase;
+  @apply --text-Bold;
+}
+
+a.ge-button {
+  text-decoration: none;
+}
+
+[type="button"].ge-button,
+[type="reset"].ge-button,
+[type="submit"].ge-button {
+  -webkit-appearance: button;
+}
+
+/* PSUEDO CLASSES */
+:--ge-button:--hoverPress{
+  @apply --background-GrayDarker1;
+  border-color: var(--color-grayDarker1);
+  cursor: pointer;
+  outline-style: none;
+}
+:--ge-button:disabled,
+:--ge-button.-color--blue:disabled{
+  opacity: 0.33;
+  pointer-events: none;
+  color: var(--color-gray);
+  background-color: var(--color-grayLighter2);
+  border-color: var(--color-grayLighter2);
+}
+button.ge-button--secondary:disabled,
+:--ge-button.-fill--outline.-color--blue:disabled {
+  color: var(--color-gray);
+  border-color: var(--color-grayLighter2);
+  background-color: transparent;
+}
+:--ge-button.-fill--transparent.-color--blue:disabled,
+:--ge-button-dark.-fill--transparent.-color--blue:disabled {
+  color: var(--color-gray);
+}
+:--ge-button-dark:disabled,
+:--ge-button-dark.-color--blue:disabled {
+  color: var(--color-gray);
+  background-color: var(--color-grayDarker1);
+  border-color: var(--color-grayDarker1);
+}
+.-theme--dark button.ge-button--secondary:disabled,
+:--ge-button-dark.-fill--outline:disabled,
+:--ge-button-dark.-fill--outline.-color--blue:disabled {
+  color: var(--color-gray);
+  border-color: var(--color-grayDarker1);
+  background-color: transparent;
+}
+:--ge-button-dark.-fill--transparent:disabled {
+  color: var(--color-gray);
+}
+
+/**** PROPERTIES ****/
+
+/* theme light NOTE: Using important here so that is overrides theme--dark parents! */
+:--ge-button.-theme--light {
+  background-color: var(--color-gray) !important;
+  border-color: var(--color-gray) !important;
+  color: var(--color-white) !important;
+}
+:--ge-button.-theme--light:--hoverPress{
+  background-color: var(--color-grayDarker1) !important;
+  border-color: var(--color-grayDarker1) !important;
+}
+
+/* theme dark */
+:--ge-button-dark {
+  @apply --background-GrayLighter2;
+  border-color: var(--color-grayLighter2);
+}
+:--ge-button-dark:--hoverPress {
+  @apply --background-White;
+  border-color: var(--color-white);
+}
+
+/* fill outline */
+button.ge-button--secondary,
+:--ge-button.-fill--outline {
+  background-color: transparent;
+  color: var(--color-gray);
+}
+button.ge-button--secondary:--hoverPress,
+:--ge-button.-fill--outline:--hoverPress {
+  background-color: transparent;
+  color: var(--color-grayDarker1);
+}
+/* fill outline + dark */
+.-theme--dark button.ge-button--secondary,
+:--ge-button-dark.-fill--outline {
+  background-color: transparent;
+  color: var(--color-grayLighter1);
+  border-color: var(--color-grayLighter1);
+}
+.-theme--dark button.ge-button--secondary:--hoverPress,
+:--ge-button-dark.-fill--outline:--hoverPress {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+/* fill outline + blue */
+:--ge-button.-fill--outline.-color--blue {
+  background-color: transparent;
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+:--ge-button.-fill--outline.-color--blue:--hoverPress {
+  background-color: transparent;
+  border-color: var(--color-blueDarker2);
+  color: var(--color-blueDarker2);
+}
+/* fill outline + dark + blue */
+:--ge-button-dark.-fill--outline.-color--blue {
+  background-color: transparent;
+  color: var(--color-blueLighter2);
+  border-color: var(--color-blueLighter2);
+}
+:--ge-button-dark.-fill--outline.-color--blue:--hoverPress {
+  background-color: transparent;
+  color: var(--color-blueLighter1);
+  border-color: var(--color-blueLighter1);
+}
+
+/* fill transparent */
+:--ge-button.-fill--transparent {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--color-gray);
+}
+:--ge-button.-fill--transparent:--hoverPress {
+  text-decoration: underline;
+  color: var(--color-grayDarker1);
+}
+/* fill transparent + dark */
+:--ge-button-dark.-fill--transparent {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--color-grayLighter1);
+}
+:--ge-button-dark.-fill--transparent:--hoverPress {
+  text-decoration: underline;
+  color: var(--color-white);
+}
+/* fill transparent + blue */
+:--ge-button.-fill--transparent.-color--blue {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-blue);
+}
+:--ge-button.-fill--transparent.-color--blue:--hoverPress {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-blueDarker2);
+}
+/* fill transparent + dark + blue */
+:--ge-button-dark.-fill--transparent.-color--blue {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-blueLighter2);
+}
+:--ge-button-dark.-fill--transparent.-color--blue:--hoverPress {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-blueLighter1);
+}
+
+/* color blue */
+button.ge-button--primary,
+:--ge-button.-color--blue {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+button.ge-button--primary:--hoverPress,
+:--ge-button.-color--blue:--hoverPress {
+  background-color: var(--color-blueDarker2);
+  border-color: var(--color-blueDarker2);
+}
+/* color blue + dark */
+.-theme--dark button.ge-button--primary,
+:--ge-button-dark.-color--blue {
+  background-color: var(--color-blueLighter2);
+  border-color: var(--color-blueLighter2);
+  color: var(--color-grayDarker2);
+}
+.-theme--dark button.ge-button--primary:--hoverPress,
+:--ge-button-dark.-color--blue:--hoverPress {
+  background-color: var(--color-blueLighter1);
+  border-color: var(--color-blueLighter1);
+}
+
+/* ICONS with text */
+:--ge-button > i.fa {
+  margin-left: var(--spacing-1_25rem);
+  margin-right: 0;
+  line-height: var(--size-2_25rem);
+  float: right;
+}
+:--ge-button > i.fa.pull-left {
+  margin-right: var(--spacing-1_25rem);
+  margin-left: 0;
+  float: left;
+}
+
+/* size small */
+:--ge-button.-size--small {
+  @apply --Small;
+}
+/* size small with icons */
+:--ge-button.-size--small > i.fa {
+  margin-left: var(--spacing-1rem);
+  line-height: var(--size-1_75rem);
+}
+:--ge-button.-size--small > i.fa.pull-left {
+  margin-right: var(--spacing-1rem);
+  margin-left: 0;
+  float: left;
+}
+
+/* size large with icons */
+:--ge-button.-size--large {
+  @apply --Large;
+}
+/* size large with icons */
+:--ge-button.-size--large > i.fa {
+  margin-left: var(--spacing-1_75rem);
+  line-height: var(--size-3_25rem);
+}
+:--ge-button.-size--large > i.fa.pull-left {
+  margin-right: var(--spacing-1_75rem);
+  margin-left: 0;
+  float: left;
+}
+
+/* STATES */
+:--ge-button.-is--icon {
+  padding: 0;
+}
+:--ge-button.-fill--transparent.-is--icon:--hoverPress {
+  background-color: var(--color-grayLighter3);
+}
+:--ge-button-dark.-fill--transparent.-is--icon:--hoverPress {
+  background-color: var(--color-grayDarker1);
+}
+
+:--ge-button.-is--icon > i.fa {
+  margin:0;
+  min-width: var(--size-2_25rem);
+  font-size: var(--size-1rem);
+}
+:--ge-button.-is--icon.-size--small > i.fa {
+  min-width: var(--size-1_75rem);
+  font-size: var(--size-0_75rem);
+}
+:--ge-button.-is--icon.-size--large > i.fa {
+  min-width: var(--size-3_25rem);
+  font-size: var(--size-1_5rem);
+}
+
+/* PRESETS */
+
+.ge-button + .ge-button,
+.ge button + .ge-button,
+.ge-button + button,
+.ge button + button,
+.ge-button--primary + .ge-button--primary,
+.ge-button--primary + .ge-button--secondary,
+.ge-button--secondary + .ge-button--primary,
+.ge-button--secondary + .ge-button--secondary {
+  margin-left: 0;
+}

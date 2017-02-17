@@ -1,0 +1,78 @@
+/*** LOCAL VARIABLES ***/
+:root {
+    --blue-gradient {
+        background-image: linear-gradient(-90deg, var(--color-blueLighter2), var(--color-grayLighter3));
+    }
+
+    --green-gradient {
+        background-image: linear-gradient(-90deg, var(--color-green), var(--color-grayLighter3));
+    }
+}
+
+@custom-selector :--ge-progress-indicator progress.ge-progress-indicator;
+@custom-selector :--ge-progress-indicator-value progress[value].ge-progress-indicator;
+@custom-selector :--ge-progress-indicator-no-value progress:not([value]).ge-progress-indicator;
+
+:--ge-progress-indicator,
+:--ge-progress-indicator-value,
+:--ge-progress-indicator-no-value {
+    width: 100%;
+    height: var(--size-0_25rem);
+    appearance: none;
+}
+
+@keyframes progressbar {
+    from {
+        width:0
+    }
+    to {
+        width: attr(value)
+    }
+}
+
+/* PSUEDO CLASSES */
+:--ge-progress-indicator-value::-webkit-progress-value{
+    border-top-right-radius: var(--size-0_125rem);
+    border-bottom-right-radius: var(--size-0_125rem);
+    @apply --blue-gradient;
+    transition: width 3s ease;
+    animation: progressbar 2s;
+}
+
+:--ge-progress-indicator-value::-webkit-progress-bar {
+    background-color: var(--color-grayLighter3);
+    opacity: 0.5;
+}
+
+
+/* VARIENTS */
+:--ge-progress-indicator-value.-color--standard::-webkit-progress-value {
+    @apply --blue-gradient;
+}
+
+:--ge-progress-indicator-value.-color--green::-webkit-progress-value {
+    @apply --green-gradient;
+}
+
+
+
+/* MOZILLA */
+:--ge-progress-indicator,
+:--ge-progress-indicator-value,
+:--ge-progress-indicator-no-value {
+    background-color: var(--color-grayLighter3);
+    border: none;
+}
+
+:--ge-progress-indicator-value::-moz-progress-bar {
+    border-top-right-radius: var(--size-0_125rem);
+    border-bottom-right-radius: var(--size-0_125rem);
+    @apply --blue-gradient;
+    -moz-transition : width 3s ease;
+    -moz-animation: progressbar 2s;
+    opacity: 0.5;
+}
+
+:--ge-progress-indicator-value.-color--green::-moz-progress-bar {
+    @apply --green-gradient;
+}

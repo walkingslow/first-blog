@@ -1,0 +1,326 @@
+/* LOCAL VARIABLES */
+:root {
+
+  --errorColor: #D70000;
+
+  --tableCardHeader {
+    padding-top: var(--spacing-0_75rem);
+    padding-bottom: var(--spacing-0_75rem);
+    padding-left: var(--spacing-1_5rem);
+    padding-right: var(--spacing-0_75rem);
+    font-size: 1.424rem;
+    display: flex;
+    align-items: center;
+    height: var(--spacing-4rem);
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-grayLighter3);
+  }
+
+  --contextualHeader {
+    background-color: var(--color-grayDarker1);
+    color: #FFFFFF;
+  }
+
+  --tableCardFooter {
+    padding-top: var(--spacing-0_5rem);
+    padding-bottom: var(--spacing-0_5rem);
+    padding-left: var(--spacing-1_5rem);
+    padding-right: var(--spacing-0_5rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3.5rem;
+    box-sizing: border-box;
+    border-top: 1px solid var(--color-grayLighter3);
+  }
+
+  --tableRow {
+    height: 3rem;
+    box-sizing: border-box;
+  }
+
+  --tableHeaderFooter {
+    height: 3.5rem;
+    box-sizing: border-box;
+  }
+
+  --fontAwesomeArrows {
+    color: var(--color-grayLighter1);
+  }
+
+  --fontAwesome {
+    font-family: FontAwesome;
+    font-size: 12px;
+    position: absolute;
+  }
+
+  --borders {
+    border-top: 1px solid var(--color-grayLighter3);
+    border-bottom: 1px solid var(--color-grayLighter3);
+  }
+
+}
+
+/* BASE COMPONENT */
+
+table,
+table.ge-datatable {
+  font-size: 0.79rem;
+  width: 100%;
+
+}
+
+table > thead tr,
+table.ge-datatable > thead tr  {
+  @apply --tableHeaderFooter;
+}
+
+table > tfoot tr:last-of-type
+table.ge-datatable > tfoot tr:last-of-type  {
+  @apply --tableHeaderFooter;
+}
+
+.ge-card .ge-datatable__footer {
+  @apply --tableCardFooter;
+}
+
+.ge-card .ge-datatable__header {
+  @apply --tableCardHeader;
+}
+
+table th,
+table.ge-datatable th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 3.5rem;
+  color: var(--color-gray);
+  font-weight: normal;
+  position: relative;
+  text-align: left;
+  border-bottom: 1px solid var(--color-grayLighter3);
+}
+
+table.-borders--top-bottom th,
+table.-borders--top-bottom.ge-datatable th {
+  border-top: 1px solid var(--color-grayLighter3);
+}
+
+table.-borders--top-bottom tr:last-of-type td,
+table.-borders--top-bottom.ge-datatable tr:last-of-type td {
+  border-bottom: 1px solid var(--color-grayLighter3);
+}
+
+table td,
+table.ge-datatable td  {
+  padding-left: 3.5rem;
+  position: relative;
+  text-align: left;
+  border-top: 1px solid var(--color-grayLighter3);
+}
+
+table.-borders--all th,
+table.ge-datatable.-borders--all th {
+  @apply --borders;
+}
+
+table.-borders--all td,
+table.ge-datatable.-borders--all {
+  @apply --borders;
+}
+
+table tr,
+table.ge-datatable tr {
+  @apply --tableRow;
+}
+
+table,
+table.ge-datatable,
+th,
+td {
+    border-collapse: collapse;
+}
+
+/* PSUEDO CLASSES */
+
+table > tr:hover,
+table > tbody > tr:hover,
+table.ge-datatable > tr:hover,
+table.ge-datatable > tbody > tr:hover,
+table.-hover--on > tr:hover,
+table > tbody > tr.-hover--on:hover,
+table.ge-datatable > tr.-hover--on:hover,
+table.ge-datatable > tbody > tr.-hover--on:hover,
+table tr.-is--selected,
+table.ge-datatable  tr.-is--selected,
+table.-hover--off > tr.-is--selected:hover,
+table.-hover--off > tbody > tr.-is--selected:hover,
+table.ge-datatable.-hover--off > tr.-is--selected:hover,
+table.ge-datatable.-hover--off > tbody > tr.-is--selected:hover,
+table > tr.-hover--off.-is--selected:hover,
+table > tbody > tr.-hover--off.-is--selected:hover,
+table.ge-datatable > tr.-hover--off.-is--selected:hover,
+table.ge-datatable > tbody > tr.-hover--off.-is--selected:hover {
+  background-color: var(--color-grayLighter3);
+  @apply --font-ThemeLight;
+}
+
+table.-hover--off > tr:hover,
+table.-hover--off > tbody > tr:hover,
+table.ge-datatable.-hover--off > tr:hover,
+table.ge-datatable.-hover--off > tbody > tr:hover,
+table > tr.-hover--off:hover,
+table > tbody > tr.-hover--off:hover,
+table.ge-datatable > tr.-hover--off:hover,
+table.ge-datatable > tbody > tr.-hover--off:hover {
+  background-color: #ffffff;
+}
+
+table td:last-of-type,
+table th:last-of-type,
+table.ge-datatable td:last-of-type,
+table.ge-datatable th:last-of-type {
+  padding-right: var(--spacing-1_5rem);
+}
+
+table.-borders--all tr:last-of-type,
+table.-borders--all td:last-of-type,
+table.-borders--all th:last-of-type,
+table.ge-datatable.-borders--all tr:last-of-type,
+table.ge-datatable.-borders--all td:last-of-type,
+table.ge-datatable.-borders--all th:last-of-type  {
+  border-right: 1px solid var(--color-grayLighter3);
+}
+
+table.-borders--all tr:first-of-type,
+table.-borders--all td:first-of-type,
+table.-borders--all th:first-of-type,
+table.ge-datatable.-borders--all tr:first-of-type,
+table.ge-datatable.-borders--all td:first-of-type,
+table.ge-datatable.-borders--all th:first-of-type {
+  border-left: 1px solid var(--color-grayLighter3);
+}
+
+table th.-is--sortable:hover:before,
+table.ge-datatable th.-is--sortable:hover:before {
+  content: "\f175";
+  left: var(--spacing-3rem);
+  @apply --fontAwesome;
+  @apply --fontAwesomeArrows;
+}
+
+table th.-sorted--desc:before,
+table.ge-datatable th.-sorted--desc:before,
+table th.-sorted--desc.-is--sortable:before,
+table.ge-datatable th.-sorted--desc.-is--sortable:before {
+  content: "\f175";
+  left: var(--spacing-3rem);
+  @apply --fontAwesome;
+  @apply --fontAwesomeArrows;
+}
+
+table th.-sorted--asc:before,
+table.ge-datatable th.-sorted--asc:before,
+table th.-sorted--asc.-is--sortable:before,
+table.ge-datatable th.-sorted--asc.-is--sortable:before {
+  content: "\f176";
+  left: var(--spacing-3rem);
+  @apply --fontAwesome;
+  @apply --fontAwesomeArrows;
+}
+
+table th.-is--sortable.-is--anchor:hover:before,
+table th.-is--anchor + th.-is--sortable:hover:before,
+table.ge-datatable th.-is--sortable.-is--anchor:hover:before,
+table.ge-datatable th.-is--anchor + th.-is--sortable:hover:before {
+  left: var(--spacing-1rem);
+}
+
+table th.-sorted--desc.-is--anchor:before,
+table th.-is--anchor + th.-sorted--desc:before,
+table.ge-datatable th.-sorted--desc.-is--anchor:before,
+table.ge-datatable th.-is--anchor + th.-sorted--desc:before {
+  left: var(--spacing-1rem);
+}
+
+table th.-sorted--asc.-is--anchor:before,
+table th.-is--anchor + th.-sorted--asc:before,
+table.ge-datatable th.-sorted--asc.-is--anchor:before,
+table.ge-datatable th.-is--anchor + th.-sorted--asc:before {
+  left: var(--spacing-1rem);
+}
+
+/* PROPERTIES */
+
+.ge-card .ge-datatable__footer.-border--off {
+  border-top: none;
+}
+
+.ge-card .ge-datatable__header.-border--off {
+  border-bottom: none;
+}
+
+/* STATES */
+
+table td.-has--error,
+table.ge-datatable td.-has--error,
+table.-borders--top-bottom tr:last-of-type td.-has--error,
+table.-borders--top-bottom.ge-datatable tr:last-of-type td.-has--error {
+  border-bottom-width: 2px;
+  border-bottom-color: var(--errorColor);
+  border-bottom-style: solid;
+}
+
+table td.-has--error:before,
+table.ge-datatable td.-has--error:before {
+  content: "\f071";
+  color: var(--errorColor);
+  left: 1px;
+  top: 1rem;
+  @apply --fontAwesome;
+}
+
+table td.-align-text--right,
+table.ge-datatable td.-align-text--right {
+  text-align: right;
+}
+
+table td.-align-text--left,
+table.ge-datatable td.-align-text--left {
+  text-align: left;
+}
+
+.ge-card .ge-datatable__header.-has--selected {
+  @apply --contextualHeader;
+}
+
+.ge-card .ge-card__header.-has--menu-right > * {
+    padding-top: var(--spacing-0_75rem);
+    padding-bottom: var(--spacing-0_75rem);
+    padding-left: var(--spacing-1_5rem);
+    padding-right: var(--spacing-0_75rem);
+}
+
+table th.-is--anchor,
+table td.-is--anchor,
+table.ge-datatable th.-is--anchor,
+table.ge-datatable td.-is--anchor {
+  padding-left: var(--spacing-1_5rem);
+}
+
+table th.-is--anchor > *,
+table td.-is--anchor > *,
+table.ge-datatable th.-is--anchor > *,
+table.ge-datatable td.-is--anchor > * {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+table th.-is--anchor + th,
+table td.-is--anchor + td,
+table.ge-datatable th.-is--anchor + th,
+table.ge-datatable td.-is--anchor + td {
+  padding-left: var(--spacing-1_5rem);
+}
+
+/* VARIENTS */

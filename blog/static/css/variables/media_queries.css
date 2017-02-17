@@ -1,0 +1,6 @@
+/* All CSS should be writen mobile first and then use these media queries for larger screen sizes */
+@custom-media --min20 (min-width: 21em);
+@custom-media --min40 (min-width: 41em);
+@custom-media --min60 (min-width: 61em);
+@custom-media --min80 (min-width: 81em);
+@custom-media --min90 (min-width: 91em);

@@ -1,0 +1,23 @@
+
+/* width */
+.-width--full {
+  width:auto;
+}
+img.-width--full {
+  width:100%;
+}
+.-width--xl {
+  max-width: var(--size--xl);
+}
+.-width--l {
+  max-width: var(--size--l);
+}
+.-width--m {
+  max-width: var(--size--m);
+}
+.-width--s {
+  max-width: var(--size--s);
+}
+.-width--xs {
+  max-width: var(--size--xs);
+}

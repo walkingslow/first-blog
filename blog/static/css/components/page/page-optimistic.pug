@@ -1,0 +1,30 @@
+extends ../../test/test-template.pug
+block body
+  <body class="ge-page -pattern--optimistic">
+    <header>
+      <div class="ge-navigation -pattern--optimistic">
+        include ../navigation/navigation-template2.html
+      </div>
+    </header>
+    <main>
+      <section class="-height--vh">
+        <div class="ge-box -height--full -overlay--gradient -padding--m" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">
+          <h3>This is a page</h3>
+        </div>
+      </section>
+    </main>
+    <footer class="ge-footer">
+      <div class="ge-footer__copyright">© 2016 GENERAL ELECTRIC</div>
+      <div class="ge-footer__brand">
+        <div class="ge-lockup">
+          <span class="ge-lockup__monogram"></span>
+        </div>
+      </div>
+      <div class="ge-footer__legal">
+        <a href="http://www.ge.com/privacy" target="_blank">PRIVACY</a>
+        <a href="http://www.ge.com/terms" target="_blank">TERMS OF USE</a>
+        <a href="http://www.ge.com/cookies" target="_blank">USE OF COOKIES</a>
+        <a href="http://www.ge.com/accessibility" target="_blank">ACCESSIBILITY</a>
+      </div>
+    </footer>
+  </body>

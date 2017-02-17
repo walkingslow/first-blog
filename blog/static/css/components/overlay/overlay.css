@@ -1,0 +1,66 @@
+/* LOCAL VARIABLES */
+:root {
+
+}
+
+/* BASE COMPONENT */
+.ge-overlay {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition:all .1s ease-in;
+  transform: translateY(var(--size-0_5rem));
+  @apply --background-ThemeLightTransparent;
+}
+
+/**** PROPERTIES ****/
+.ge-overlay.-is--open {
+  visibility: visible;
+  opacity: 1;
+  transition:all .2s ease-in;
+  transform: translateY(0%);
+}
+.ge-overlay.-theme--dark,
+.-theme--dark .ge-overlay {
+  @apply --background-ThemeDarkTransparent;
+}
+
+/**** CHILD COMPONENTS *****/
+.ge-overlay__controls {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: var(--size-2_5rem);
+}
+@media (--min60) {
+  .ge-overlay__controls {
+    display: block;
+    height: auto;
+  }
+}
+.ge-overlay__content {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: var(--spacing-3rem);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.ge-overlay__content.-gutter--none {
+  margin: 0;
+}
+.ge-overlay__content.-align--left {
+  justify-content: flex-start;
+}

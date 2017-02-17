@@ -1,0 +1,329 @@
+/* LOCAL VARIABLES */
+:root {
+
+  /* horizontal spacing & sizing */
+  --paddingSidesStandard {
+    padding-right: var(--spacing-0_5rem);
+    padding-left: var(--spacing-0_5rem);
+    margin-right: var(--spacing-1rem);
+    margin-left: var(--spacing-1rem);
+  }
+  --paddingSidesDense {
+    margin-right: var(--spacing-0_5rem);
+    margin-left: var(--spacing-0_5rem);
+  }
+  --heightStandard {
+    height: var(--size-4rem);
+    line-height: var(--size-4rem);
+  }
+  --heightDense {
+    height: var(--size-2_5rem);
+    line-height: var(--size-2_5rem);
+  }
+
+  --heightStandardVertical {
+    height: var(--size-3rem);
+    line-height: var(--size-3rem);
+  }
+  --heightDenseVertical {
+    height: var(--size-2rem);
+    line-height: var(--size-2rem);
+  }
+
+  /* vertical spacing */
+  --paddingSidesVertical {
+    padding-right: var(--spacing-1_25rem);
+    padding-left: var(--spacing-1_25rem);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+
+
+  --disabled {
+    opacity: 0.33;
+    cursor: default;
+    font-weight: normal;
+    border: none;
+  }
+
+  --themeLightDisabled {
+    @apply --font-ThemeLight;
+    @apply --disabled;
+  }
+
+  --themeDarkDisabled {
+    @apply --font-ThemeDark;
+    @apply --disabled;
+  }
+
+  --itemPositioning {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  --themeLightHoverAndActiveStates {
+    border-bottom: solid var(--size-0_125rem) var(--color-blue);
+  }
+  --themeLightHoverAndActiveStatesBackground {
+    @apply --background-GrayLighter4;
+  }
+
+  --themeDarkHoverAndActiveStates {
+    border-bottom: solid var(--size-0_125rem) var(--color-blueLighter1);
+  }
+  --themeDarkHoverAndActiveStatesBackground {
+    @apply --background-GrayDarker2;
+  }
+}
+
+@custom-selector :--ge-tab-item a, .ge-tab__item;
+@custom-selector :--ge-tabs-vertical .ge-tabs.-align--vertical, .ge-navigation.-pattern--purposeful .ge-tabs;
+@custom-selector :--theme-dark .-theme--dark .ge-tabs, .-theme--dark.ge-tabs;
+@custom-selector :--theme-light .ge-tabs;
+
+/* BASE COMPONENT */
+.ge-tabs {
+    @apply --itemPositioning;
+}
+
+.ge-tabs > ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+    @apply --itemPositioning;
+}
+
+.ge-tabs :--ge-tab-item {
+    @apply --font-BodyMinus3;
+    @apply --text-Spaced;
+    @apply --paddingSidesStandard;
+    @apply --heightStandard;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-bottom: solid var(--size-0_125rem) transparent;
+}
+.ge-tabs :--ge-tab-item i {
+    @apply --heightStandard;
+}
+
+.ge-tabs a {
+    color: inherit;
+    text-decoration: none;
+    display:block;
+}
+.ge-tabs a:hover {
+    text-decoration: none;
+}
+
+/* PSUEDO CLASSES */
+.ge-tabs :--ge-tab-item:hover {
+    @apply --themeLightHoverAndActiveStates;
+    font-weight: normal;
+}
+
+/* PROPERTIES */
+
+/* spacing */
+.ge-tabs.-spacing--standard :--ge-tab-item {
+  @apply --paddingSidesStandard;
+  @apply --heightStandard;
+}
+
+.ge-tabs.-spacing--dense :--ge-tab-item {
+  @apply --paddingSidesDense;
+  @apply --heightDense;
+}
+
+.ge-tabs.-spacing--dense :--ge-tab-item i {
+    @apply --heightDense;
+}
+
+/* theme */
+
+:--theme-dark {
+    @apply --font-ThemeDark;
+}
+
+:--theme-dark :--ge-tab-item:hover {
+    @apply --themeDarkHoverAndActiveStates;
+}
+:--theme-dark.-hover--background :--ge-tab-item:hover {
+    @apply --themeDarkHoverAndActiveStatesBackground;
+}
+
+:--theme-dark :--ge-tab-item.-is--active {
+    font-weight: bold;
+    @apply --themeDarkHoverAndActiveStates;
+}
+
+:--theme-dark.-hover--background :--ge-tab-item.-is--active {
+    @apply --themeDarkHoverAndActiveStatesBackground;
+}
+
+:--theme-dark :--ge-tab-item.-is--disabled {
+    @apply --themeDarkDisabled;
+}
+
+
+:--theme-light {
+    @apply --font-ThemeLight;
+}
+
+:--theme-light :--ge-tab-item:hover {
+    @apply --themeLightHoverAndActiveStates;
+}
+
+:--theme-light.-hover--background :--ge-tab-item:hover {
+    @apply --themeLightHoverAndActiveStatesBackground;
+}
+
+
+:--theme-light :--ge-tab-item.-is--active {
+    font-weight: bold;
+    @apply --themeLightHoverAndActiveStates;
+}
+:--theme-light.-hover--background :--ge-tab-item.-is--active {
+    @apply --themeLightHoverAndActiveStatesBackground;
+}
+
+:--theme-light :--ge-tab-item.-is--disabled {
+    @apply --themeLightDisabled;
+}
+
+
+/* STATES */
+
+/* -is--active */
+.ge-tabs :--ge-tab-item.-is--active  {
+    @apply --themeLightHoverAndActiveStates;
+}
+
+/* -is--disabled */
+.ge-tabs :--ge-tab-item.-is--disabled {
+    @apply --themeLightDisabled;
+}
+
+
+
+/* VARIENTS - vertical */
+
+:--ge-tabs-vertical {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+:--ge-tabs-vertical :--ge-tab-item {
+    @apply --font-BodyMinus2;
+    @apply --paddingSidesVertical;
+    @apply --heightStandardVertical;
+
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+    border-bottom: none;
+    border-left: solid var(--size-0_125rem) transparent;
+}
+:--ge-tabs-vertical :--ge-tab-item i {
+    @apply --heightStandardVertical;
+}
+:--ge-tabs-vertical.-spacing--dense :--ge-tab-item {
+    @apply --heightDenseVertical;
+}
+:--ge-tabs-vertical.-spacing--dense :--ge-tab-item i {
+    @apply --heightDenseVertical;
+}
+
+:--ge-tabs-vertical > ul {
+    display: initial;
+}
+
+:--ge-tabs-vertical li {
+    display: block;
+}
+
+:--ge-tabs-vertical .ge-tab__label {
+    width: calc(100%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ge-tabs :--ge-tab-item > i:first-child {
+    padding-right: var(--size-1rem);
+}
+
+:--ge-tabs-vertical i.fa-angle-right {
+   padding-left: var(--size-1rem);
+}
+
+/* -is--active */
+:--ge-tabs-vertical :--ge-tab-item.-is--active,
+:--ge-tabs-vertical :--ge-tab-item:hover  {
+    border-bottom: none;
+    border-left: solid var(--size-0_125rem) var(--color-blue);
+}
+
+:--theme-dark:--ge-tabs-vertical :--ge-tab-item.-is--active,
+:--theme-dark:--ge-tabs-vertical :--ge-tab-item:hover  {
+    border-bottom: none;
+    border-left: solid var(--size-0_125rem) var(--color-blueLighter1);
+}
+
+:--theme-light:--ge-tabs-vertical :--ge-tab-item.-is--active,
+:--theme-light:--ge-tabs-vertical :--ge-tab-item:hover  {
+    border-bottom: none;
+    border-left: solid var(--size-0_125rem) var(--color-blue);
+}
+
+/* -is--disabled */
+:--ge-tabs-vertical :--ge-tab-item.-is--disabled,
+:--ge-tabs-vertical :--ge-tab-item.-is--disabled:hover {
+    @apply --themeLightDisabled;
+}
+
+:--theme-dark:--ge-tabs-vertical :--ge-tab-item.-is--disabled,
+:--theme-dark:--ge-tabs-vertical :--ge-tab-item.-is--disabled:hover {
+    @apply --themeDarkDisabled;
+}
+
+:--theme-light:--ge-tabs-vertical :--ge-tab-item.-is--disabled
+:--theme-light:--ge-tabs-vertical :--ge-tab-item.-is--disabled:hover {
+    @apply --themeLightDisabled;
+}
+
+/*** OVERRIDES ***/
+@media (--min60) {
+  .ge-navigation.-pattern--optimistic .ge-tabs :--ge-tab-item {
+    max-width: var(--size-10rem);
+  }
+  .ge-navigation.-pattern--optimistic.-is--minimized .ge-tabs :--ge-tab-item {
+    @apply --paddingSidesDense;
+    @apply --heightDense;
+  }
+  .ge-navigation.-pattern--optimistic.-is--minimized .ge-tabs :--ge-tab-item i {
+    @apply --heightDense;
+  }
+  .ge-navigation.-pattern--purposeful .ge-tabs {
+    flex-direction: column;
+    width: var(--size-20rem);
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-tabs {
+    width: var(--size-3_5rem);
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-tabs .ge-tab__label {
+    display: none;
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-tabs:hover {
+    width: var(--size-20rem);
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-tabs:hover .ge-tab__label {
+    display: block;
+  }
+}

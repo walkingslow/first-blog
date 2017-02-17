@@ -1,0 +1,15 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+/* background images */
+.-image--cover { background-size: cover; background-repeat: no-repeat; background-position: center center; }
+.-image--contain { background-size: contain; background-repeat: no-repeat; background-position: center center; }
+.-image--inherit { background-size: inherit; background-repeat: no-repeat; background-position: center center; }
+.-image--fixed { background-attachment: fixed; background-repeat: no-repeat; background-position: center center; }
+.-image-position--left { background-position: left top; }
+.-image-position--center { background-position: center center; }
+.-image-position--right { background-position: right top; }
+.-image-position--bottom { background-position: center bottom; }
+.-image-position--left-bottom { background-position: left bottom; }

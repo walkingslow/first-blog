@@ -1,0 +1,203 @@
+/****** LOCAL VARIABLES *****/
+:root {
+    --smallestImage {
+        height: var(--size-1_625rem);
+        min-width: var(--size-1_625rem);
+        margin: calc(var(--size-1_625rem) / 4);
+    }
+
+    --smallImage {
+        height: var(--size-2rem);
+        min-width: var(--size-2rem);
+        margin: calc(var(--size-2rem) / 4);
+    }
+
+    --mediumImage {
+        height: var(--size-2_5rem);
+        min-width: var(--size-2_5rem);
+        margin: calc(var(--size-2_5rem) / 4);
+    }
+
+    --largeImage {
+        height: var(--size-3_5rem);
+        min-width: var(--size-3_5rem);
+        margin: calc(var(--size-3_5rem) / 4);
+    }
+
+    --largestImage {
+        height: var(--size-5rem);
+        min-width: var(--size-5rem);
+        margin: calc(var(--size-5rem) / 4);
+    }
+}
+@custom-selector :--lockup-image .ge-lockup__monogram, img;
+
+/****** BASE COMPONENT ******/
+.ge-lockup,
+.ge-lockup.-size--medium {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    @apply --font-Body;
+}
+.ge-lockup__monogram {
+  background-image: url('brand/svg/ge-monogram-blue.svg');
+  display:block;
+}
+.ge-lockup__monogram.-color--gray,
+.ge-footer .ge-lockup .ge-lockup__monogram,
+.ge footer .ge-lockup .ge-lockup__monogram  {
+  background-image: url('brand/svg/ge-monogram-gray.svg');
+  background-color: inherit;
+  color: inherit;
+}
+.-theme--dark .ge-lockup__monogram,
+.-theme--dark .ge-footer .ge-lockup__monogram,
+.ge .-theme--dark footer .ge-lockup__monogram,
+.ge-footer.-theme--dark  .ge-lockup__monogram,
+.ge footer.-theme--dark  .ge-lockup__monogram {
+  background-image: url('brand/svg/ge-monogram-white.svg');
+}
+.ge-lockup > :--lockup-image {
+   @apply --mediumImage;
+   background-size: contain;
+}
+.ge-lockup .ge-lockup__brand {
+  @apply --font-ThemeLight;
+}
+.ge-lockup.-theme--dark .ge-lockup__brand,
+.-theme--dark .ge-lockup .ge-lockup__brand {
+  @apply --font-ThemeDark;
+}
+
+/******* PROPERTIES ********/
+/* size */
+.ge-lockup.-size--smallest,
+.ge-navigation .ge-lockup,
+.ge-footer .ge-lockup,
+.ge footer .ge-lockup{
+    @apply --font-BodyMinus2;
+}
+.ge-lockup.-size--small {
+    @apply --font-BodyMinus1;
+}
+.ge-lockup.-size--large {
+    @apply --font-BodyPlus1;
+}
+.ge-lockup.-size--largest {
+    @apply --font-BodyPlus2;
+}
+
+.ge-lockup.-size--smallest > :--lockup-image,
+.ge-navigation .ge-lockup > :--lockup-image,
+.ge-footer .ge-lockup > :--lockup-image,
+.ge footer .ge-lockup > :--lockup-image {
+    @apply --smallestImage;
+}
+.ge-lockup.-size--small > :--lockup-image {
+    @apply --smallImage;
+}
+.ge-lockup.-size--large > :--lockup-image {
+    @apply --largeImage;
+}
+.ge-lockup.-size--largest > :--lockup-image {
+    @apply --largestImage;
+}
+
+/* align */
+.ge-lockup.-align--bottom {
+  flex-direction: column;
+}
+.ge-lockup.-align--left > .ge-lockup__brand,
+.ge-lockup.-align--left-top > .ge-lockup__brand {
+  order: -1;
+}
+.ge-lockup.-align--right-top,
+.ge-lockup.-align--left-top {
+  align-items: flex-start;
+}
+
+.ge-lockup.-align--right-top.-size--smallest > .ge-lockup__brand,
+.ge-lockup.-align--left-top.-size--smallest > .ge-lockup__brand {
+  margin-top: calc(var(--size-1_625rem) / 4);
+}
+.ge-lockup.-align--right-top.-size--small > .ge-lockup__brand,
+.ge-lockup.-align--left-top.-size--small > .ge-lockup__brand {
+  margin-top: calc(var(--size-2rem) / 4);
+}
+.ge-lockup.-align--right-top > .ge-lockup__brand,
+.ge-lockup.-align--left-top > .ge-lockup__brand {
+  margin-top: calc(var(--size-2_5rem) / 4);
+}
+.ge-lockup.-align--right-top.-size--large > .ge-lockup__brand,
+.ge-lockup.-align--left-top.-size--large > .ge-lockup__brand {
+  margin-top: calc(var(--size-3_5rem) / 4);
+}
+.ge-lockup.-align--right-top.-size--largest > .ge-lockup__brand,
+.ge-lockup.-align--left-top.-size--largest > .ge-lockup__brand {
+  margin-top: calc(var(--size-5rem) / 4);
+}
+
+/***** STATES *****/
+.ge-lockup.-is--img-only .ge-lockup__brand {
+  display:none;
+}
+
+
+
+/*** OVERRIDES ***/
+
+/* when in header, only show text on larger screens */
+.ge-navigation .ge-lockup .ge-lockup__brand {
+  display:none;
+}
+@media (--min40) {
+  .ge-navigation .ge-lockup .ge-lockup__brand {
+    display:inherit;
+  }
+}
+
+/* optimistic and engaging */
+@media (--min60) {
+  .ge-navigation.-pattern--optimistic.-is--minimized .ge-lockup,
+  .ge-navigation.-pattern--engaging.-is--minimized .ge-lockup {
+    @apply --font-BodyMinus2;
+  }
+  .ge-navigation.-pattern--optimistic .ge-lockup,
+  .ge-navigation.-pattern--engaging .ge-lockup {
+    @apply --font-BodyMinus1;
+  }
+  .ge-navigation.-pattern--optimistic.-is--minimized .ge-lockup > :--lockup-image,
+  .ge-navigation.-pattern--engaging.-is--minimized .ge-lockup > :--lockup-image {
+    @apply --smallestImage;
+  }
+  .ge-navigation.-pattern--optimistic .ge-lockup > :--lockup-image,
+  .ge-navigation.-pattern--engaging .ge-lockup > :--lockup-image {
+    @apply --smallImage;
+  }
+
+  .ge-navigation.-pattern--purposeful .ge-lockup {
+    flex-direction: column;
+    @apply --font-BodyPlus1;
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-lockup .ge-lockup__brand {
+    display:none;
+  }
+  .ge-navigation.-pattern--purposeful.-is--minimized .ge-lockup > :--lockup-image {
+    @apply --smallestImage;
+  }
+  .ge-navigation.-pattern--purposeful .ge-lockup > :--lockup-image {
+    @apply --largeImage;
+  }
+}
+.ge-navigation.-pattern--purposeful.-is--menu .ge-lockup {
+  flex-direction: column;
+  @apply --font-BodyPlus1;
+}
+.ge-navigation.-pattern--purposeful.-is--menu .ge-lockup > :--lockup-image {
+  @apply --largeImage;
+}
+.ge-navigation.-pattern--purposeful.-is--menu .ge-lockup .ge-lockup__brand {
+  display:inherit;
+}

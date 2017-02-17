@@ -1,0 +1,17 @@
+extends ../../test/test-template.pug
+block body
+  <body class="ge-page -pattern--optimistic -is--minimized">
+    <header>
+      <div class="ge-navigation -pattern--optimistic -is--minimized">
+        include ../navigation/navigation-template.html
+      </div>
+    </header>
+    <main>
+      <section class="-height--vh">
+        <div class="ge-box -height--full -overlay--gradient -theme--dark -padding--m" style="background-image:url('/pages/core-design/core-css/test-output/test/resources/bridge.jpeg');">
+          <h3>This is a secondary page</h3>
+        </div>
+      </section>
+    </main>
+    <footer>FOOTER</footer>
+  </body>

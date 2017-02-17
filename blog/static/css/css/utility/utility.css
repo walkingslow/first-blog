@@ -1,0 +1,15 @@
+
+.-show--min60 {
+  display:none;
+}
+.-hide--min60 {
+  display:block;
+}
+@media (--min60) {
+  .-show--min60 {
+    display: block;
+  }
+  .-hide--min60 {
+    display: none !important;
+  }
+}

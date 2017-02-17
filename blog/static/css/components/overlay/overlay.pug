@@ -1,0 +1,26 @@
+extends ../../test/test-template.pug
+block content
+
+  <cdx-test name="ge-overlay" height="20rem" theme="true">
+    <div class="ge-box -height--full" style="position:relative">
+      <div class="ge-overlay -is--open" style="position:absolute">
+        <div class="ge-overlay__controls"><button class="ge-button -fill--transparent -is--icon"><i class="fa fa-close"></i></button></div>
+        <div class="ge-overlay__content">
+          <div class="ge-box">This is content of an overlay</div>
+        </div>
+      </div>
+      <div class="ge-box -height--full -color--blue -padding--m">content that is not in the overlay</div>
+    </div>
+  </cdx-test>
+
+  <cdx-test name="ge-overlay -theme-dark" height="20rem">
+    <div class="ge-box -height--full" style="position:relative">
+      <div class="ge-overlay -theme--dark -is--open" style="position:absolute">
+        <div class="ge-overlay__controls"><button class="ge-button -fill--transparent -is--icon"><i class="fa fa-close"></i></button></div>
+        <div class="ge-overlay__content">
+          <div class="ge-box">This is content of an overlay</div>
+        </div>
+      </div>
+      <div class="ge-box -height--full -color--blue -padding--m">content that is not in the overlay</div>
+    </div>
+  </cdx-test>

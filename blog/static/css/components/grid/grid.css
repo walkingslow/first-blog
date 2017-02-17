@@ -1,0 +1,84 @@
+/* LOCAL VARIABLES */
+:root {
+}
+
+/* BASE COMPONENT */
+.ge-grid {
+  display: block;
+  flex-wrap: nowrap;
+}
+@media (--min60) {
+  .ge-grid {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .ge-grid.-stack--vertical {
+    flex-wrap: nowrap;
+    flex-flow: column;
+    align-items: stretch;
+  }
+  .ge-grid.-stack--horizontal {
+    flex-wrap: nowrap;
+  }
+  .ge-grid.-stack--grid {
+    flex-wrap: wrap;
+  }
+
+
+  .ge-grid.-align--start {
+    align-items: flex-start;
+  }
+  .ge-grid.-align--center {
+    align-items: center;
+  }
+  .ge-grid.-align--stretch {
+    align-items: stretch;
+  }
+  .ge-grid.-align--end {
+    align-items: flex-end;
+  }
+
+  .ge-grid.-justify--start {
+    justify-content: flex-start;
+  }
+  .ge-grid.-justify--center {
+    justify-content: center;
+  }
+  .ge-grid.-justify--end {
+    justify-content: flex-end;
+  }
+  .ge-grid.-justify--between {
+    justify-content: space-between;
+  }
+  .ge-grid.-justify--around {
+    justify-content: space-around;
+  }
+
+  .ge-grid.-gutter--xs {
+    margin-left: -var(--spacing-xs);
+    margin-right: -var(--spacing-xs);
+  }
+  .ge-grid.-gutter--s {
+    margin-left: -var(--spacing-s);
+    margin-right: -var(--spacing-s);
+  }
+  .ge-grid.-gutter--m {
+    margin-left: -var(--spacing-m);
+    margin-right: -var(--spacing-m);
+  }
+  .ge-grid.-gutter--l {
+    margin-left: -var(--spacing-l);
+    margin-right: -var(--spacing-l);
+  }
+}
+
+/*** PROPERTIES ***/
+.ge-grid.-padding--xs,
+.ge-grid.-padding--s,
+.ge-grid.-padding--m,
+.ge-grid.-padding--l,
+.ge-grid.-padding--xl,
+.ge-grid.-padding--none {
+  padding: 0;
+}
